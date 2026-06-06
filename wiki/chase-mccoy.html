@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chase McCoy — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./dan-mall.html">Dan Mall →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Chase McCoy</h1>
+    <p><em>Digital garden pioneer, systems documentarian, and advocate for modeling design systems as non-linear knowledge graphs.</em></p>
+
+    <h2>Who he is in this corpus</h2>
+    <p>Chase McCoy is the author of the pivotal 2021 essay "Design systems as knowledge graphs."<sup><a href="#s-1">1</a></sup> In the context of the corpus, he serves as the bridge between personal knowledge management (PKM) paradigms and design system documentation. His work draws heavily from the history of hypertext (Ted Nelson's Xanadu) and modern digital gardening tools (Roam Research, Obsidian, Andy Matuschak's sliding notes) to challenge the standard "software library" model of system documentation.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Core positions</h2>
+    <ul>
+      <li><strong>The Graph Paradigm:</strong> A design system is not just a software library, but a hyperobject of decisions, language, and history. Its structure should be modeled as an interconnected knowledge graph rather than a top-to-bottom product manual.<sup><a href="#s-1">1</a></sup> See <a href="./knowledge-graphs.html">Design Systems as Knowledge Graphs</a>.</li>
+      <li><strong>Transclusion as Synchronization:</strong> Document duplication breeds drift. McCoy advocates for storing all design elements (tokens, properties, icons) in their minimum viable format and "transcluding" (dynamically embedding) them wherever they are mentioned.<sup><a href="#s-1">1</a></sup> He points to Seeds and Kiwi's Orbit systems as successful implementations of hovers/embed tags.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Bidirectional Relationships:</strong> A design system is built on dependency hierarchies (e.g., a Button imports an Icon). McCoy argues these edges must be bidirectional—so that developers viewing the Icon page can immediately see all components that consume it.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Fragments for Governance:</strong> Missing nodes in the graph should be explicitly declared (Wikipedia's "red links") to act as a clear backlog and invite community contributions to undeveloped areas.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Exposing Graph Interfaces:</strong> To fully unlock the value of the system, teams should expose queryable interfaces (such as Shopify Polaris' GraphQL API) directly to users to allow them to query, remix, and share parts of the system.<sup><a href="#s-1">1</a></sup></li>
+    </ul>
+
+    <h2>Where he sits in the debates</h2>
+    <ul>
+      <li><strong>vs. Brad Frost on definition and structure:</strong> While Frost defines a design system around three core assets (design library, code library, reference website) $^{[2]}$, McCoy argues that linear reference documentation is a limitation of today's web medium. He reframes the reference site as a queryable, non-linear knowledge graph that exposes its internal relationships.<sup><a href="#s-1">1</a></sup> See <a href="./what-is-a-design-system.html">What Is a Design System?</a></li>
+      <li><strong>Aligning with the Agentic Frontier:</strong> Although McCoy's essay was written in 2021 before the rise of production-grade agentic coding loops, his graph mechanics serve as the architectural foundation for agentic consumption. His proposal of exposing GraphQL APIs directly to consumers is the spiritual predecessor to the Model Context Protocol (MCP) servers used in 2026 to feed structured schemas to LLMs. $^{[3]}$ See <a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a>.</li>
+    </ul>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Design%20systems%20as%20knowledge%20graphs.txt">Design systems as knowledge graphs — Chase McCoy (08/2021)</a></li>
+      <li id="s-2"><a href="../raw/Design%20System%20with%20Brad%20Frost.txt">Design Systems with Brad Frost (video, 05/2024)</a></li>
+      <li id="s-3"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./knowledge-graphs.html">Design Systems as Knowledge Graphs</a></li>
+      <li><a href="./what-is-a-design-system.html">What Is a Design System?</a></li>
+      <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

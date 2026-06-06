@@ -1,0 +1,28 @@
+Article title: The Broken Promises of Design Systems: Why Following the Rules Won't Get You to Great Products
+Author: Itai Vonshak
+Date: 10/2024
+Url: https://www.linkedin.com/pulse/broken-promises-design-systems-why-following-rules-wont-itai-vonshak-g2huf/
+
+I've spent the last ~5 years leading the Material Design team at Google, arguably the world's largest and most recognized design system. I've worked with brilliant minds, backed by incredible resources. And yet, I can't shake this feeling: design systems have failed us. They don't do what they say on the (proverbial) box.
+
+Let's rewind. The promise of design systems was alluring: accelerate the process of building cohesive experiences, ensuring high quality and consistency at scale. We envisioned systems that encompassed patterns, components, motion, content strategy, and even micro-interactions. A holistic guide to creating delightful experiences.
+
+But somewhere along the way, we got lost in the weeds of components, tokens and documentation. Design systems became rigid rulebooks + glorified Figma sticker sheets — stifling creativity and burying designers in endless updates. And so adoption becomes the main challenge. Any design system professional will tell you that they spend more time trying to convince people to adopt their design system than actually designing it. Could it be that we have not quit reached Product Market Fit for design systems ?
+
+Here's the brutal truth:
+
+They're unread novels. Anything that requires reading is dead on arrival. No one reads the manual. That is why patterns fall by the wayside. Since we don't encapsulate patterns in code - they become dead text that serves no real purpose.
+They crush innovation. Instead of empowering designers, they force them into pre-defined boxes, leading to a sea of homogenous digital experiences. Designers often spend more time trying to figure out which pattern to use than how to solve a particular problem. 
+They're a black hole of maintenance. Keeping them up-to-date and consistent across sprawling organizations is a Sisyphean task. 
+They're dinosaurs in the age of AI. While AI is revolutionizing coding, design systems remain stuck in the past, slowing us down instead of propelling us forward.
+They don't scale. They fail small teams striving for product-market fit who don't have the bandwidth for long-term documentation. At the same time, they fail multi-product teams where a centralized system becomes a compromise, diluting its effectiveness for any single application.
+
+And the biggest lie of all? That adherence to a design system guarantees a good product. A truly great app is usable and desirable because of thoughtful design, not because it religiously follows a set of rules. 
+
+So sure, use Material 3. Its a great design system with some awesome resources. But is it enough? Code reuse is great, and it's very helpful to have your design and code aligned. But a full adoption of a design system is an expensive proposition, for most organizations it is not justifiable just for the cost savings alone. 
+
+So why do we continue to push design systems as the solution for design at scale? Should we consider that while they might be part of a solution, there are other tools and ideas that we need to develop?
+
+So, what's the next chapter? How do we harness the power of AI to create designs that are consistent when they need to be but also truly dynamic, intelligent, and adaptable?
+
+I'm on a mission to find out...
