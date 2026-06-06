@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Systems Thinking for Design Systems — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./token-architecture.html">Three-Tier Token Architecture →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Systems Thinking for Design Systems</h1>
+    <p><em>The mental model beneath the craft: hierarchies, feedback loops, and decomposing a system into solvable concerns.</em></p>
+
+    <h2>Thinking in Systems</h2>
+    <p>Frost recommends Donella Meadows' <em>Thinking in Systems</em> as essential reading for understanding how interconnected hierarchies and feedback loops operate in both nature and design systems.<sup><a href="#s-1">1</a></sup> The relevance is direct: a design system is a network of dependencies where a change at the core propagates outward, so reasoning about it requires thinking in stocks, flows, and feedback rather than in isolated components.</p>
+
+    <h2>A systems-oriented design method</h2>
+    <p>Nate Baldwin operationalizes systems thinking into a concrete method:<sup><a href="#s-2">2</a></sup></p>
+    <ul>
+      <li><strong>Encapsulation</strong> — decompose a system into smaller, independent concerns (responsiveness, accessibility, density) and solve each separately rather than treating the system as one monolith.</li>
+      <li><strong>Parameterization</strong> — define elements from constants (base sizes, ratios) rather than hard-coded values, so the system is inherently scalable and dynamic.</li>
+      <li><strong>Archetypes</strong> — find commonalities and build a core template, then derive all other components from it instead of designing each individually.</li>
+      <li><strong>Diagrams</strong> — use system diagrams to make relationships between tokens, variables, and components legible.</li>
+    </ul>
+
+    <h2>Why decomposition matters</h2>
+    <p>The same instinct to separate concerns recurs across the corpus: separating structure from aesthetics in <a href="./token-architecture.html">token architecture</a>, separating size from density in <a href="./parametric-scales.html">parametric scales</a>, and — most strikingly — separating foundations, style, and behavior so AI agents can reason about smaller "context bubbles."<sup><a href="#s-2">2</a></sup> Decomposition is the throughline that makes systems both human- and machine-tractable.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Design%20System%20with%20Brad%20Frost.txt">Design Systems with Brad Frost (video, 05/2024)</a></li>
+      <li id="s-2"><a href="../raw/Scalable%20scales%20that%20scale%20-%20Nate%20Baldwin%20at%20Into%20Design%20Systems.txt">Scalable scales that scale — Nate Baldwin (video, 04/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./parametric-scales.html">Modular & Parametric Scales</a></li>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+      <li><a href="./what-is-a-design-system.html">What Is a Design System?</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

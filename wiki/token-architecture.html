@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three-Tier Token Architecture — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./token-pipelines.html">Token Pipelines →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Three-Tier Token Architecture</h1>
+    <p><em>A layered token model that separates raw values from meaning from component hooks — the seam that unlocks multi-brand, multi-theme flexibility.</em></p>
+
+    <h2>Tokens replace the brand book</h2>
+    <p>Frost frames design tokens as the replacement for the static brand style guide: instead of every team manually interpreting a PDF, all products connect to a token system so a <strong>single value remap propagates everywhere automatically</strong>, avoiding painful, duplicative manual rebranding across codebases.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>The three tiers</h2>
+    <table>
+      <thead>
+        <tr><th>Tier</th><th>Name</th><th>Example</th><th>Audience</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Primitives (definitions)</td><td><code>starbucks-green: #00704A</code></td><td>System owners only — "cornstarch behind the double doors." Not exposed to consumers.</td></tr>
+        <tr><td>2</td><td>Semantic tokens</td><td><code>background-brand: starbucks-green</code></td><td>Most teams consume these — they assign jobs/meaning to primitives.</td></tr>
+        <tr><td>3</td><td>Component tokens (sparingly)</td><td><code>button-background</code></td><td>Reserved for genuine multi-brand differentiation.</td></tr>
+      </tbody>
+    </table>
+    <p>Tier 1 defines what's available; Tier 2 assigns meaning; Tier 3 is fine-grained component hooks used <strong>only</strong> when Tier 2 alone cannot solve the problem.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Themes as collections of token decisions</h2>
+    <p>A theme is not a one-off — it is the set of token values hung together for a context. An organization may run 1 theme (simple), 2 (light + dark), 4 (multiple products), or 8+ (multiple brands / white-label clients), and the architecture should swap the appropriate theme per context.<sup><a href="#s-1">1</a></sup> Dark mode in particular should be implemented by <strong>overriding only the color tokens</strong> (typography and spacing usually stay), not by duplicating stylesheets.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Separate structure from aesthetics</h2>
+    <p>Frost reframes the old HTML/CSS/JS split as a new separation of concerns: a <strong>structural layer</strong> (the door frame), a <strong>behavior layer</strong> (JS/component system), and a <strong>token layer</strong> (paint and hardware — purely aesthetic). Keeping the aesthetic layer isolated from structure is precisely what enables multi-theme, multi-brand, multi-platform flexibility.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Tokens as the API for the design language</h2>
+    <p>The strongest claim: treat tokens not merely as CSS variables but as <strong>the contract between the design system and every consumer</strong> — web, native, CMS, QA automation, and AI tooling alike.<sup><a href="#s-1">1</a></sup> This "tokens-as-API" framing is exactly why tokens matter for <a href="./agentic-readiness.html">agentic readiness</a>: well-named tokens are machine-consumable foundations, and AI workflows depend on agents seeing them.<sup><a href="#s-2">2</a></sup></p>
+
+    <h2>Perspectives: how many tokens is too many?</h2>
+    <p>A consistent anti-pattern warning runs through the sources: do <strong>not</strong> create a token for every CSS property on every component. Systems with thousands of component tokens become unmaintainable.<sup><a href="#s-1">1</a></sup> The agentic literature adds a related failure mode — monolithic component definitions that bundle foundations, style, and behavior make it hard for both humans and agents to reason about any one of them.<sup><a href="#s-2">2</a></sup> The shared lesson: let Tier 2 do the heavy lifting; reach for Tier 3 only for genuinely gnarly brand differentiation.</p>
+
+    <h2>Flexibility, not uniformity</h2>
+    <p>Frost pushes back on the criticism that design systems make everything look the same. A well-architected token system — structure separated from aesthetics — is what lets each brand look different while sharing one component library. <em>The door frame stays the same; the paint and hardware can be unique per brand.</em><sup><a href="#s-1">1</a></sup> This claim sits in direct dialogue with Dan Mall's argument that consistency is a poor goal — see <a href="./success-metrics.html">Success Metrics</a>.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Design%20Token%20Architecture%20with%20Brad%20Frost.txt">Design Token Architecture — Brad Frost (video, 04/2025)</a></li>
+      <li id="s-2"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./token-pipelines.html">Token Pipelines: JSON, Style Dictionary & Figma Variables</a></li>
+      <li><a href="./type-safe-systems.html">Type-Safe Design Systems</a></li>
+      <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

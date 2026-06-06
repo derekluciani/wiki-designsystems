@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is a Design System? — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./component-architecture.html">Component Architecture →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">What Is a Design System?</h1>
+    <p><em>The official story of how an organization designs and builds its interfaces — though whether that story is authored or merely emerges is itself contested.</em></p>
+
+    <h2>The "official story" definition</h2>
+    <p>Brad Frost defines a design system as <strong>the official story of how an organization designs and builds user interfaces</strong>.<sup><a href="#s-1">1</a></sup> The framing is deliberate: a design system is not a component library, a Figma file, or a documentation site in isolation — it is the authoritative narrative that ties those artifacts together and settles how UI gets made.</p>
+
+    <h2>The three core assets</h2>
+    <p>In Frost's account, the "story" is carried by three concrete assets that must stay in sync.<sup><a href="#s-1">1</a></sup></p>
+    <table>
+      <thead>
+        <tr><th>Asset</th><th>Typical form</th><th>Role</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Design library</td><td>Figma</td><td>The visual source of truth designers compose with.</td></tr>
+        <tr><td>Code library</td><td>Often Web Components</td><td>The implementation consumers actually ship.</td></tr>
+        <tr><td>Reference website</td><td>Docs site</td><td>The guidance that explains intent, usage, and governance.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Start pragmatic</h2>
+    <p>A recurring caution is that organizations do <strong>not</strong> need a massive system from day one. Frost's advice is to start simple and only introduce complexity as the need arises.<sup><a href="#s-1">1</a></sup> Premature abstraction is a cost, not a virtue — a theme Dan Mall returns to repeatedly in arguing for scope before scale.<sup><a href="#s-2">2</a></sup></p>
+
+    <h2>Perspectives: designed vs. emergent</h2>
+    <p>The corpus contains a genuine tension about <em>where</em> a system comes from.</p>
+    <ul>
+      <li><strong>Authored infrastructure (Frost).</strong> The "official story" framing treats the system as something an organization deliberately stands up, staffs, and governs — an internal product with a clear narrative.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Emergent from the work (Mall).</strong> Mall argues systems should <em>emerge</em> from real product work and let the work lead, rather than being designed up front in a vacuum — and insists design systems are ultimately for humans, not an end in themselves.<sup><a href="#s-2">2</a></sup></li>
+    </ul>
+    <p>These are reconcilable in practice — author the story, but let the components emerge from real usage — yet the difference in emphasis predicts very different early-stage behavior, and it resurfaces on the <a href="./team-maturity.html">team maturity</a> and <a href="./success-metrics.html">success metrics</a> pages.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Design%20System%20with%20Brad%20Frost.txt">Design Systems with Brad Frost (video, 05/2024)</a></li>
+      <li id="s-2"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions.csv">Dan Mall / Design System University email essays</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./component-architecture.html">Component Architecture: Web Components & the Layer Cake</a></li>
+      <li><a href="./systems-thinking.html">Systems Thinking for Design Systems</a></li>
+      <li><a href="./team-maturity.html">Design System Team Maturity</a></li>
+      <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

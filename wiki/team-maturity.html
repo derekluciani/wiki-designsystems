@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Team Maturity — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./governance.html">Governance →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Design System Team Maturity</h1>
+    <p><em>A three-stage trajectory — serving, enforcing, elevating — where the progression is as much organizational as technical.</em></p>
+
+    <h2>The system as an internal product</h2>
+    <p>Ricky Zhang's premise: a well-run design system has graduated from static style guide to <strong>internal product</strong> with its own release cycle, team, versioned packages, and support channel. Teams don't get good at this all at once; they move through three stages, and what changes at each is the team's trust, influence, and relationship to product squads.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Stage 1 — Serving components</h2>
+    <p>Ship a tested, visually consistent component library before fragmentation and tech debt take over. Two payoffs:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Consistency / efficiency.</strong> Uber's Base system is the canonical data point: adopting teams shipped 3× faster, had 4× fewer visual consistency bugs, and wrote half as much UI code. Numbers like these are how a new team earns internal trust.</li>
+      <li><strong>Shared language.</strong> The longer-lasting effect is a common vocabulary — a designer labels something <code>bg-primary</code> in Figma and an engineer uses the same token in code. No guesswork.</li>
+    </ul>
+    <p>Origin shapes Stage 1: <strong>top-down</strong> systems (sponsor, budget) must prove efficiency fast without forcing adoption; <strong>bottom-up</strong> systems (no sponsor, an engineer just started it) grow by helping the teams hurting most and letting word of mouth spread. Either way, the stage ends when the team starts behaving like a product team — docs, onboarding, internal marketing.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Stage 2 — Enforcement</h2>
+    <p>Once adoption is broad, the problem flips from adoption to <strong>scale</strong>: teams use components in unintended ways, requests pile up, and decisions that were fine small buckle under load. The team shifts from serving to governing.<sup><a href="#s-1">1</a></sup></p>
+    <h3>Tightening APIs via abstraction levels</h3>
+    <p>Stage 1's flexible, override-everything components become a liability at scale. The mature move is constraining APIs without killing usability by offering multiple abstraction levels. Spotify's Encore system is the model:<sup><a href="#s-1">1</a></sup></p>
+    <table>
+      <thead>
+        <tr><th>Tier</th><th>How it works</th><th>When to use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Config (high abstraction)</td><td>Preset options only; component owns its rendering.</td><td>Standard cases. Upgrades land automatically, zero work for product teams.</td></tr>
+        <tr><td>Slots (medium)</td><td>Exposes specific regions for child components.</td><td>Local customization while the system keeps control of layout/behavior.</td></tr>
+        <tr><td>Custom (low)</td><td>Unstyled headless primitives — a11y & keyboard nav, no visuals.</td><td>Edge cases; teams build any UI but still get standardized a11y for free.</td></tr>
+      </tbody>
+    </table>
+    <h3>Preventing slop, owning migrations</h3>
+    <p>Documentation alone won't keep a system clean at scale. Encode standards into the toolchain — strict linting, build-time checks, runtime validations — so violations are caught before they land, and engineers learn conventions by fixing lint errors. And the system team should <strong>do the migration work itself</strong> (codemods where possible — Sourcegraph automated 95% of one migration) rather than tossing breaking changes over the wall.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Stage 3 — Core infrastructure</h2>
+    <p>The system stops being a library that makes devs faster and becomes infrastructure the whole product ecosystem runs on. What defines it is <strong>reach</strong>: sitting at the bottom of the dependency tree, a change at the core propagates everywhere instantly. GitHub's Primer reworked its contrast strategy in one token update that fixed hundreds of a11y issues across 1,000+ spots; Atlassian rolled new typefaces across 18+ products via the system rather than a multi-month coordination effort.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Perspectives: enforcement vs. service</h2>
+    <p>Zhang's Stage 2 is explicitly about <strong>enforcement</strong> — linters that block PRs, owning governance. Dan Mall pushes back on letting enforcement become the identity: "a design system team is not a design standards team," and a team that mostly reviews and enforces is "running a standards committee," a critical mistake.<sup><a href="#s-2">2</a></sup> The reconciliation: enforce through tooling and trust (Zhang's lint-as-teacher, owning migrations) rather than through gatekeeping reviews. See <a href="./governance.html">Governance</a> and <a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a>.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Design%20System%20Team%20Maturity.txt">Design System Team Maturity — Ricky Zhang (article, 06/2026)</a></li>
+      <li id="s-2"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions.csv">Dan Mall / Design System University email essays</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>
+      <li><a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a></li>
+      <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+      <li><a href="./type-safe-systems.html">Type-Safe Design Systems</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

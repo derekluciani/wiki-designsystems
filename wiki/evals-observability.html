@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evals & Observability — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./ai-assisted-authoring.html">AI-Assisted Component Authoring →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Evals & Observability</h1>
+    <p><em>Agentic workflows drift silently — so you benchmark them with eval harnesses and watch them with observability, the way you'd monitor any production system.</em></p>
+
+    <h2>Why evals matter</h2>
+    <p>Because agentic workflows can silently drift or degrade over time, leading teams invest in <strong>evaluation harnesses</strong> that exercise agents across many prompts and LLM backends, comparing generated components both in code and visually (Storybook snapshot tests, Figma diffing) to catch regressions before they reach production or design libraries.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Storybook Evals</h2>
+    <p>Frost and team describe using <strong>Storybook Evals</strong> to benchmark a design system against test prompts — tracking performance over time, detecting drift, and understanding the trade-offs between speed, cost, and quality.<sup><a href="#s-2">2</a></sup> Evals turn "does the agent do a good job?" from a vibe into a measured, repeatable signal.</p>
+
+    <h2>Broader agentic safety practices</h2>
+    <p>Beyond evals, teams apply general safety practices: guardrails on allowed actions, logging and auditing of agent decisions, and circuit breakers for jailbreak-like prompts or out-of-scope tasks. Human-in-the-loop review stays central, especially for changes affecting governance, brand, or accessibility.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Validation is half of readiness</h2>
+    <p>Evals are the system-level expression of Frost's <strong>validation</strong> pillar (see <a href="./agentic-readiness.html">Agentic Readiness</a>): functional, accessibility, and visual tests are what give a team confidence in what agents assemble.<sup><a href="#s-2">2</a></sup> Coverage tells the agent <em>how</em> to build; validation/evals tell you <em>whether it did</em>.</p>
+
+    <h2>Perspectives: eval before you scale</h2>
+    <p>The consistent recommendation is sequencing: build a small evaluation suite that benchmarks prompts, component coverage, and failure modes across LLMs <em>before</em> scaling agent usage, then expand autonomy as evidence accumulates.<sup><a href="#s-1">1</a></sup> This pairs naturally with <a href="./agent-trust-levels.html">trust levels</a> — evals are the evidence that justifies promoting an agent from "suggest only" toward "auto-merge" for a given action class.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+      <li id="s-2"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./agent-trust-levels.html">Governance & Trust Levels for Agents</a></li>
+      <li><a href="./ai-assisted-authoring.html">AI-Assisted Component Authoring</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

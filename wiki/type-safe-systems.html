@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type-Safe Design Systems — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./team-maturity.html">Design System Team Maturity →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Type-Safe Design Systems</h1>
+    <p><em>Using the type system as a guardrail — forbidding invalid component usage at compile time instead of hoping documentation is read.</em></p>
+
+    <h2>Typed tokens</h2>
+    <p>Kathleen McMahon advocates a token pipeline (Figma → Style Dictionary) that generates <strong>TypeScript definitions</strong>, preventing silent failures and keeping multi-brand systems in sync.<sup><a href="#s-1">1</a></sup> This is the type-system continuation of the <a href="./token-pipelines.html">token pipeline</a>.</p>
+
+    <h2>Discriminated unions and <code>never</code></h2>
+    <p>For component props, the recommendation is to use <code>interface</code> for common shapes and <code>type</code> for variants, and to deploy the <code>never</code> type to <strong>forbid invalid prop combinations</strong>. The type system thereby acts as a guardrail for accessibility and correct usage — invalid states become unrepresentable.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Type-safe styling</h2>
+    <p>Approaches like <strong>tailwind-variants</strong> or <strong>CVA (Class Variance Authority)</strong> ensure styles only apply to valid variants, preventing CSS bloat and configuration errors.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Runtime safety nets</h2>
+    <p>Static types are not enough alone. McMahon adds an <strong>assert layer</strong> as a secondary defense: it catches issues via console errors in development that static types might miss.<sup><a href="#s-1">1</a></sup> Belt and suspenders.</p>
+
+    <h2>Perspectives: the <code>as</code> prop debate</h2>
+    <p>McMahon takes a strong, quotable stance against the polymorphic <strong><code>as</code> prop</strong> — calling it "the driftwood of component design" — because it blurs buttons and links and erodes semantic clarity. Her prescription: ship <strong>distinct button and link components</strong> rather than one shape-shifting component.<sup><a href="#s-1">1</a></sup></p>
+    <p>This is a real tradeoff against the flexibility instinct elsewhere in the corpus. Frost's <a href="./component-architecture.html">layer cake</a> and Spotify's Encore tiers (see <a href="./team-maturity.html">Team Maturity</a>) both lean toward giving consumers <em>more</em> compositional flexibility; McMahon argues some flexibility (polymorphism) costs more in correctness than it returns. The reconciling principle: offer flexibility through <em>typed, bounded</em> APIs, not through escape hatches that defeat the types.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Guide%20to%20Type-Safe%20Design%20Systems.txt">Guide to Type-Safe Design Systems — Kathleen McMahon (video, 05/2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./token-pipelines.html">Token Pipelines: JSON, Style Dictionary & Figma Variables</a></li>
+      <li><a href="./component-architecture.html">Component Architecture: Web Components & the Layer Cake</a></li>
+      <li><a href="./team-maturity.html">Design System Team Maturity</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

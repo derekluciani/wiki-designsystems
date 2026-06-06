@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic Readiness & Architecture — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./mcp-interface.html">MCP & the Machine-Readable Interface →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Agentic Readiness & Architecture</h1>
+    <p><em>If your design system isn't structured for machines, agents will ignore your patterns and invent their own — readiness is the work of becoming machine-readable infrastructure.</em></p>
+
+    <h2>The shift to agentic workflows</h2>
+    <p>Brad Frost and Dominic Nguyen's thesis: autonomous agents are now assembling UIs from component libraries, and if a design system isn't properly structured, <strong>agents will ignore the patterns and create their own</strong>, producing inconsistent output.<sup><a href="#s-1">1</a></sup> Design systems must evolve into machine-readable infrastructure to stay relevant. An "agentic design system" is infrastructure that lets agents autonomously read, reason over, and build with components, tokens, and guidelines — with guardrails so output stays on-brand and accessible.<sup><a href="#s-2">2</a></sup></p>
+
+    <h2>The dual pillars: coverage and validation</h2>
+    <p>Frost names two areas teams must invest in to get production-ready agent output:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Coverage</strong> — clear examples, metadata, types, and constraints so agents understand how to use components correctly. (Thorough descriptions and JSDoc comments are essential for agents to interpret a library's intent.)</li>
+      <li><strong>Validation</strong> — robust functional, accessibility, and visual tests plus human-in-the-loop sign-offs, acting as guardrails against errors. Tests are the "sauce" that gives confidence in what agents assemble.</li>
+    </ul>
+
+    <h2>Three elements of the architecture</h2>
+    <p>The report describes a recurring shape: <strong>always-on design foundations</strong>, <strong>on-demand component metadata</strong> via APIs/MCP servers, and <strong>orchestration rules</strong> governing what agents can do.<sup><a href="#s-2">2</a></sup> Control flow is usually workflow-oriented (clearly defined steps with limited autonomy per step) rather than a single free-running agent: client → orchestration layer → tools (MCP server, Figma API, token service, CI, Storybook) → target repos.<sup><a href="#s-2">2</a></sup></p>
+
+    <h2>Layered architecture for "context bubbles"</h2>
+    <p>Large product companies have restructured systems into independent layers — <strong>foundations</strong> (tokens/primitives), <strong>visual style</strong>, and <strong>behavioral logic</strong> — so agents can reason about small "context bubbles" (just spacing tokens, just button styles) instead of parsing monolithic component definitions.<sup><a href="#s-2">2</a></sup> This is the same decomposition principle from <a href="./systems-thinking.html">systems thinking</a>, now serving machines as well as humans.</p>
+
+    <h2>Failure modes specific to design systems</h2>
+    <p>Five recurring failures when connecting agents to design systems:<sup><a href="#s-2">2</a></sup></p>
+    <ol>
+      <li><strong>Documentation drift</strong> — docs, tokens, and code disagree, so agents pick the wrong source of truth.</li>
+      <li><strong>Unstructured docs in MCP</strong> — dumping longform Markdown into machine-consumed interfaces produces bloated prompts and hallucinations.</li>
+      <li><strong>No explicit trust levels</strong> — agents make high-impact changes (merging PRs, editing tokens) without safeguards.</li>
+      <li><strong>Foundations not visible</strong> — MCP reveals components but omits spacing/typography, so agents guess and break brand consistency.</li>
+      <li><strong>Monolithic component definitions</strong> — single huge docs make it hard to reason about foundations, style, and behavior separately.</li>
+    </ol>
+    <p>Teams fix these by aligning docs with actual components, separating human- and machine-oriented representations, and layering foundations/style/behavior.<sup><a href="#s-2">2</a></sup></p>
+
+    <h2>Redefining roles</h2>
+    <p>Frost argues design-ops and engineering should focus on building the <strong>"constraint system" and "quality pipelines"</strong> rather than individual components — and that this shift lets non-engineers (PMs, sales leads) effectively "code" by prompting agents, while engineers retain control through the system's rigor.<sup><a href="#s-1">1</a></sup> See <a href="./ai-assisted-authoring.html">AI-Assisted Authoring</a> and <a href="./evals-observability.html">Evals & Observability</a>.</p>
+
+    <h2>Perspectives: readiness as prerequisite</h2>
+    <p>A throughline worth holding onto: every agentic capability in this corpus is downstream of <em>non-AI</em> rigor. Clean tokens (<a href="./token-architecture.html">tokens-as-API</a>), aligned docs, layered architecture, and real tests are the prerequisites; agents amplify whatever foundation they're given — including its flaws. "Your design system is not ready for AI agents" is less a warning about AI than about the state of the foundations.<sup><a href="#s-2">2</a></sup></p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
+      <li id="s-2"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
+      <li><a href="./agent-trust-levels.html">Governance & Trust Levels for Agents</a></li>
+      <li><a href="./evals-observability.html">Evals & Observability</a></li>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

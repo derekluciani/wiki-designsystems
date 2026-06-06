@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Governance & Trust Levels for Agents — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./evals-observability.html">Evals & Observability →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Governance & Trust Levels for Agents</h1>
+    <p><em>Giving agents write access without guardrails is unacceptable risk — so teams define trust per action, scaled to the blast radius of the change.</em></p>
+
+    <h2>Trust levels per action</h2>
+    <p>A recurring lesson: granting agents direct write access to tokens and component APIs without guardrails creates unacceptable risk. Teams instead define <strong>trust levels per action</strong>, scaled to risk:<sup><a href="#s-1">1</a></sup></p>
+    <table>
+      <thead>
+        <tr><th>Trust level</th><th>Applies to</th><th>Examples</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Auto-merge</td><td>Low-risk</td><td>Doc typos, non-semantic refactors, simple a11y label fixes.</td></tr>
+        <tr><td>Draft PR only</td><td>Medium-risk</td><td>Token value changes, component copy updates, non-breaking prop additions.</td></tr>
+        <tr><td>Suggest / comment only</td><td>High-risk</td><td>New components, API redesigns, cross-brand governance rules.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Hard architectural limits</h2>
+    <p>Some systems make the boundary structural rather than advisory: GitHub's Primer explicitly constrains agents to <strong>creating issues or PRs but never merging</strong>, enforcing human review as a hard rule.<sup><a href="#s-1">1</a></sup> The agentic-2026 session echoes this — keep agents in "suggest" or "draft PR" modes while humans retain the merge.<sup><a href="#s-2">2</a></sup></p>
+
+    <h2>Encoding governance as rules</h2>
+    <p>Governance work is increasingly <strong>encoded as machine-readable rules</strong> agents must follow, letting design leaders guarantee certain decisions (e.g., "no new button styles") instead of relying on education.<sup><a href="#s-1">1</a></sup> This is the agentic continuation of Dan Mall's WHO/WHAT/WHEN governance — see <a href="./governance.html">Governance: Conversations, Not Flowcharts</a>.</p>
+
+    <h2>Keep workflows in "suggest/draft" mode</h2>
+    <p>The token/foundation use cases follow the same discipline: agents detect drift, propose semantic alignments, and simulate cross-brand theming, but stay in "suggest" or "draft PR" modes with final merges left to humans — a workable balance between scale and safety.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Perspectives: autonomy vs. control</h2>
+    <p>The defining tension of agentic design systems. The capability pull is toward <strong>autonomy</strong> (let agents ship); the governance pull is toward <strong>control</strong> (humans hold the merge). The corpus resolves it by <em>tiering by blast radius</em> rather than choosing globally: autonomy where a mistake is cheap and reversible (typos, labels), control where it's expensive and propagating (new components, cross-brand rules).<sup><a href="#s-1">1</a></sup> For a commercial / multi-brand retail context, the report explicitly counsels starting on the conservative end — suggest and draft, not autonomously ship.<sup><a href="#s-1">1</a></sup></p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+      <li id="s-2"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>
+      <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./evals-observability.html">Evals & Observability</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

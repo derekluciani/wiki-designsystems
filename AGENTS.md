@@ -1,22 +1,23 @@
 ## Wiki Purpose
-
-- The wiki is a compounding learning base that maps the Design Engineer role and the potential impact for enterprise organizations in the new age of AI — its concepts, craft, tools, people and orgs — through multiple faithful perspectives, with the enterprise-impact angle woven throughout, organized as cited synthesis pages you browse and query.
+- This wiki exists to build **durable personal mastery** of design systems — deep enough to reason and speak authoritatively among expert practitioners. It is a knowledge instrument, not decision-support for any one initiative.
+- Coverage is **even and in-depth across every cluster**, and the corpus is expected to **grow over time** as new `/raw` sources are added per cluster. Current pillars (emergent and extensible): (1) **Agentic AI ↔ design systems**, (2) **Token architecture & technical rigor**, (3) **Team maturity, governance & org dynamics**, (4) **Foundational definitions & architecture**.
+- The reader is an **experienced practitioner**: pages skew toward synthesis, live tensions, and frontier nuance — never beginner glossaries.
+- Mastery is defined, in priority order, as: **(1) owning the debates** — laying out live disagreements, the camps and their evidence, and a defensible position; **(2) explaining crisply** from first principles. Applying to real scenarios and comprehensive recall are supporting byproducts, not goals.
 
 ## What Success looks like
-- Not a thesis to defend; not a tool aimed at a specific decision. Purely, understanding for its own sake.
-- Every notable person, organization, concept, and comparison about the role has a clear page where multiple (even conflicting) perspectives sit side-by-side.
-- The base corpus compounds — querying it produces outputs that, once promoted back into the wiki, make it richer over time.
+- The wiki corpus compounds — querying it produces outputs that, once promoted back into the wiki, make it richer over time.
+- The **feedback loop is the definition of success** — query → `/outputs` artifact → validated insight promoted into synthesis pages. Static quality checks (debate-cores, clean ingestion, dense cross-refs, self-tests) are healthy byproducts, not the bar.
+- **Promotion bar:** an output's insight is eligible when it's either a *durable, reusable* insight (new perspective, sharper mental model, reconciliation of conflicting sources, cross-cluster connection) **or** net-new information not yet captured — even if minor. **Every promotion requires the user's validation/endorsement** before it enters the synthesis layer.
+- "**Richer**" is measured as net-new perspectives/sections, new cross-references, and sharpened debates — each promotion recorded in `log.html`.
 
-### Structural model
-The wiki is essentially a graph of synthesis pages, organized by concept / person / org / comparison. Raw documents are inputs that get cited, never pages of their own.
-Two spines: the role (primary — sociological, organizational, enterprise impact) and the craft (supporting — the concrete competencies, kept descriptive, showing what the work actually is).
-The "enterprise impact" angle is a recurring dimension across role pages, not a separate destination.
+## Structural model
+- The wiki is essentially a graph of synthesis pages derived from raw documents as inputs that get cited, but never pages of their own.
 
 ## Wiki Architecture
 
 `/raw` — a directory of source documents (ie. articles, papers, images, data files, etc.) curated by the user. These files are _immutable_ — the LLM reads them but _never modifies_ them. The user owns this layer entirely.
 
-`/wiki` — a directory of HTML _synthesis pages_ (ie. summaries, synthesis, entities, concepts, comparisons, visualization, etc.). These files are _mutable_ — the LLM owns this layer entirely and is responsible for:
+`/wiki` — a directory of HTML _synthesis pages_ (ie. summaries, synthesis, entities, concepts, comparisons, visualizations, etc.). These files are _mutable_ — the LLM owns this layer entirely and is responsible for:
 1. creating HTML pages and updating them when new /raw sources are ingested.
 2. maintaining cross-references across wiki pages.
 3. keeping everything consistent.
