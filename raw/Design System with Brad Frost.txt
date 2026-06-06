@@ -1,0 +1,23 @@
+Video title: Design Systems with Brad Frost
+Date: 05/2024
+Url: https://www.youtube.com/watch?v=8GngWugEOCc&t=3323s
+
+In this episode, Brad Frost shares his expertise on Design Systems, covering technical implementation, organizational strategy, and best practices. Key points and recommendations from the discussion include:
+
+Defining Design Systems:
+A design system is the official story of how an organization designs and builds user interfaces (06:26).
+It consists of three primary assets: a Design Library (e.g., Figma), a Code Library (often using Web Components), and a Reference Website for documentation (08:33 - 10:01).
+Technical Implementation & Architecture:
+
+Web Components: Highly recommended for delivering design systems across different tech stacks and frameworks because they bundle HTML, CSS, and JS into a reusable package (10:10, 25:19).
+The 'Layer Cake' Approach: Use a basement-level layer for base components, and implement a recipe layer for more complex, composed components (like cards or headers) that might vary by product (17:00 - 18:50).
+Design Tokens: Treat these as low-level brand attributes (colors, spacing, fonts). Keep them separate from component logic so they can be managed, themed (e.g., dark mode, white labeling), and updated independently (33:05 - 36:36).
+Standardization: Aim to build on native web standards whenever possible. This ensures longevity, especially as specific frameworks come and go (53:41 - 54:15).
+Process & Governance:
+
+Collaboration is Key: Designers and developers should be collocated or work closely to sweat the small details of API naming and consistency (47:45 - 48:30).
+Governance: When a team wants to go outside the standard guidelines, have a conversation. Determine if the change is a one-off exception or if it points to a missing piece in the system that needs to be added (41:05 - 43:30).
+Start Pragmatically: Organizations don't need a massive system from day one. Start simple and only introduce complexity as the need arises (30:00 - 32:00).
+Recommended Reading:
+
+Thinking in Systems by Donella Meadows is highly recommended for understanding how interconnected hierarchies and feedback loops work in both nature and design systems (51:19 - 52:27).

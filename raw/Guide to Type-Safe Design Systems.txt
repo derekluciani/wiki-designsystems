@@ -1,0 +1,13 @@
+Video title: Guide to Type-Safe Design Systems
+Date: 05/2026
+Url: https://www.youtube.com/watch?v=YZZNRdxQRvc&t=1439s
+
+In this presentation, Developer Kathleen McMahon discusses strategies for building resilient and type-safe design systems, comparing the process to 'beachcombing' for treasures.
+
+Key takeaways include:
+
+Typed Design Tokens: The speaker advocates for using a token pipeline (e.g., pulling variables from Figma through Style Dictionary) to generate TypeScript definitions, which prevents silent failures and keeps multi-brand systems in sync.
+Component Patterns & Discriminated Unions: Using interface for common shapes and type for variants is recommended. The speaker explains the use of the never type to forbid invalid prop combinations, which serves as a guardrail for accessibility and correct component usage.
+Polymorphic Patterns: The speaker presents a strong stance against using the as prop (calling it 'the driftwood of component design'), urging developers to avoid confusing buttons and links. Instead, she suggests distinct button and link components to maintain semantic clarity.
+Type-Safe Styling: Approaches like tailwind-variants or CVA (Class Variant Authority) are highlighted to ensure that styles only apply to valid variants, preventing CSS bloat and configuration errors. 
+Runtime Safety Nets: Adding an 'assert' layer provides a secondary defense, allowing developers to catch issues via console errors in development that might otherwise be missed by static types alone.

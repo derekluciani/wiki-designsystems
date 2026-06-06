@@ -1,0 +1,173 @@
+Video title: Scalable scales that scale - Nate Baldwin at Into Design Systems
+Date: 04/2025
+Url: https://www.youtube.com/watch?v=v6sG0oElloc
+
+In his presentation "Scalable scales that scale," Nate Baldwin outlines a systematic, parametric approach to building responsive and adaptive design systems. He argues against rigid pixel-based grids in favor of proportional, mathematical models. Here are his core recommendations:
+
+1. Adopt a Systems-Oriented Design Method
+Break down problems (Encapsulation): Instead of viewing a system as a whole, decompose it into smaller, manageable concerns (e.g., responsiveness, accessibility, component density). This separation allows you to solve each problem independently (16:53 - 17:13).
+Use parameterization: Define system elements based on constants (like base sizes and ratios) rather than static, hard-coded values. This makes the system inherently scalable and dynamic (22:48 - 23:39).
+Create abstractions (Archetypes): Rather than designing components individually, identify commonalities to create a core "archetype" or template. Use this as a foundation for building all other components (27:33 - 28:03, 33:30 - 33:50).
+Illustrate with diagrams: Use system diagrams to clarify relationships between tokens, variables, and components. This is essential for communicating the structure of complex systems (34:26 - 34:55).
+
+2. Implementation Strategies
+Ditch pixel grids: Baldwin explicitly criticizes rigid pixel grids as non-proportional and prone to inconsistency. Instead, he suggests using modular scales (using a base value and a ratio) to generate values (13:42 - 14:14, 18:36 - 19:48).
+Implement responsive typography: Use conditional ratios and base font sizes that adapt based on the viewport width (e.g., small, medium, large, widescreen). Use REM units for text to ensure the system respects the user's browser-level font size preferences for accessibility (20:10 - 21:55).
+Proportional spacing: Use the same modular scale formula for spacing as you do for typography. This ensures that spacing remains proportional to text size, which is critical for maintaining visual relationships (25:19 - 25:52).
+
+Differentiate Size vs. Density:
+Size: Affects the overall scale of an element, including text.
+Density: Affects only the internal padding of a component. By separating these dimensions, you ensure that content density changes do not break content hierarchy (28:06 - 29:18).
+Define padding via relative indices: In your component archetypes, define padding using relative indices (e.g., -4, -1, 0, 1) rather than hard-coded pixel values. This makes padding responsive and easily adjustable via a scale (29:32 - 30:42).
+
+3. Recommended Tools
+Baldwin suggests exploring tools that support parametric design:
+Proportio: An open-source tool he created to help designers build proportional typography, spacing, and component systems parametrically.
+Utopia.fyi: Recommended for generating CSS clamp functions for fluid, proportional scaling across viewports.
+Token Studio: Useful for building tangible, editable graph-based representations of your design system structure.
+
+
+
+FULL INTERVIEW TRANSCRIPT:
+
+everything in design systems is about scale. Something's either on a scale, it is a scale, it's made to scale, or it is at scale, so hey, why not have some fun.
+
+But in reality I am going to talk about how to make scalable scales that scale. And what I mean by this facetious little phrase is creating multi-dimensional, multi-level, and adaptive systems for design. These are systems that can help you to create adaptive and responsive typography, responsive spacing, proportional design foundations that support various unique component designs, and a system for size and density options across components.
+
+And a complex example of this started with a story from about a year ago. So my team at Intuit got a simple request from our marketing team to enhance our button component. The button sizes that we had were not large enough for their use cases, so they wanted some larger buttons in our system.
+
+Until then the button sizes we supported were 24, 36 and 48 pixels tall. Our design system followed an 8‑pixel grid system, so the next size options would reasonably grow by 8 pixels in height from the previous size. This approach gave us 56 and 64 pixel height options for our buttons.
+
+For these new button sizes the text also increased in size, so each size followed the values of our type scale, which was a consistent approach that we used for other sized components. But then things got a little hairy. The marketing team wanted the text size to actually stay the same across the medium and all these larger‑sized buttons, and this deviated from the conventions that our team was using for handling sizes in components.
+
+So we needed to be consistent with our system, but we also needed to support this marketing request. As a result, we created two new button sizes plus a whole new button component specifically for marketing. The product button sizes followed our type scale, whereas the marketing buttons had the fixed text size that they requested. What began as a simple request became a point of fragmentation by introducing duplicate button components into our design system, so the solution itself became a part of the problem.
+
+And the situation was growing more complex. Some teams were eager to use responsive scaling in our products. As the viewport size changed, teams wanted their product’s text and spacing sizes to change along with it to provide optimal user experiences. Other teams wanted to implement REM‑based values in order to support accessible text scaling on the web.
+
+REM stands for root em size, which is essentially like a percentage of the default browser text size of 16 pixels. As users change their default browser text size, all REM‑based sizes will change along with it. But until now, all of our text size values were in pixels. This was a complex problem for our team. It is an example of a systematic problem with size and spacing in a design system, and it's a problem that I don't think is too uncommon.
+
+The challenge was: how might we create a system for size and space that's visually balanced, scalable, and adaptive to support responsive design, component options, personalization, and accessibility? So I'm going to take a look at this problem from the ground up. I'll use some example code and demonstrations from a coded prototype that I'm going to share after the talk.
+
+And along the way we'll uncover a few systems‑oriented design methods that will help us to solve this and many other systems‑related problems in the future. Typically as designers we begin any size or space‑related exercise by using a pixel grid system. Every unit of measurement conforms to the basic rule that the value must be divisible by this number. So a common example of this is an 8‑pixel grid system, which gives us numbers like 8, 16, 32 and so on. This sequence of numbers is called a linear progression.
+
+Every value has a common difference of 8 pixels, which can be expressed as y=x∗8. As designers we're naturally drawn to this approach for its simplicity and because we're usually looking for balance and symmetry in design. These numbers seem to provide us with that, at least at first glance.
+
+But evaluating the common difference of 8 pixels focuses on an absolute difference. One value minus its previous will always equal 8 regardless of the number. With a linear progression like this, small values will have a large difference between them whereas large values will have a small difference. For example, the difference between 8 and 16 pixels is 100%, whereas the difference between 96 and 104 is only 9%. This makes it difficult to create and maintain spatial relationships with a linear scale, as the values themselves are out of proportion.
+
+The values of a linear scale grow at an exponentially decreasing rate. This becomes a usability issue for product teams because the choice between spacing with 64 versus 72 pixels is unclear. Both of these sizes appear very similar in the context of design, and in some cases the differences are nearly imperceivable.
+
+As we look at how these values apply to component design, we come across another problem. Should the height of the component, or should its internal spacing, conform to the pixel grid? It's rare that you can have both the height and the internal spacing conform to the grid, and in order to create designs that are visually balanced and proportional, you typically have to deviate from this approach on a case‑by‑case basis.
+
+Sometimes only the height conforms to the grid, and sometimes only the padding conforms to the grid. As you grow to support more component sizes and options, the problem only gets worse. So the fact of the matter is, to put it quite bluntly, pixel grids are crap. Any rule that requires inconsistent application of the rule in order for that rule to be followed is not systematic.
+
+Subjective inconsistency does not scale. An absolute difference in spacing values gives inconsistent relative differences, which results in unproportional sizes and difficulty using the system. Pixel grids aren't proportional, they're not flexible, and frankly should not be used in a design system, so for these reasons we are going to ditch the grid.
+
+Now, if we're not starting with a grid system, where should we begin? Well, we need to start by breaking down the problem. First, we need to identify some key relationships in our system and which ones need to be adaptive. We're going to illustrate these relationships to help clarify each part of the system.
+
+Identifying these at the beginning is going to help us to solve a complex problem one piece at a time. The first topic we can address is that of responsive design, or the relationship between the viewport size, text, and spacing. We know from our problem statement that we're going to want both the text and the spacing sizes to change based on viewport width.
+
+Headings for mobile screens will need to be relatively small, whereas headings for widescreen displays will need to be relatively large. In smaller screens we may want to have denser layouts compared to wider screens, which may benefit from having more spacious layouts. Altogether this will help to create content hierarchy and spatial relationships while respecting the available screen real estate.
+
+The next relationship is that of extensibility, or the ability to add new features or functionality to the system. For example, we know that we need to support different component sizes and densities. Some components in our system will be small and some will be large. Some will use small internal spacing and some will use larger internal spacing.
+
+There are some components that will need to support options for sizes, and there are other components that will need options for densities. Our system needs to support all of these different use cases for size and spacing in our components. And the final relationship is that of personalization and accessibility, or the relationship between our product and our end users’ personal needs. All text sizes must change based on the user's preferred text size.
+
+So as users change their settings, our entire system needs to adapt to fit their needs. Looking at these three topics in our problem statement, we can begin to illustrate the various parts. We can see how viewport widths need to affect spacing and text sizes, that component size and density options are directly related to internal component spacing and the component's text size, and we can see that user‑preferred text size will need to affect all text sizes.
+
+For complex systems problems, breaking them down into smaller parts is called encapsulation. This approach separates problems and relationships of a larger system. In development terms it's also known as a separation of concerns. Using this method can help us to effectively solve each problem independently, and when we put these smaller relationship diagrams together, we can see a more complex system emerge.
+
+By highlighting the smaller encapsulations we can see what areas of the system are responsible for responsiveness, extensibility and accessibility. We can also gain insight into the broader system before it's even built. For example, we can start to see how a component's height is going to be the combined output of spacing, line height, and the text size of the component.
+
+Because of this, a component's height isn't something that we really can or should try to control directly. As designers we like to define components by their height, but this shouldn't be a starting point. In order to support an adaptive system, component heights will be addressed as a system output, which we can try to target but should not be a focus as a specific value or metric for design quality or success.
+
+These could greatly vary depending on the viewport width, the density or the size options, and the user's preferred text size. Now that we know the system and its encapsulated parts, we need to start with the most basic elements and build our way up. This means that we are going to start with typography.
+
+And for typography we're going to use a design approach that many of you may already be familiar with. We're going to start by defining a base font size and then create a modular scale to define all subsequent text sizes. In this case we're going to start with a 16‑pixel base font size and a modular scale of 1 to 1.2.
+
+These two values will be used to generate every text size that we want to support in our typography system. We can write this as a function such as: text size equals the base times the ratio raised to the nth power. n in this case refers to the index of the text size that you're looking for. So for example, if we're going to look for the fourth larger text size in our scale, we would calculate 16 * 1.2 to the fourth power, which would give us the size of 33 pixels.
+
+Now designers hate decimals and odd numbers, so we can very easily add a rounding function that ensures all of our values are whole even numbers. With some rounding applied we can make 33 a much prettier 34. This text size function is how we're going to start building our typography system. And again, if math and JavaScript isn't your thing, don't get too intimidated; at the end I am going to share some tools that will take the math out of the equation, pun intended.
+
+The next values that we want to choose for our type scale are going to depend on the viewport size. Since we want a responsive type scale, we're going to need to evaluate and define our type scales using multiple viewports. Between small, medium, large, and widescreen viewports, we may want to use different ratios—for example 1.15, 1.2, 1.275 or 1.3.
+
+We may also want the base font size to be 14 pixels on smaller viewports and 20 pixels on widescreen viewports, and then 16 pixels on everything in between. Conditional ratios and base text sizes will help us to define a scalable and responsive typography system. This approach will make it easier to adjust our scales in the future, and we can build this using some basic conditional function in JavaScript.
+
+When we implement this approach we can see our entire type scale adapting to the viewport width, which results in a much more tailored approach to multi‑surface typography. We can see here that the scale itself becomes more or less pronounced based on the available screen size, which provides us with the ability to use multiple levels of content hierarchy in our application without compromise.
+
+So let's take another look at our system diagram. So far we have implemented a solution for responsive typography, but we still need to solve the overlapping problem for accessibility. Text sizes need to change based on the user's preferred text size, which means the user preference is going to need to alter our type scale too. The simplest way to do this is to make sure we convert all of our text sizes to rems instead of pixels.
+
+If you recall earlier, rems are basically a percentage of the base text size, which has a default of 16 pixels. So all we need to do is divide each text size by 16 in order to get that rem value. Now here's what that looks like in our demo app. I've added a slider here to help you change the default text size directly in the app, and this helps you to see how our type scale adapts to the user's preferred text size while also supporting responsive scaling.
+
+What's important to note here is that even though text sizes are changing across two dimensions, we're still able to uphold the visual hierarchy between each text size. This is because our entire typography system is defined on two specific values: the base size and the proportional ratio between all subsequent sizes. This approach of generating multiple text sizes using only two values is an exercise in parameterization.
+
+Parameterization is a powerful tool for systems‑oriented design. It helps us to dynamically adjust scales, or any other element, based on their lowest common denominator. It's a design approach that scales design by its very nature. The constants, such as the viewport sizes that we want to target, the ratios and base sizes that we've defined for each—these are design parameters that we control as systems authors.
+
+At any time we can change these parameters and alter the design of our entire system. The preferred text size and the user's viewport width are variable parameters which are controlled by the end user and will adapt the system based on our design parameters to deliver a personalized product experience. Now that we've solved for basic typography using parametric design, it's time to take a look at spacing.
+
+Spacing in design is used to arrange elements and to create relationships and hierarchies. Objects closer together are seen as related, while objects further away are seen as unrelated. Looking at this example of text and an icon, we can see that the space between them is relatively small. This helps to signify to the user that these two elements are closely related.
+
+Now if we shrink the icon and the text without adjusting the spacing between them, they ultimately lose their relationship. These two related things now seem much less related. What we're observing is that proximity or spatial relationships correlate with an object's size. So the distance between or around objects must be proportional to the elements themselves, otherwise we lose their intended relationships.
+
+Nearly every component of a design system consists of text and/or an icon. Sometimes we use the icon with text, sometimes it's used in the place of text, but because of this, it's important that our spatial relationships are proportional to text size. This will give us a foundational relationship that we can rely on for the rest of our system.
+
+And since we already have a type scale defined, we can leverage the type scale formula for our spacing scale too. By copying over the same formula, we can already be assured that our spacing values will be responsive and proportional to text. The key difference here is that we don't want our spacing values to change relative to the end user's preferred text size.
+
+The whole purpose of text scaling is to improve text legibility, not to just scale up an entire interface. So for our spacing scale we're going to want to use pixels instead of rems. Now looking at our spacing values in the demo app, we can see these values change responsively. This pink stack of boxes are given heights for each of our spacing units, and you can notice as the screen size changes, so do the heights of each rectangle.
+
+This means that now we have a responsive and accessible type scale and a responsive spacing scale for our system. And believe it or not, that's the easy part. We still have to define spacing for our components and to support component size and density options. To do this we need to find another systems‑oriented design approach to help us.
+
+We're going to start by looking at our component ecosystem. This is an example of just some basic components found in most design systems. Some of the components you see here are going to be used in the demo app that I share in this talk. We need to support all of these different use cases for sizing and spacing. The best way for us to do this is by looking for commonalities across components.
+
+First, we can see that most of our simple components use the base font size for their text size. We can also see that many of these components have a gap between the text and some form of visual, whether it's an icon or a control, and they generally use the same spacing between them. Components with a physical boundary and the same text size have consistent vertical and horizontal padding as well.
+
+We can use these use cases to create a basic archetype of our components. An archetype is the original pattern or model which all things of the same type are copied from. In our case this will be basic components. This archetype is like a template for constructing any component in our system, and the archetype will also serve as a starting point for defining semantic tokens, as well as how we can support sizing and density options across the entire system.
+
+Now for this talk it is important that I define exactly what I mean by size and density before I go much further. Size relates to the overall size of an element, including its text size. So a badge is an example of a small component. Designers can select size options for any component design in order to create content hierarchies.
+
+But density relates only to the internal spacing of a component. So a table cell, which may have larger padding than other components, could be considered as having lower density than the default. So even though its height may be larger than a default component, since it still uses the same default text size, it's not considered large. Instead, it's just the default size with a spacious density.
+
+Designers or consumers can use density options to increase or decrease the content density of an experience. Both size and density are separate dimensions of a component's scale, and defining them or differentiating between size and density in this way will help to ensure that content density does not affect content hierarchy.
+
+Now coming back to our component archetype, we need to start by defining our default spacing. The way that we're going to do this is by specifying how many steps away from the base size a value should be along our spacing scale. For example, our base spacing size is 16 pixels and we want to define a top and bottom padding of 6 pixels, so that would be four steps smaller on our spacing scale, or an index of -4.
+
+Similarly, if we want our left and right padding to be 12 pixels, which is one step smaller, that would be an index of -1. Expressing these padding values as indices relative to the base size will help us to calculate the spacing values we need. We can calculate the responsive spacing values for any component using our responsive base size, responsive ratios, and these relative indices that we've defined.
+
+This formulaic approach will ensure that our spacing values are proportional and responsive, and this is why it's important that we define the values in our archetype as relative indices, not as pixel values. This method can be easily scaled for generating differently sized components. Since the archetype spacing is defined using indices, we can also create an array for all other sizes that we want to create.
+
+So here I'm using an array of -1, 0, and 1, negative being one size smaller, 0 being the base or the default, and positive 1 being one size larger. We use these values to increase or decrease the relative index for the padding. When we combine that with text sizes that also increase or decrease along the type scale, that gives us small, medium, and large components.
+
+This approach guarantees uniform and consistent proportions across differently sized components, which is important when creating content hierarchy in an interface. To define component densities, we take the same approach and add another dimension. A more compact density will decrease spacing values by one step, whereas a more comfortable or spacious density will increase spacing values by one step.
+
+Though here we have three options—compact, regular, and comfortable—which are defined by another array of -1, 0, and 1. This is used to increase or decrease the spacing values alone. So by default this will shift the value by one step, just as it does with sizing. But if we want to have a more pronounced difference between compact and spacious components, we can also define a density factor.
+
+So here essentially we're going to skip a value in the spacing scale, and that will mean we have a density factor of two. That means compact components would have spacing indices that decrease by two steps, and spacious components would have values that increase by two steps. For a medium component this means that a compact spacing would be 4 and 8 pixels, whereas a spacious component would have 10 and 20 pixel spacing.
+
+When we build this out into our demo app, we can see our arrays of t‑shirt‑sized components and their density options. Since these use the responsive and accessible text sizes along with responsive spacing, we can see how our component designs adapt based on the viewport width and the user‑defined text size. These archetype components can be used to help define semantic tokens and can be used as templates for designing or building all basic components of a product experience.
+
+This approach to finding commonalities across components to create a unified archetype or template is an exercise in abstraction. Abstractions are a systems‑oriented method that will help component design scale. In other words, the system for sizing and density that we've defined is not confined to a single component alone. This can be used to design any component in our system and ensure that it's proportionally balanced, adaptive and extensible.
+
+Now that we've solved for these encapsulated problems, we're going to revisit our system diagram and update it with some of the nuances that we've uncovered along the way. And this gives us a fuller picture of how text size and spacing values are created, what inputs affect those values, and how it relates to a component ecosystem.
+
+And this brings me to my last systems‑oriented design method. Illustrating your system with diagrams will help to clarify relationships, encapsulate problems, and illuminate unforeseen challenges. These diagrams are helpful to systems designers, but they're also valuable for communicating and sharing complex ideas with others. System diagrams can be invaluable when identifying parameters of the system and solving multi‑dimensional problems—or should I say, when creating scalable scales that scale.
+
+So the system that I created today is an example of a complex systems problem, and I encourage you to visit the link to the demo app that I built for this talk. It's implemented using plain old JavaScript, CSS, and HTML, so it's a little more accessible—there's no framework knowledge required to look under the hood.
+
+But as you can see, you can toggle the density of the table component to see how end users can customize specific elements, or you can move the sliders at the top of the page to adapt the entire interface based on text scaling and browser zoom level. By resizing the browser viewport, text size, spacing, and component sizes adapt to the viewport. The purpose of this demo app is to provide a real‑life example of what a dynamic system looks like and to encourage you to experiment with this on your own.
+
+Now, I recognize all of this can be pretty complex, and it is a challenge even to know where to begin with more systems design for designers. Current product design tools don't really do a great job of supporting systems design or systems‑oriented design, but they are getting better every day. In the meantime, there are a few tools that I can share to help you get started.
+
+The first, which has been mentioned already, is called Proportio. I created this tool when trying to solve this exact problem for Intuit. It's a free open‑source web application for designing proportional typography, spacing, radius, elevation and component systems using the methods that I shared today. It's a parametric design tool for experimentation.
+
+You can create basic primitive systems, spacing scales and experiment with different ratios and see how they affect component design. The demo component is intended to act like an archetype or a template. Even though it looks like a button, it has wider scale use. Proportio lets you add small and large component options, change the default relative indices for padding, and add other density options like a unique density factor.
+
+It also generates design tokens as well as CSS variables that you can use in continued experimentation. You could import these tokens directly into Figma using an import plugin, or you could use the CSS directly in your system if that's all you need. If you're interested in fluid scaling systems, I recommend checking out utopia.fyi. This tool generates CSS clamp functions to generate fluid typography and spacing systems.
+
+Combined with Proportio you could create an entirely fluid component system, so rather than resizing at each breakpoint, the text and spacing would resize fluidly and proportionally to every viewport width in between. The one caveat with this is that CSS clamp can have negative effects on accessibility that prevent users from scaling text, so you might want to investigate a little bit more before using it in your products.
+
+Oh yeah, and I should probably mention Token Studio. These folks are definitely thinking about the future of design and truly systematic design methodologies. If you saw the talks and demos earlier, you're aware of this. The nice thing about that graph engine is: if you see the system diagrams that we're illustrating today, the graph engine is a more tangible expression of that system diagram that you can actually edit right then and there. So definitely check them out.
+
+Okay, so I hope that the methods I shared today will help you in your design systems work. Start by breaking down the problems, separate concerns, structure them into smaller encapsulated problems. Then identify the constants and the variables of your system; find ways to define a simplified system based on how these interact.
+
+Parameterization like this will help you to create solutions that scale. Work in the abstract, create generic reusable templates to scale your design solutions across multiple use cases, and then put it all together in an illustrated diagram to help clarify and communicate the parts of your complex system and how they relate.
+
+Alright, thank you all for listening. I have some links that are shared in the Miro board today, but yeah, you can also follow me on all the socials. I like to write a lot on Medium, happy to connect on Twitter and LinkedIn, so thank you.

@@ -1,0 +1,139 @@
+Video title: This is how I use AI for Design Systems at Monday.com
+Speaker: Elad Mizrahi
+Date: 02/2026
+Url: https://www.youtube.com/watch?v=7jeocy9IN1M&list=WL&index=14
+
+
+Step 1: Design the Component in Figma (as before)
+Create the component design in Figma as normal — with all its variants, states, spacing, and visual details laid out. The key change is how you annotate it: instead of writing exhaustive notes for a human developer (e.g., "this gap is 2px," "this is the background color"), you write documentation for AI. Keep it:
+
+Short and technical (list props, variants, specific use cases)
+
+Visually clear (make all spacing visible so AI can infer measurements from screenshots)
+
+Context-rich (include all variants and specific use cases in one document)
+
+Step 2: Generate a Component Specification Using an Internal VS Code Extension
+Copy the Figma frame link and paste it into their internal VS Code extension. This tool:
+
+Analyzes the Figma frame directly
+
+Auto-generates a structured technical specification (component structure, props, tokens used, visual rules, etc.)
+
+Produces the same spec you'd see in Figma, reformatted for Cursor to understand
+
+You review the spec, make small fixes if needed (e.g., if it missed something), and confirm it captures your intent before moving forward.
+
+Step 3: Use Figma MCP for Additional Context
+Alongside the internal tool, use Figma MCP (Model Context Protocol) to:
+
+Pull screenshots directly from Figma into Cursor
+
+Connect Figma components to "code connect" (links Figma components to their corresponding code)
+
+Give Cursor visual context it needs to generate accurate implementations
+
+Figma MCP is the bridge that lets the AI "see" the design, not just read a spec.
+
+Step 4: Load Cursor Rules for Code Consistency
+Before prompting Cursor to generate code, the Cursor Rules are already in place (set up once by the engineering team). These are stored as files in a .cursor/rules folder in the repo and are automatically injected into the agent. They cover:
+
+Component structure: How components are named, how files are organized in Vibe
+
+Styling rules: How Monday.com applies styles (their conventions, not generic CSS)
+
+Storybook story format: Exactly how stories should be written and structured
+
+Accessibility guidelines: WCAG compliance, semantic HTML, ARIA rules (don't use div for buttons, ensure keyboard navigation, logical tab order, valid ARIA roles, etc.)
+
+Implementation conventions: How new components are built inside the Vibe library
+
+These rules ensure the AI doesn't just write working code — it writes Monday-quality, consistent code.
+
+Step 5: Prompt Cursor to Generate the Component
+Open a new Cursor session, then:
+
+Attach the component specification (generated in Step 2)
+
+Reference the Figma file/frame via Figma MCP
+
+Prompt Cursor: "Create an [X] component based on this spec"
+
+Cursor then:
+
+Reads all the Cursor Rules automatically
+
+Pulls from Figma MCP (screenshots, component data)
+
+Creates a full plan (to-dos) before writing code
+
+Generates the component code: types, structure, styling, tests — all following Monday's conventions
+
+Typical output accuracy: 70–90% complete, depending on component complexity. Simple components (like empty states or info components) can reach 90%+ with minimal tweaking.
+
+Step 6: Generate Storybook Stories Automatically
+As part of the same Cursor session, the agent also generates:
+
+Storybook stories (following the Cursor Rules template for how stories should be structured)
+
+All props documentation
+
+Usage guidelines
+
+Dos and Don'ts sections (inferred from existing components' patterns and any Figma guidelines provided)
+
+You no longer need to manually write a detailed Figma file describing how Storybook should look. Cursor infers it from existing code patterns and the spec.
+
+Step 7: Update Visuals / Illustrations via Cursor
+For visual assets (illustrations, SVGs, images):
+
+Export the desired illustration/SVG from Figma
+
+Drop it into Cursor (drag-and-drop into chat or add to the project assets folder)
+
+Prompt Cursor: "Replace the visual on the [X] story with this one"
+
+Tag the relevant story file for context
+
+Cursor replaces the placeholder or old visual with the new approved illustration — without needing to open tickets or wait for a developer.
+
+Step 8: Review, Iterate, and Fix Locally
+Run the local Storybook server to verify the component renders correctly. If something is off:
+
+Send Cursor a screenshot of the actual vs. expected result for additional context
+
+Prompt it to make targeted fixes
+
+Iterate quickly (the whole loop takes minutes, not meetings)
+
+The more context you give (screenshots, Figma links, example code from similar components), the more accurately Cursor fixes issues.
+
+Step 9: Quality Check (Human Review Still Required)
+Once you're satisfied locally:
+
+Push to a Git branch (same Git workflow as before — nothing changes here)
+
+Open a Pull Request on GitHub
+
+The engineering team reviews for: code quality, accessibility, adherence to standards, passing tests
+
+Automated quality checks run as part of CI
+
+On the Figma side, the same process applies: open a branch in Figma, make design changes, get reviewed and approved by the design system team before merging to Vibe.
+
+The speed changes. The quality gates do not.
+
+Step 10: Publish to Vibe (Open Source Design System)
+Once approved, the component is merged into Vibe (Monday's open-source component library at vibe.monday.com), where it is available in both Storybook and Figma — kept in sync so the team doesn't maintain documentation twice.
+
+Key Tool Summary:
+
+| Tool                       | Role                                                                                    |
+| -------------------------- | --------------------------------------------------------------------------------------- |
+| Figma                      | Design source of truth; branching for change control                                    |
+| Figma MCP                  | Pulls Figma screenshots + component data into Cursor                                    |
+| Internal VS Code Extension | Auto-generates technical component specs from Figma links                               |
+| Cursor                     | AI coding agent that generates component code, stories, and tests                       |
+| Cursor Rules               | Persistent rules injected into every Cursor session (structure, styling, a11y, stories) |
+| Storybook                  | Component documentation and visual testing environment                                  |
+| GitHub / Git               | Branching, PRs, and code approval workflow                                              |

@@ -1,0 +1,18 @@
+Video title: Agentic Design Systems in 2026 with Brad Frost
+Date: 12/2025
+Url: https://www.youtube.com/watch?v=Vg78K3t9KYc&t=1157s
+
+In this session, Brad Frost and Dominic Nguyen explore the evolution of design systems in the era of AI-driven autonomous agents. They emphasize that design systems must evolve into machine-readable infrastructure to remain relevant.
+
+Key Takeaways & Concepts:
+The Shift to Agentic Workflows: Autonomous agents are now assembling UIs using component libraries. If your design system is not properly structured, agents will ignore patterns and create their own, leading to inconsistent outputs (3:42).
+The Dual Pillars of Success: To ensure agents produce high-quality, production-ready code, teams need to focus on two core areas:
+Coverage (10:24): Providing clear examples, metadata, types, and constraints so agents understand how to use components correctly.
+Validation (10:55): Implementing robust tests (functional, accessibility, visual) and human-in-the-loop sign-offs to act as guardrails against errors.
+Storybook MCP (Model Context Protocol): Dominic and Kyle demonstrate how the Storybook MCP server acts as the connective tissue, exposing design system components, APIs, and interaction tests to AI agents in a structured, token-optimized format (17:26, 18:24).
+The Power of "Mouth Coding": The speakers highlight that this shift allows non-engineers (like product managers or sales leads) to effectively "code" by prompting agents to assemble interfaces, while engineers retain control through the underlying system's rigor and governance (43:10).
+Recommendations for Teams:
+Prioritize Machine-Readable Docs: Ensure your components include thorough descriptions and JSDoc comments. These are essential for agents to interpret your library's intent (21:05, 1:07:45).
+Invest in Component Tests: Use tests as "sauce" to gain confidence in what agents assemble. Move beyond just linting; implement interaction tests and accessibility checks that agents can run autonomously (13:41, 56:21).
+Adopt Observability (Evals): Use Storybook Evals to benchmark your design system against test prompts. This helps you track performance over time, detect drift, and understand the trade-offs between speed, cost, and quality (58:53).
+Redefine Roles: Embrace the shift in organizational structure. Design ops and engineering teams should focus on building the "constraint system" and "quality pipelines" rather than just individual components (1:12:12, 1:13:09).

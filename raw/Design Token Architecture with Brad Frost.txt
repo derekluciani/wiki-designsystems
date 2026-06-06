@@ -1,0 +1,69 @@
+Video title: Design Token Architecture
+Speaker: Brad Frost
+Date: 04/2025
+Url: https://www.youtube.com/watch?v=u5okJ0VvQwk&t=2501s
+
+1. Adopt a Design Token System to Replace Brand Books
+Instead of a static brand style guide that every team must manually interpret and update, centralize your visual language in a design token system. All products and platforms should connect to it, so a single value remap propagates everywhere automatically. This avoids the expensive, painful, duplicative process of manual rebranding across many codebases.
+
+2. Define a Three-Tier Token Architecture
+Use a layered system to give yourself flexibility without chaos:
+
+Tier 1 — Primitives (a.k.a. definitions): Raw ingredient values (e.g., starbucks-green: #00704A). These are hex values, border radii, type scales, etc., mapped directly to their literal value. Do not publish or expose these directly to consumers — they are for system owners only (the "cornstarch behind the double doors" analogy). They just define what's available.
+
+Tier 2 — Semantic tokens: Give the primitives jobs to do (e.g., background-brand: starbucks-green). This is where meaning is assigned — what color is used for what purpose. These are the tokens that most teams should be consuming.
+
+Tier 3 — Component tokens (use sparingly): Fine-grained, component-level hooks (e.g., button-background) for situations like multi-brand theming where different brands need different button colors, focus ring styles, or form borders. Avoid over-using this layer — systems with thousands of component tokens become unmaintainable. Only reach for Tier 3 when Tier 2 alone cannot solve the problem.
+
+3. Think of a "Theme" as a Collection of Token Decisions
+A theme is not a one-off concept — it's the set of token values hung together for a specific context. Your organization might have:
+
+1 theme (simple)
+
+2 themes (light + dark mode)
+
+4 themes (multiple products)
+
+8+ themes (multiple brands / white-label clients)
+
+Design your architecture to swap in the appropriate theme per context.
+
+4. Separate Structure from Aesthetics (New Separation of Concerns)
+The old HTML/CSS/JS separation has blurred with the rise of JavaScript frameworks, but the principle is still vital. Reframe it:
+
+Structural layer (HTML + layout CSS): equivalent to the door frame — hinges on left or right, dimensions, etc.
+
+Component/behavior layer (JavaScript + component system): delivers and powers interactive behavior.
+
+Design token layer (purely aesthetic CSS): equivalent to paint color and door hardware — cosmetic choices that don't affect function. Keep this layer isolated from structure.
+
+This separation is what enables multi-theme, multi-brand, multi-platform flexibility.
+
+5. Use JSON + Style Dictionary as Your Token Pipeline
+Store your design token source of truth as JSON files so they are tool-agnostic and transformable. Use Style Dictionary (or a similar tool) to transform those JSON files into whatever platform-specific output you need — CSS custom properties, iOS/Android values, React Native tokens, etc. This single source can then serve all your downstream platforms.
+
+6. Align Your Figma Variables and JSON Token Names Exactly
+The token names in Figma (using Figma Variables) must map 1:1 to the names in your JSON / code. This shared naming is literally the contract and API between design and development. Misalignment here is the most common source of confusion and breakage. The language becomes a shared vocabulary for designers, developers, QA engineers, CMS systems, and even AI tooling.
+
+7. Developers: Don't Just Accept Figma Output — Co-Create the Token Architecture
+Designers have only had naming/variable tools (Token Studio, Figma Variables) since summer 2023 — roughly two years of experience. Developers have been naming variables for decades. Use that expertise. Do not passively receive whatever a designer exports from Figma Variables. Proactively collaborate on structuring the token system together — even if it means picking up tickets not formally assigned to you. Co-created systems work vastly better than waterfall handoffs.
+
+8. Don't Create a Token for Every Single CSS Property
+A common anti-pattern is creating thousands of design tokens — one for every possible CSS property on every component. This creates unmanageable complexity. Reserve Tier 3 component tokens only for genuinely gnarly, brand-differentiation situations (e.g., focus rings, form borders, button backgrounds needing per-brand customization). Let Tier 2 semantic tokens do the heavy lifting everywhere else.
+
+9. Implement Dark Mode via Token Overrides, Not Duplicate Stylesheets
+For dark mode (and other color modes):
+
+System dark mode: Use prefers-color-scheme: dark in CSS and override only the color tokens — you likely don't need to override typography tokens.
+
+User-selectable dark mode: Toggle a class/attribute that swaps the token values at runtime.
+
+Inverted/knockout colors: Treat these as a separate mode/theme in the token system, not as one-off CSS hacks.
+
+Only override what changes — dark mode typically only changes color tokens, not spacing or type.
+
+10. Treat Design Tokens as the API for Your Design Language
+Think of tokens not just as CSS variables, but as the contract between your design system and every consumer of it — web products, native apps, CMS platforms, QA automation, AI tooling, and more. Investing in well-named, well-structured tokens pays dividends across the entire organization, not just the front-end team.
+
+11. Design Systems Enable Flexibility, Not Uniformity — Structure Unlocks Expression
+Push back on the "design systems make everything look the same" criticism. A well-architected token system, with its separation between structural components and aesthetic tokens, is precisely what enables each brand/product to look different while sharing the same underlying component library. The door frame (component) stays the same; the paint and hardware (tokens) can be unique per brand.

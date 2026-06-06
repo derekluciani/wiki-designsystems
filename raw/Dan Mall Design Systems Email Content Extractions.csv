@@ -1,0 +1,2751 @@
+Date,From,Subject,Body
+3/24/2026 7:02:48,Design System University <hello@designsystem.university>,Keep the Savings,"There’s a moment in every maturing design system where the
+efficiency gains become visible. Leadership notices delivery
+speeding up. Planning gets easier. The roadmap suddenly feels
+lighter. What happens next often determines whether those gains
+help the team, or simply reset expectations.
+
+I’ve seen this play out more than once – a team builds a system
+that cuts delivery time in half, and within a couple of planning
+cycles, sprint commitments double. The time saved doesn’t go to
+maintenance, documentation, or improving quality. It disappears
+into throughput.
+
+Speed isn’t the problem. Treating speed as the point is.
+
+Design system teams often sell efficiency to get buy-in in the
+first place. That’s understandable. But if speed is how the
+system is justified, speed becomes the expectation – and every
+gain quickly turns into the new baseline.
+
+In those environments, teams adapt. They ship on the original
+timelines and use the slack for the work that never makes the
+roadmap: stabilizing components, mentoring partners, paying down
+system debt, or simply working at a pace that doesn’t burn people
+out. It’s not strategy, it’s survival.
+
+The longer-term work is reframing what the system is for. Not
+just faster delivery, but resilience, sustainability, and product
+quality over time. That shift isn’t always possible everywhere.
+
+When it isn’t, protecting the system – and the people maintaining
+it – matters. And when that stops being enough, it’s usually a
+signal worth listening to."
+3/17/2026 7:00:26,Design System University <hello@designsystem.university>,When Teams Stop Calling,"Design system teams rarely set out to become enforcers. But as
+review queues grow and more work funnels through approvals, the
+team’s role can narrow to catching problems. When that happens,
+the relationships tend to change alongside it.
+
+When a system team becomes known mainly for reviewing work and
+flagging issues, product teams start to delay involving them. Not
+out of malice, but out of self-preservation. By the time the
+system team is brought in, small issues have already grown, and
+the conversation naturally centers on what’s wrong. Over time,
+that becomes the team’s reputation – and people stop calling
+altogether.
+
+The distinction between standards work and systems work helps
+explain why. Standards teams assess finished work. Systems teams
+influence how work gets built. The difference isn’t just
+responsibility – it’s how teams experience support while
+decisions are still being made.
+
+When teams start holding work back, that’s diagnostic. Somewhere
+along the way, the relationship shifted from a partnership to
+policing. And better components or clearer documentation won’t
+fix that on their own.
+
+The way forward usually starts with changing how the system team
+shows up. Being involved earlier. Offering help before it’s
+requested. Paying attention to what slows teams down and removing
+friction before it turns into feedback.
+
+Systems work is relationship work. The components matter, but so
+does whether teams feel comfortable reaching out before things
+are finished."
+3/10/2026 7:03:04,Design System University <hello@designsystem.university>,Design System Relief,"Efficiency and consistency are the metrics design system teams
+usually talk about. Faster delivery. Fewer variations. Less
+rework.
+
+Those matter. But they miss something just as important.
+
+Relief.
+
+Well-functioning design systems reduce the cognitive and
+emotional load on teams. Fewer decisions to second-guess. Fewer
+arguments to relitigate. Less anxiety about whether something is
+“right”. Work feels lighter, even when the work itself hasn’t
+changed much.
+
+When that relief isn’t there, it shows.
+
+Teams hesitate. They work around the system instead of with it.
+They rebuild things they don’t trust. The system may be
+technically sound, but it doesn’t feel supportive. Adoption
+stalls – not because the system is bad, but because it doesn’t
+remove enough weight.
+
+This is why relief and adoption tend to move together.
+
+When teams feel relief, they come back. They reuse components
+without debate. They trust that the system has their back. Those
+behaviors are measurable, even if the feeling itself isn’t.
+
+Relief shows up in what teams stop doing. Fewer Slack threads
+about edge cases. Less time spent justifying decisions. Fewer
+“are we allowed to do this?” questions. More default use, less
+deliberation.
+
+Design systems that focus only on efficiency often miss this.
+They optimize for speed without addressing the friction that made
+the work stressful in the first place. The system might help
+teams ship faster, but still leave them carrying the same mental
+load.
+
+A system that’s doing its job doesn’t just make work quicker. It
+makes it easier to breathe.
+
+If people don’t feel some sense of relief, the work isn’t
+finished yet.
+"
+3/3/2026 7:03:05,Design System University <hello@designsystem.university>,Subtract to Scale,"Most design system roadmaps keep expanding. More components, more
+patterns, more documentation. The backlog grows, the system
+sprawls, and over time it starts to feel less like a toolkit and
+more like an archive of everything anyone ever asked for.
+
+At that point, adoption becomes harder, not easier – not because
+teams need more, but because the system is carrying too much.
+
+The path forward might be subtraction.
+
+Consider the math: If you have 100 components and 70 are actively
+used, that’s a 70% adoption rate. Remove 10 unused components and
+you’re at 77%, without anyone adopting anything new. Nothing
+changed except what you chose to keep.
+
+This isn’t an accounting trick. Those components still carry real
+cost: maintenance, documentation, accessibility checks,
+compatibility testing, and the ongoing effort of supporting
+patterns no one is using. Cutting them frees capacity for work
+that actually matters.
+
+The harder part is the decision itself. Teams add components
+because someone asked for them, and saying yes feels helpful.
+Removing something feels like failure – or like admitting a past
+decision didn’t age well. But unused components don’t stay
+neutral. Over time, they become clutter dressed up as
+comprehensiveness.
+
+A mature system isn’t defined by how much it contains. It’s
+defined by how deliberately it’s maintained – including what it’s
+willing to let go.
+"
+2/24/2026 7:02:51,Design System University <hello@designsystem.university>,Chronicling System Decisions,"Design system documentation usually focuses on describing what
+exists – what a component does, how it behaves, where it should
+be used.
+
+That information is necessary. It’s also incomplete.
+
+Teams don’t just need to know what a component is. They need to
+understand why it exists, what problem it was meant to solve, and
+what trade-offs were made along the way. Without that context,
+the system becomes a set of rules without a story.
+
+This is where chronicling comes in.
+
+Chronicling captures the reasoning behind decisions, not just the
+decisions themselves. It records why one approach was chosen over
+another, what constraints were in play, and how the component
+evolved. That context helps teams make better judgments when they
+encounter situations the documentation doesn’t explicitly cover.
+
+Documentation creates reference material. Chronicling creates
+understanding. A healthy system needs both.
+
+When that context is missing, teams end up recreating the same
+conversations. Questions surface in Slack that aren’t really
+about usage, but about intent. Chronicling reduces that
+back-and-forth because the reasoning is already there.
+
+The timing matters.
+
+The most useful chronicles are created alongside the work, while
+decisions are still being made. When chronicling is treated as an
+afterthought, it rarely happens at all. Over time, this shared
+record becomes less about individual components and more about
+how the system thinks.
+
+Design systems don’t just ship artifacts. They carry decisions
+across an organization. Chronicling is how those decisions remain
+understandable as teams and context change.
+"
+2/17/2026 7:03:00,Design System University <hello@designsystem.university>,On Implicit Systems,"Many design systems work because people know how they’re supposed
+to be used.
+
+They know which component to reach for. They know what a token
+really means. They know which rules are flexible and which ones
+aren’t.
+
+That kind of shared understanding can carry a system surprisingly
+far. It’s efficient. It feels lightweight. And early on, it often
+works better than formal structure.
+
+Until it doesn’t.
+
+As systems grow, that “just knowing” becomes harder to maintain.
+Teams change. Context gets lost. New people arrive without the
+same history. Decisions that once lived in conversation start to
+drift. What used to feel obvious becomes inconsistent, then
+confusing.
+
+At that point, the system hasn’t broken – it’s been exposed.
+
+Exposure tends to happen when context drops away. When decisions
+have to stand on their own, without the background knowledge that
+once made them feel clear.
+
+That’s why AI tools have become such a useful stress test for
+design systems.
+
+Unlike people, machines don’t infer intent. They don’t carry
+history. They don’t “just know” what a component is for or which
+token should be used. They rely entirely on what the system makes
+explicit. When meaning is vague or implicit, the cracks show
+immediately.
+
+What AI surfaces isn’t a new problem. It’s the same one teams
+have been working around for years, just without the buffer of
+human interpretation.
+
+Design systems scale when shared understanding moves out of
+people’s heads and into the system itself. Not all at once, and
+not prematurely, but deliberately, as patterns stabilize and
+teams rely on them. Clear naming. Explicit contracts. Decisions
+that hold even when context is removed.
+
+Culture carries systems early on. Structure carries them later.
+
+Seen this way, moments of confusion – whether from new team
+members or from machines – aren’t failures. They’re indications
+that some of the work has been implicit for too long.
+
+The job isn’t to eliminate judgment or flexibility. It’s to
+decide which parts need to be explicit so the system can keep
+supporting teams as it grows."
+2/10/2026 7:02:50,Design System University <hello@designsystem.university>,Where Consistency Matters,"For a long time, design system work was framed around the idea of
+100% UI consistency. It sounded reassuring. Predictable.
+Scalable.
+
+It also set an expectation that was never realistic. Full UI
+consistency across a growing organization – across teams,
+surfaces, and shifting product contexts – was always out of
+reach. Different constraints, different needs, different stages
+of maturity. Even with the best intentions, the reality was
+messier than the promise.
+
+Consistency is often used as a shortcut for efficiency, and
+efficiency is often taken as a sign of quality. But consistency
+on its own doesn’t guarantee good outcomes. A perfectly
+consistent interface can still be confusing, slow, or wrong for
+the job it’s doing.
+
+What actually matters is where consistency shows up.
+
+Design systems earn their value when they’re specific –
+consistent interaction patterns, consistent accessibility
+guarantees, consistent behavior in common flows. These are the
+things users notice and rely on. Visual sameness everywhere else
+matters far less, and sometimes actively gets in the way.
+
+This is where teams lose credibility. Promising full consistency
+turns every exception into a failure. Instead of learning from
+variation, teams end up defending why something doesn’t fit. Over
+time, the system hardens, and adoption suffers.
+
+Mature systems make a different trade-off. They aim for high
+consistency where it carries real user and team value, and leave
+room elsewhere – deliberately. Inconsistency isn’t ignored; it’s
+examined.
+
+Seen this way, inconsistency becomes a sign. It can point to gaps
+in the system, new product needs, or areas where the work hasn’t
+settled yet. Treating it as information, rather than deviation,
+keeps the system relevant as the product evolves.
+
+Full UI consistency was never achievable at scale. The real job
+is deciding where consistency matters – and having the discipline
+to be inconsistent on purpose everywhere else.
+
+The shift doesn’t lower the bar. It raises it.
+"
+2/3/2026 7:01:04,Design System University <hello@designsystem.university>,Time to Involvement,"There’s a noticeable difference between systems that are healthy
+and systems that are tolerated.
+
+In healthy systems, the design system team shows up early. Not to
+review work, but to shape it. They’re part of planning
+conversations, early sketches, open questions. Their input
+changes the direction of the work while it’s still cheap to
+change.
+
+In less healthy systems, the system team appears much later.
+Often right at the end, when the work is mostly done and the
+request is narrow. The role is reduced to validation, not
+contribution.
+
+That difference shows up long before adoption numbers change.
+
+Adoption tells you what teams are using. Time to involvement
+tells you how teams are approaching the work.
+
+You can see it in small ways. When do teams first reach out? Are
+you hearing about work during discovery, or only once it’s built?
+Do conversations start with open questions, or finished
+solutions?
+
+Over time, those patterns matter more than any single project.
+
+Earlier involvement usually means the system is trusted as a way
+to move work forward. Later involvement often means it’s seen as
+something to comply with. Both can coexist for a while, which is
+why adoption alone can be misleading.
+
+This is also why small changes in how the system team shows up
+can make a noticeable difference.
+
+Office hours, shared channels, joining planning sessions – these
+don’t immediately change what teams ship. What they change first
+is when teams reach out. That shift often shows up before
+anything else.
+
+Time to involvement isn’t a KPI to optimize. It’s something worth
+paying attention to.
+
+It tells you whether the system is being invited into decisions –
+or only asked to approve them.
+"
+1/27/2026 7:00:28,Design System University <hello@designsystem.university>,The Cost of Early Abstraction,"Design tokens are often described as foundational. Something you
+put in place early, before the rest of the system takes shape.
+
+In practice, they tend to arrive much later.
+
+Tokens sit at a level of abstraction that assumes a lot is
+already true. Agreement on naming, shared understanding of what
+decisions matter, confidence in how changes should ripple through
+products. That agreement rarely exists at the start, especially
+across design, engineering and product.
+
+Early system work is usually more tentative than that. Teams are
+solving immediate problems, patterns are still forming. Language
+is inconsistent because the work itself is still unsettled.
+Trying to introduce tokens at this stage often surfaces
+disagreement faster than it creates alignment.
+
+This is where things start to feel stuck.
+
+Teams debate token structures before they’ve agreed on component
+behavior. They argue over semantics without a clear sense of
+where variation is actually useful. The work looks sophisticated,
+but it’s disconnected from how teams are building day to day.
+
+Systems that gain traction tend to move in the opposite
+direction.
+
+They start with something concrete – a component a few teams
+genuinely need, a problem that’s already costing time or creating
+inconsistency. As those pieces get used, shared decisions begin
+to emerge. Certain choices stabilize. Others prove less important
+than expected.
+
+That’s the point where abstraction becomes helpful.
+
+Tokens work best when they formalise patterns teams already rely
+on. They make existing decisions easier to apply consistently,
+not harder to agree on. Introduced too early, they ask
+organizations to align on things they haven’t yet experienced.
+
+Seen this way, tokens aren’t a foundation, they’re a signal that
+the groundwork has been done.
+
+Start with the work teams are actually doing. Let patterns
+settle. Build trust. The abstractions will have something to
+stand on when they arrive.
+"
+1/20/2026 7:04:17,Design System University <hello@designsystem.university>,Setting System Boundaries,"One of the most common sources of design system friction is
+unclear boundaries.
+
+Product teams aren’t always sure where the system team’s
+responsibility ends and where feature work begins. When that line
+is fuzzy, requests linger. Decisions slow down. Conversations
+feel heavier than they need to – not because anyone disagrees,
+but because ownership is unclear.
+
+Clear boundaries change how teams work together.
+
+A simple example is the “three teams need it” threshold. When a
+problem shows up in one or two places, it’s usually best solved
+close to the feature – product teams can move quickly without
+waiting for system input. When the same issue starts appearing
+across multiple teams, it’s a signal that the system may need to
+absorb it.
+
+This kind of clarity benefits both sides.
+
+Product teams know when they can act independently. System teams
+avoid becoming a bottleneck or a general service desk. Work moves
+forward without every decision needing to be escalated.
+
+The tension usually shows up in conversation.
+
+Telling a team that something sits outside the system’s scope can
+sound abrupt if it isn’t grounded in shared expectations. What
+helps is explaining how scope works, and making it clear that the
+system team is paying attention – even when the work stays at the
+product level.
+
+Pilots are where these boundaries get exercised.
+
+Early on, system teams often help with work they wouldn’t
+normally own. That flexibility helps things get started. Over
+time, it becomes important to distinguish what was temporary
+support from what’s part of the system’s ongoing responsibility.
+Writing that down prevents confusion as more teams get involved.
+
+Healthy boundaries don’t create distance. They make collaboration
+easier.
+
+When teams understand where the system ends and product work
+begins, they’re more confident making decisions. And the system
+team can focus on the work that actually benefits everyone.
+"
+1/13/2026 7:00:16,Design System University <hello@designsystem.university>,Good Enough to Be Useful,"Design system teams often overestimate how good something needs
+to be before it’s useful.
+
+For a product team deciding whether to adopt a component, the bar
+for “good enough” is usually lower than system teams expect.
+Clarity, availability, and fit often matter more than polish. If
+a component solves a real problem and doesn’t create friction,
+that’s often enough to get started.
+
+This is where many systems slow themselves down.
+
+Teams spend time refining details, debating edge cases, and
+raising internal standards before anything ships. Meanwhile,
+product teams keep moving, filling gaps in their own way. The
+system becomes carefully crafted, but easy to ignore.
+
+This isn’t because quality doesn’t matter. It’s because quality
+works differently over time.
+
+Early on, quality is mostly hypothetical. Decisions are made in
+isolation, without real usage to push back. Once a component is
+in use, quality becomes concrete. Teams can see where it breaks
+down, what causes confusion, and what needs refinement.
+Improvements have somewhere to land.
+
+That’s why quality tends to compound after adoption, not before
+it.
+
+More mature systems can afford to slow down and raise the bar.
+They already have trust, usage, and feedback loops in place. For
+teams still trying to earn that trust, prioritizing quality too
+early can work against them.
+
+Systems that make it through this stage tend to ship sooner than
+feels comfortable, learn from real use, and invest in quality
+where it has proven impact.
+
+Adoption doesn’t replace quality. It creates the conditions for
+it.
+"
+1/6/2026 7:03:52,Design System University <hello@designsystem.university>,Scope Before Scale,"Design system teams often try to be generous from the start. The
+first component is built to work for every team, every product
+area, every possible use case. No one is left out.
+
+That generosity usually comes at a cost.
+
+When a system tries to serve the entire organization from day
+one, it has no clear center of gravity. Feedback comes from
+everywhere and nowhere. Conflicting needs pile up before any
+patterns have settled. Decisions get delayed because every edge
+case feels equally valid.
+
+At that stage, teams don’t really know what they’re building yet
+– but they’re already accountable to everyone.
+
+Starting smaller changes the kind of learning that’s possible.
+
+Shipping a component for a narrow, contained context forces
+focus. You learn who actually needs to be involved in decisions.
+You learn how updates get reviewed, approved, and shipped. You
+see where product pressure shows up, and where the system bends
+or breaks under it.
+
+This is how governance forms in practice, not in theory.
+
+Small starts also shape expectations. When the system is
+introduced as intentionally scoped, boundaries feel deliberate.
+Expansion becomes something that’s earned through use, not
+assumed by default. Saying “not yet” doesn’t feel like exclusion
+– it feels like sequencing.
+
+Trying to serve everyone immediately often comes from good
+instincts: fairness, ambition, a desire to avoid politics. But
+systems don’t scale by being fair to every use case at once. They
+scale by being useful somewhere first.
+
+Design systems that last tend to begin with a handful of teams
+and a specific problem. They learn what actually matters, fix
+what breaks, and grow with evidence instead of confidence.
+
+Scale works better when it’s discovered, not declared.
+"
+12/30/2025 7:00:20,Design System University <hello@designsystem.university>,Let the Work Lead,"Teams don’t usually stall design system work on purpose. But when
+the work is named before it’s experienced, momentum often slows.
+
+Once something is called a “design system”, the conversation
+shifts. Leadership starts asking about scope, cost, and return.
+Those are reasonable questions. Early on, though, the work
+doesn’t have much to point to yet. The outcomes are still
+forming. The value hasn’t shown up in a way anyone outside the
+team can feel.
+
+At that stage, the burden moves from the work to the explanation.
+Progress depends on pitches, not results. Without evidence, the
+conversation tends to circle instead of move forward.
+
+The work that gains traction usually follows a different path. A
+team ships something useful. A product team moves faster. Fewer
+decisions have to be revisited later. Bugs decrease. Timelines
+tighten. The impact shows up in delivery before it shows up in
+decks.
+
+At that point, naming starts to help. Once people have felt the
+benefit, giving the work a name helps connect those outcomes into
+something leadership can recognize and support. A design system
+becomes investable after it’s already proven useful – not before.
+
+Naming something early can feel like progress. It gives the work
+a shape and a story before either really exists. But it also
+pulls the conversation away from outcomes and toward
+justification.
+
+In practice, adoption tends to follow experience, not
+terminology.
+
+Let the work lead. The name will make sense when it’s ready."
+12/16/2025 7:00:11,Design System University <hello@designsystem.university>,Create an Influence Map,"If your design system is struggling to gain traction, don’t start
+by fixing components.
+
+Start by mapping influence.
+
+Because design system adoption is not a meritocracy. It’s
+political.
+
+----------------------------
+Step 1: Forget the org chart
+----------------------------
+
+Org charts show reporting lines. They don’t show decision-making.
+
+Influence lives elsewhere:
+
+* The engineer everyone listens to in reviews
+* The designer who sets taste without authority
+* The PM who blocks things quietly
+* The leader whose opinion ends debates
+
+Write names, not titles.
+
+If you only include managers, your map is already wrong.
+
+-------------------------------------
+Step 2: Classify intent, not attitude
+-------------------------------------
+
+For each person, ask one question:
+
+If this design system succeeds, do they win or lose?
+
+Then label them:
+
+* Supportive: they benefit if it works
+* Undecided: they could go either way
+* Opposed: success costs them something
+
+This is not about who’s “nice.” It’s about incentives.
+
+Someone can be pleasant and opposed.
+
+-----------------------------------------
+Step 3: Draw influence, not relationships
+-----------------------------------------
+
+Now connect people with arrows:
+
+* Thick arrows = strong influence
+* Thin arrows = weak influence
+
+Direction matters.
+
+Who shapes whose opinion? Who defers to whom? Who can override
+whom?
+
+This is where the real system reveals itself.
+
+--------------------------------
+Step 4: Find the leverage points
+--------------------------------
+
+Look for:
+
+* Supportive people with strong influence
+* Undecided people influenced by supporters
+* Opponents who don’t actually influence decisions
+
+That’s your strategy.
+
+You don’t need everyone on board. You need the right alliances.
+
+Trying to convince the wrong people is how design systems stall.
+
+-------------------------
+The point most teams miss
+-------------------------
+
+Influence maps aren’t political games. They’re clarity tools.
+
+They stop you from:
+
+* Over-investing in buy-in that doesn’t matter
+* Fighting resistance you can’t win
+* Assuming logic alone will carry the day
+
+Design systems don’t spread because they’re correct. They spread
+because the system around them allows it.
+
+Map that system first.
+
+"
+12/2/2025 7:03:19,Design System University <hello@designsystem.university>,Design System Siblings,"Here‘s one of the simplest ways to explain design systems to
+confused stakeholders:
+
+Put them in a family.
+
+Specifically, the family of enterprise-wide tools that shape how
+companies build, ship, publish, and maintain digital experiences.
+
+Design systems have siblings. And understanding those siblings
+makes the role of a design system much easier to grasp.
+
+If your partners—engineering, product, marketing, content,
+leadership—aren’t clear on what a design system is, they’ll fill
+in the gaps with assumptions:
+
+* “Isn’t this just a CMS?”
+* “Our CRM already handles that.”
+* “We have a DAM; why do we need this?”
+* “Is this like a UI kit from Figma?”
+* “Wait… who owns this?”
+
+When a design system is misunderstood, it gets mis-scoped,
+underfunded, and misused.
+
+When it’s understood, it becomes a strategic asset.
+
+Most teams jump straight into defining components, tokens,
+accessibility, governance, or contribution.
+
+But not the first thing your stakeholders need.
+
+They need context.
+
+Without context, a design system feels like “another platform,”
+“another tool,” or “another thing to maintain.” So teams end up
+explaining too tactically, too technically, or too narrowly.
+
+Instead, the fastest way to clarity is contrast. Explain what a
+design system is by showing what it is not, next to the tools it
+sits beside.
+
+A design system finally makes sense when people see it as a
+sibling—not a duplicate—of the enterprise platforms they already
+know.
+
+Here’s how to teach the siblings:
+
+CMS (Content Management System)
+
+* What it manages: Pages, posts, structured content
+* Who uses it: Marketing, content ops, publishers
+* Its job: Publish and organize information
+* How it relates: The CMS distributes content; the design system
+standardizes the UI used to display it.
+
+CRM (Customer Relationship Management)
+
+* What it manages: Customer data, interactions, segmentation
+* Who uses it: Sales, CX, lifecycle marketing
+* Its job: Show you who the user is
+* How it relates: The CRM knows who the user is; the design
+system shapes how experiences feel to that user.
+
+DAM (Digital Asset Management)
+
+* What it manages: Images, video, brand assets, documents
+* Who uses it: Creative teams, marketing, brand
+* Its job: Store and distribute brand assets
+* How it relates: The DAM holds assets; the design system
+provides instructions and components for using them consistently.
+
+PIM (Product Information Management)
+
+* What it manages: Product data, specs, variations
+* Who uses it: E-commerce, product operations
+* Its job: Maintain product metadata
+* How it relates: The PIM manages product content; the design
+system manages product presentation.
+
+Design System
+
+* What it manages: UI components, patterns, tokens, guidelines
+* Who uses it: Design, engineering, content designers,
+accessibility teams
+* Its job: Create a shared visual and functional language across
+the entire digital ecosystem
+* Its unique value: ensures surfaces are consistent, accessible,
+and cohesive.
+
+---------------------------------
+Bonus Framing: The Family Summary
+---------------------------------
+
+* CMS: What we say
+* CRM: Who we say it to
+* DAM: What we use to say it
+* PIM: What we sell
+* Design System: How it looks, behaves, and works
+
+When stakeholders see this picture, design systems stop feeling
+abstract and start feeling essential.
+
+"
+11/25/2025 7:01:59,Design System University <hello@designsystem.university>,Design Systems as Decision Engines,"Most teams still treat design systems like collections of
+components. That’s the shallow end of the pool. The real
+value—the part that actually scales—isn’t in buttons or tokens.
+It’s in decisions.
+
+A design system that only gives teams assets forces them to
+guess. A design system that gives teams decision clarity makes
+them faster, more consistent, and dramatically more aligned.
+
+That’s why the systems that win aren’t libraries. They’re
+decision engines.
+
+-------------------
+The Real Bottleneck
+-------------------
+
+Every slow workflow inside a product team can be traced back to
+one thing: people making decisions with too little context or too
+many options.
+
+* Which spacing is correct?
+* What pattern fits this flow?
+* Who approves?
+* Why is this team doing it differently?
+* Why didn’t engineering interpret the design the same way?
+
+Components don’t solve these problems.
+​Shared decision logic does.
+
+-------------------------------------
+The Three Layers of a Decision Engine
+-------------------------------------
+
+* Standards (the rules). Clear, opinionated standards remove
+subjective debates. They give everyone the same baseline for what
+“good” means.
+* Guidance (the reasoning). This is the multiplier. Guidance
+explains why a decision is correct, creating trust and alignment.
+Done well, it replaces hours of Slack back-and-forth.
+* Assets (the tools). Components, tokens, templates.
+Essential—but only valuable when built on standards and guidance.
+Otherwise they’re just parts in a drawer.
+
+---------------------------------
+The Shift That Changes Everything
+---------------------------------
+
+Stop centralizing control.
+Start centralizing clarity.
+
+When teams understand how to make the right decisions without
+asking permission, everything scales:
+
+* Fewer redesigns
+* Fewer inconsistencies
+* Fewer meetings
+* Faster engineering velocity
+* Better cross-team alignment
+
+Your design system’s job is not to be a gatekeeper.
+Its job is to make product teams self-sufficient.
+
+--------------------------------
+If You Want a System That Scales
+--------------------------------
+
+Treat every asset you create as a vehicle for one question:
+
+“What decision does this help someone make faster?”
+
+If you answer that consistently, your design system won’t just
+unify your UI.
+It will transform how your organization ships.
+
+That’s the real value.
+That’s the part that scales.
+
+"
+11/11/2025 7:02:05,Design System University <hello@designsystem.university>,Design Systems Emerge,"Reading time: around 1 minute
+
+Design systems are rarely the result of a single brilliant plan.
+
+They’re the outcome of a hundred small decisions, tested and
+adjusted over time.
+
+That’s what business consultant Henry Mintzberg called emergent
+strategy: patterns that form through action, not intention. In
+1987, he wrote in Harvard Business Review (
+
+):
+
+“Deliberate strategy precludes learning once the strategy is
+formulated; emergent strategy fosters it.”
+That’s design systems in a nutshell.
+
+Most teams try to “build the system” in a vacuum: collecting
+buttons, colors, and spacing tokens like ingredients before
+baking a cake.
+
+But that’s not how systems really come together. The truth is,
+the list of components isn’t a recipe. It’s a reflection of
+what’s already been learned in the organization.
+
+Creating a design system is more like restoring an antique car.
+You take it apart to see what still works, what needs tuning, and
+what’s beyond repair. At some point, you’re left with every part
+scattered across your garage floor… old and new, dusty and
+shining.
+
+That’s your system: a collection of pieces waiting to be
+reassembled into something that actually runs.
+
+A successful design system doesn’t begin with a blueprint. It
+begins with a teardown or what already exists.
+
+Because only after you’ve deconstructed what is can you design
+what could be.
+
+"
+11/4/2025 7:02:30,Design System University <hello@designsystem.university>,Design System Inertia,"One of the biggest challenges in design system work isn’t what to
+build.
+
+It’s how to get it moving.
+
+If you’ve ever tried to start a design system from scratch, you
+know what inertia feels like.
+
+Meetings stall.
+
+Funding fades.
+
+Everyone agrees it’s a “good idea,” but no one’s quite sure when
+to start.
+
+The truth is, this isn’t a design problem. It’s a physics
+problem.
+
+Isaac Newton’s first law of motion says that objects at rest tend
+to stay at rest.
+
+In organizational terms: teams without a design system will
+likely keep working without one.
+
+But here’s the good news: that same law gives you the solution.
+Objects in motion tend to stay in motion.
+
+If you want your design system to move, link it to something
+that’s already moving.
+
+What’s always moving in a digital organization?
+
+Product work.
+
+Roadmaps are alive.
+
+Teams have budgets, deadlines, and executive buy-in.
+
+That’s momentum… and your design system can hitch a ride.
+
+In most companies, there are natural inflection points that
+already signal big change:
+
+* Rebrands
+* Replatforms
+* Re-orgs
+* Content migrations
+* Mergers
+
+Moments where the company says, “While we’re doing this, we might
+as well do it right.”
+
+That’s your opening.
+
+Volunteer your team.
+
+Step into the change.
+
+Use that energy to quietly start laying the groundwork for your
+system.
+
+And here’s the twist: you don’t even need to say the words
+“design system.”
+
+To leadership, that phrase can sound abstract. Or worse: like
+extra work.
+
+So talk about outcomes instead. Say things like:
+
+* “Doing work this way puts us six weeks ahead of schedule.”
+* “See how many fewer bugs we had by reusing code that’s already
+been QA’d?”
+* “Our velocity has increased over the last few sprints.”
+
+They’ll feel the impact before they even know it’s a design
+system.
+
+Because at the end of the day, momentum isn’t built by convincing
+people.
+
+It’s built by delivering wins inside the work that’s already in
+motion.
+
+So, don’t fight inertia.
+
+Use it.
+
+Find the moving train, and get on board.
+
+"
+10/28/2025 7:01:00,Design System University <hello@designsystem.university>,Wireframe to Design in One Click,"Remember Axure? Balsamiq? OmniGraffle? The wireframing tools that
+made rough low fidelity digital mockups feel fast and
+approachable? These tools were great for getting collaborative
+input from people that weren’t necessarily designers, but the
+tradeoff was always the same… you’d wireframe screens in
+Balsamiq, get alignment, then rebuild everything from scratch in
+Figma.
+
+What if you could get that same speed but using your actual
+design system components? What if you could switch between low
+fidelity and high fidelity with one click?
+
+That’s exactly what we built for the New York State Design System
+(
+
+). Using a clever approach to Figma variable collections and
+modes, designers can switch components from low fidelity mode to
+high fidelity mode. And it works in both directions. Start low
+fidelity wireframing in FigJam and copy/paste into Figma for a
+high-fidelity view. Or start in high fidelity in Figma, and
+switch down to low fidelity to keep stakeholder feedback focused
+on layout and content.
+
+-----------------
+What’s The Value?
+-----------------
+
+Before diving into how it works, let’s talk about a few reasons
+why we implemented this.
+
+First, we had several clients who didn’t want to take the time to
+wireframe the full user flows. They saw the work as duplicative,
+and instructed designers to start work in high fidelity to save
+time. This new approach helped us reduce this roadblock to
+wireframing.
+
+The second reason had to do with getting the right kind of input
+and feedback at the right time. If a designer reviews a
+high-fidelity screen with clients, the feedback is usually some
+variation of “hm… can we try that button in blue?” That might be
+the feedback they’re looking for, but probably not, especially
+early on. Switch the same design to low fidelity before the
+review, and the feedback might be more like, “hm… should this
+content come before or after the image?” Better feedback.
+
+There’s another, more pragmatic, benefit for a large org: FigJam
+licenses are cheaper, and FigJam files can even be opened to
+stakeholders for 24-hour sessions without requiring accounts. You
+can run a consensus-gathering workshop with 30 people across
+departments by giving them temporary FigJam access, sharing the
+low fidelity components as sticker sheets (for example), and
+letting them contribute ideas directly. Because stakeholders are
+working with actual components, they can be instantly upgraded to
+high fidelity once decisions are made. This can add up to
+significant cost savings (both money and time) for large teams.
+
+​
+
+--------------------------------------
+How Does It Work? (The Simple Version)
+--------------------------------------
+
+My explanation is going to assume you have a solid understanding
+of how Figma Variables work. If you need a primer, Figma has a
+solid introduction for beginners (
+
+).
+
+The way we’ve implemented Fidelity Modes is based on using
+Figma’s variable collections as a sort of routing system. Think
+of it like a switchboard that can send different values to the
+same components depending on which mode you’re in.
+
+The simplest setup is based on three types of variables:
+
+* Primitive Variables: Raw values, like specific color hex codes,
+pixel sizes, etc.
+* Routing Variables: The “switchboard” that says, “in low
+fidelity mode, use this primitive; in high fidelity mode, use
+that one.”
+* Applied Variables: These are the variables that actually get
+assigned to your component properties.
+
+For fidelity switching, we created a routing collection with
+three modes: Low, Mid, and High. When you switch modes, all of
+your components automatically update because they’re pulling from
+variables that now point to different values.
+
+For example, when the mode is set to Low Fidelity, the border
+radius variables are all set to 0. The color variables are all
+translated to a grayscale equivalent. The font family variables
+are set to Comic Sans. In High Fidelity, components are rendered
+in full detail including accurate brand colors and fonts. Same
+components, different modes.
+
+We also built in a second Fidelity routing mode for designers to
+change the Fidelity font from hand drawn (Comic Sans) to
+scribbled lines (Redacted Script). This is for times when a
+designer wants to focus solely on layout and take the focus
+entirely away from text content. For the Fidelity modes to work
+with the text in your components and screens, you need to build
+and publish Figma Text Styles from your Applied Variables
+collection.
+
+​
+A key thing to understand is that you don’t need to expose this
+complexity to the designers using your design system. You only
+need to publish the Applied variable collection. Teams just use
+the components normally… they don’t need to understand the
+routing logic that happens behind the scenes. They can even build
+new components from the published Applied variable collection and
+their new components will automatically get the Fidelity
+switching functionality. The design system team handles the
+complexity once, and everyone else just gets a ✨magical✨ new
+feature.
+
+-----------------
+FigJam Workaround
+-----------------
+
+The first time we tried this, we ran into the issue where FigJam
+doesn’t let you set modes.
+
+But we figured out a workaround. Create a section (not a frame)
+in Figma, set it to Low or Mid Fidelity, and copy it into FigJam.
+Any components you place in that section will inherit the
+fidelity mode setting. We tried using Frames as artboards in
+FigJam and found that there were issues with variable modes not
+being correctly applied when components were placed on top of
+Frames inside of Sections. Use sections as your FigJam artboards,
+and you’re good to go.
+
+--------------------
+Should You Try This?
+--------------------
+
+This approach requires a well-structured foundation. You need a
+thoughtful set of design tokens (you can find ours here (
+
+)) implemented in Figma as variables, a library of components
+built from those variables, and a systematic approach to
+extending. It's not for everyone, especially if you've already
+built many components.
+
+If your design system is in its infancy or you’d like to take
+your system to the next level, start by building your components
+from a single-mode variable collection. If you have multiple
+brands put those in a lower level collection and map your Applied
+Variables to the brand collection. By taking this approach it
+becomes easy to insert additional routing layers, like Fidelity
+Modes, in the future.
+
+Fidelity modes feel like a superpower. To designers who see it
+for the first time, it feels like a magic trick… but it’s really
+just a clever use of variables.
+
+--------------
+One More Thing
+--------------
+
+We’re also using this routing collection approach for more than
+just fidelity. The same routing technique can be used for:
+
+* Multiple brands (useful if different teams need customized
+versions of components)
+* Device sizes (switch between mobile, tablet, and desktop
+styling)
+* Appearance modes (light, dark, high contrast)
+
+For example, we’re planning to add an “Organization” routing
+collection so that once the NYS Design System is published to the
+community, local governments in New York can plug in their own
+brand colors and customize it without starting from scratch.
+
+Credit for the routing collection concept to Vincent Schlothauer
+(
+
+) and Franziska Haaf (
+
+) from the REWE design system team, whose talk at Into Design
+Systems 2025 inspired the idea for this.
+
+-------------------
+Want to Learn More?
+-------------------
+
+This workflow is still in beta, but we’re excited about where
+it's heading. If you’re experimenting with similar ideas or have
+questions, you can reach out to us at designsystem@its.ny.gov (
+
+).
+
+You can try out this technique in the Figma community file (
+
+) we published.
+
+The NYS Design System was recently named a finalist for the 2025
+Zeroheight Award for Innovation for this fidelity-switching
+approach. If this article or technique resonated with you, we'd
+be grateful for your vote: The NYS Design System: Using Routing
+Variables to Allow DS-driven FigJam Prototyping (
+
+)
+
+—Leo Vogel (
+
+), UX Lead, NYS Design System Team
+
+Whenever you’re ready, there are 3 ways we can help you level up
+your design system skills:
+
+* Beginner: start with our free course “Make Design Systems
+People Want to Use (
+
+)” for an overview of what it takes to succeed in design systems.
+* Intermediate: Go through our “Design Systems 101 (
+
+)” course, a hands-on, 72-module, 10+ hour course that gets you
+started on everything you need to know to get a design system’s
+design and code up and running.
+* Advanced: register for an upcoming live cohort of “Design
+System in 90 Days (
+
+)” to learn how to set up a design system practice at your
+organization. You’ll work directly with DSU founder Dan Mall and
+a group of your industry peers over an intense period of 12
+weeks.
+
+You’ve received this email because you signed up at Design System
+University (
+
+). Unsubscribe (
+https://unsubscribe.convertkit-mail2.com/gkux53g7pgi5hl68ovvirh8dxm699bmh9r34p
+) if you’d prefer not to receive these emails anymore.
+
+Design System University: 533 E Girard Ave Unit #549 ,
+Philadelphia, PA 19125"
+10/21/2025 7:05:38,Design System University <hello@designsystem.university>,Why Product Teams Don’t Contribute to Design Systems,"Design systems thrive on contributions from across an
+organization.
+
+Without contributions, design systems become bottlenecks: stale,
+disconnected, and increasingly irrelevant to product realities.
+
+The irony? The same teams you built the system for are often the
+least likely to contribute back.
+
+---------------------------------
+The Hard Truth Most DS Teams Miss
+---------------------------------
+
+Most design system teams assume product teams should want to
+contribute.
+
+But that assumption ignores two key truths.
+
+First, too many new things. A 2006 Duke study showed that over
+40% of human actions are habitual. So when you introduce new
+tools, processes, or workflows, you’re not just changing
+software. You’re asking people to rewire their habits.
+
+Second, it’s not their job. Product teams exist to ship products.
+Not to maintain or improve your design system. When deadlines
+loom, “contribute to the design system” naturally slides to the
+bottom of the backlog.
+
+---------------------------------------------------
+Flip the Frame: Don’t Ask for Help, Remove Friction
+---------------------------------------------------
+
+If you want product teams to contribute, stop asking them to act
+like design system teams.
+Your goal isn’t to convince them; it’s to make contribution the
+path of least resistance.
+
+Here’s what actually works:
+
+* Reduce cognitive load. Integrate your system into their natural
+workflow. Don’t force adoption through extra steps or tools.
+* Reward contributions. Recognize and celebrate even small pull
+requests or component updates.
+* Design for them, not you. Treat product teams as your primary
+customers and make contribution feel like progress, not charity.
+* Automate the boring parts. The easier it is to contribute, the
+more contributions you’ll see.
+* Align incentives. If contributing helps them hit deadlines
+faster, you won’t need to beg for buy-in.
+
+------------------------------------
+The Real Job of a Design System Team
+------------------------------------
+
+Your job isn’t to collect components. It’s to create alignment.
+
+Every contribution from a product team is a signal that they
+trust your system, that it helps them move faster, that it feels
+theirs.
+
+When contribution becomes collaboration, your design system stops
+being a product and starts becoming a culture.
+
+That’s when it scales.
+
+—Dan Mall, founder of Design System University
+
+Whenever you’re ready, there are 3 ways we can help you level up
+your design system skills:
+
+* Beginner: start with our free course “Make Design Systems
+People Want to Use (
+
+)” for an overview of what it takes to succeed in design systems.
+* Intermediate: Go through our “Design Systems 101 (
+
+)” course, a hands-on, 72-module, 10+ hour course that gets you
+started on everything you need to know to get a design system’s
+design and code up and running.
+* Advanced: register for an upcoming live cohort of “Design
+System in 90 Days (
+
+)” to learn how to set up a design system practice at your
+organization. You’ll work directly with DSU founder Dan Mall and
+a group of your industry peers over an intense period of 12
+weeks.
+
+You’ve received this email because you signed up at Design System
+University (
+
+). Unsubscribe (
+https://unsubscribe.convertkit-mail2.com/v8ul25ekpehrhve8g7pughv2xemlls9hrd2g7
+) if you’d prefer not to receive these emails anymore.
+
+Design System University: 533 E Girard Ave Unit #549 ,
+Philadelphia, PA 19125"
+10/14/2025 7:04:26,Design System University <hello@designsystem.university>,The Best Design Systems Don’t Just Ship. They Serve.,"A lot of design system teams call their system a “product.” And
+that’s mostly a good thing. It shifts the mindset toward quality,
+maintenance, and user experience.
+
+But the best design systems aren’t just products. They’re
+services too.
+
+A product is something people use.
+
+A service is something people rely on.
+
+----------------------------
+Why this distinction matters
+----------------------------
+
+Products live in dashboards. Services live in people’s daily
+workflows.
+
+Products sit in repos. Services show up in Slack at 4pm on Friday
+when someone’s trying to push a release.
+
+If your system is just a pile of tokens and components, it’s a
+product. If your system comes with onboarding, support, and
+real-time guidance, it’s a service.
+
+---------------------------------------------
+What service design looks like in system work
+---------------------------------------------
+
+* On-demand help. Is it easy to get a question answered fast?
+* Intentional onboarding. Are new team members shown how to use
+it, or left to fend for themselves?
+* SLAs and response times. Do you respond quickly when something
+breaks or is unclear?
+* Human ownership. Is someone responsible for helping people
+succeed with the system?
+
+----------------------------------------
+The best teams act like customer support
+----------------------------------------
+
+One of the strongest system teams I’ve worked with rotated weekly
+“system support” shifts. One engineer and one designer, both on
+call for questions.
+
+That service mindset built trust. Teams felt seen. And adoption
+soared. People knew help was just a Slack message away.
+
+--------------------------------
+Turn your product into a service
+--------------------------------
+
+If you’re treating your system like a dropbox of reusable code,
+you’re under-serving your users.
+
+Shift your mindset: what if you thought of your system as
+support, not just software?
+
+Build a great product. Just don’t forget the humans (
+
+) who rely on it.
+
+"
+9/30/2025 7:04:05,Design System University <hello@designsystem.university>,How to Run a Design System Workshop That Doesn’t Suck,"A great design system workshop isn’t about slides. It’s about
+shared understanding.
+
+---------------------------
+The mistake most teams make
+---------------------------
+
+They treat workshops like mini conferences:
+
+Decks.
+Demos.
+Maybe a Q&A at the end.
+​
+But the best workshops are working sessions.
+​Where people learn by doing, not just watching.
+
+------------------
+My workshop recipe
+------------------
+
+* Start with goals. What pain are people feeling? What decisions
+need to be made?
+* Build something together. Review and rebuild a real component
+with input from both design and dev.
+* Surface disagreement. Find where people don’t align. Name it.
+* End with actions. What’s decided? What needs a follow-up? Who
+owns what?
+
+---------------------------
+Bonus: Capture the friction
+---------------------------
+
+Workshops are gold mines for uncovering real blockers:
+
+* “Why can’t I override this prop?”
+* “We always fork the tooltip because of X.”
+
+Document those. They shape your backlog better than any survey.
+
+Workshops don’t have to be perfect.
+But they do have to feel productive.
+
+Less presenting.
+More collaborating.
+And bring cake for celebrating.
+
+"
+9/23/2025 7:01:57,Design System University <hello@designsystem.university>,"If Everything’s a Priority, Nothing Is","I’ve worked with a lot of design system teams who proudly say:
+
+“We’re building tokens, components, documentation, tooling,
+accessibility, design-to-code workflows, contributor guidelines,
+and content patterns… all at once.”
+
+To which I reply:
+
+“Great! Which one of those is the most important?”
+
+Because here’s the truth:
+
+If everything’s a priority, nothing really is.
+
+Or, by way of one of my favorite ancient proverbs:
+
+“If you chase two rabbits, you will catch neither.”
+
+---------------------------------
+The illusion of parallel progress
+---------------------------------
+
+Design systems feel like they should be built in parallel.
+
+Designers build the kit. Engineers build components. PMs write a
+roadmap.
+
+But what often happens?
+
+Work drifts.
+Dependencies stall.
+People burn out.
+Nothing ships.
+
+----------------------------
+A design system is a startup
+----------------------------
+
+Think like a founder.
+
+If you had six months of runway (
+
+), what feature would most prove the system’s value to your
+organization?
+
+That’s your real priority.
+
+Everything else can wait.
+
+------------------------------------------------------------
+How to find your design system’s “point of highest leverage”
+------------------------------------------------------------
+
+Ask:
+
+* What’s the most repeated pain point in product teams?
+* What’s the most adopted part of our system so far?
+* What’s the smallest win that would unlock bigger ones?
+
+Ruthlessly focus on that.
+
+-------------------------------------
+Shifting from “coverage” to “crucial”
+-------------------------------------
+
+One system team I coached was trying to build lots of things for
+multiple platforms simultaneously.
+
+I encourage them to find the most important thing.
+
+After some digging, we discovered that message components for iOS
+applications were the most needed area of help.
+
+We cut everything else out.
+
+Product teams loved it.
+Adoption tripled.
+Momentum soared.
+And it created breathing room to build the rest.
+
+"
+9/16/2025 7:05:37,Design System University <hello@designsystem.university>,Why Your Second Design System Stinks,"You may not realize it, but if you work on a design system,
+you’re doing leadership work.
+
+Even if you’re not a manager.
+Even if no one reports to you.
+
+Systems work is leadership by design.
+
+Why?
+
+Because you influence decisions at scale.
+
+You shape:
+
+* What gets reused
+* What gets standardized
+* What gets encouraged vs. avoided
+
+That’s not just delivery work. That’s strategic direction.
+
+Leadership shows up in how you:
+
+* Push for clear naming
+* Advocate for accessibility
+* Say no to component bloat
+* Handle feedback from skeptical teams
+* Respond when someone forks your component
+
+It’s all leadership. Quiet, invisible, powerful.
+
+I once worked with a junior designer on a design system team who
+said, “I don’t feel qualified to tell other teams how to build.”
+
+But here’s the thing:
+
+* She helped onboard multiple teams.
+* Fixed dozens of Figma inconsistencies.
+* Prevented regressions in design QA.
+
+That’s impact. That’s leadership.
+
+What makes a great design system leader?
+
+Not job title. Not tenure. Not slide decks.
+
+* It’s listening.
+* It’s clarity.
+* It’s care.
+* It’s courage to speak up when something’s not right.
+
+When you’re working on a design system, you’re not just pushing
+pixels or fixing tokens. You’re modeling the kind of design
+culture your org will inherit.
+
+Every component you refine, every guideline you clarify, every
+tough “no” you stand by… those choices ripple outward. They shape
+how teams design, how they collaborate, and how they scale.
+
+That’s why system work is leadership work.
+
+So the next time you’re knee-deep in Figma clean-up or debating a
+naming convention, remember: you’re not just tidying up. You’re
+leading: quietly, visibly, and at scale.
+
+"
+9/9/2025 7:05:07,Design System University <hello@designsystem.university>,Why Your Second Design System Stinks,"Have you heard of the “second system effect”?
+
+Coined by Fred Brooks in The Mythical Man-Month, it describes
+what happens when someone builds their second big system:
+
+This second is the most dangerous system a man ever designs… The
+general tendency is to over-design the second system, using all
+the ideas and frills that were cautiously sidetracked on the
+first one.
+They over-engineer it.
+Overcomplicate it.
+Add every feature they wished the first one had…and then some.
+
+The result becomes something bloated, hard to maintain, and hard
+to use.
+
+Sound familiar?
+
+-----------------------------------
+How this shows up in design systems
+-----------------------------------
+
+A team builds v1 of their system quickly: basic components, a
+token set, light docs.
+
+Then they start v2 with good intentions: better structure, more
+coverage, tighter dev pipelines.
+
+And suddenly:
+
+* Every component has 12 props.
+* The Figma kit has 5 states no one uses.
+* Onboarding takes 2 hours just to explain buttons.
+
+You’ve fallen into the second system trap.
+
+-----------------
+The warning signs
+-----------------
+
+🚨 You’re building for edge cases that haven’t happened yet.
+🚨 You’re prioritizing theoretical scale over current usage.
+🚨 You’re maintaining patterns no one uses… because you might
+someday.
+
+-----------------------
+The way out: keep going
+-----------------------
+
+How do you solve your second system problem?
+
+Finish it.
+
+As quickly as possible.
+
+Build in all your wishes and desires.
+
+Then put it to bed and get on to your third system.
+
+Almost every successful team I’ve worked with was on their third
+or fourth iteration of their design system.
+
+"
+9/2/2025 7:03:24,Design System University <hello@designsystem.university>,Don’t Scale Chaos,"One of the biggest traps for design system teams is trying to
+scale chaos.
+
+I see this all the time:
+
+An organization has 10 product teams all doing things
+differently.
+
+Leadership finally says, “We need a design system to fix this
+mess!”
+
+So the system team tries to roll out a big, top-down solution to
+standardize everything, all at once.
+
+What happens?
+
+Pushback. Confusion. Half-baked adoption.
+
+The chaos doesn’t shrink. It just gets hidden under a new set of
+rules that nobody feels invested in.
+
+----------------------------------------
+A better way: small system, proven first
+----------------------------------------
+
+A design system isn’t a mandate. It’s a promise.
+The promise is: Use this, and your life will get easier.
+
+If your promise doesn’t deliver fast, no one sticks around to
+trust it.
+
+------------------------------------
+Start with a “minimum viable system”
+------------------------------------
+
+Here’s what I recommend:
+
+* Pick three teams who want help.
+* Identify their biggest pain point: Is it inconsistent spacing?
+Duplicate components? Accessibility headaches?
+* Solve that pain with the system, and prove the value quickly.
+
+--------------------------
+System scale follows proof
+--------------------------
+
+When people see real benefits—saved hours, cleaner handoff,
+better experience—they spread the word. Word of mouth does more
+than any big launch event ever could.
+
+The best design systems don’t spread by forcing compliance.
+
+They spread by being too useful to ignore.
+
+------------------------------------------------
+Build the system first, then scale when it works
+------------------------------------------------
+
+Don’t announce a system that hasn’t solved a real problem yet.
+
+Prove the value on the ground. Show it saves time.
+
+Then scale up.
+
+That’s how you win trust and adoption for the long haul.
+
+"
+8/26/2025 7:03:02,Design System University <hello@designsystem.university>,The Secret to a Resilient Design System,"Most people think design systems succeed because of big moments:
+
+* A shiny website
+* A 60-slide launch deck
+* An important announcement at the company all-hands
+
+But the real magic is in the small wins stacked day after day,
+sprint after sprint.
+
+--------------------
+Why big moments fade
+--------------------
+
+Big launches are exciting. But six months later, no one remembers
+the keynote. What sticks instead?
+
+* The dev who used your modal and shipped faster.
+* The accessibility fix that prevented a legal headache.
+* The designer who dropped a component into Figma without stress.
+
+Tiny moments of trust, over and over.
+
+That’s how you build something that lasts.
+
+---------------------------
+Make the small wins visible
+---------------------------
+
+Don’t wait for annual retros to tell your story.
+
+Every small win is a story you can share:
+
+* Slack shoutouts.
+* Quick internal blog posts.
+* A rolling “wins wall” in your system hub.
+
+Celebrate them, often. People love being part of something that
+works.
+
+---------------------------
+Small wins build resilience
+---------------------------
+
+​Reorg (
+
+)? Leadership shift? Budget drama?
+
+If your system has visible daily value, it survives the bumps.
+Teams will protect it because they know how much harder life was
+before.
+
+-----------------
+The checkout flow
+-----------------
+
+An apparel company I worked with had a chaotic checkout. 10
+engineers, 3 design leads, everyone hand-rolling styles. The
+system team worked with the Checkout team to ship one tiny
+update: a unified input pattern for forms. Over two quarters,
+that one update removed 30% of checkout-related bugs. No big
+launch. Just a small win that quietly smoothed out the workflow
+for everyone involved.
+
+Small wins are humble. They don’t get fancy case studies. But
+they compound.
+
+Stack them every week.
+Keep telling the story.
+And watch your system become something people fight to keep.
+
+"
+8/20/2025 7:00:08,Design System University <hello@designsystem.university>,Design Systems Are For Humans,"We love talking about tokens, pipelines, automation.
+Those things definitely matter.
+
+But a design system is only as good as the humans who use it.
+
+----------------
+The human factor
+----------------
+
+At its heart, a system is a social contract:
+
+* Designers trust that what they build will be consistent and
+coherent.
+* Engineers trust that the system won’t break production.
+* PMs trust it will help hit deadlines, not slow them down.
+
+If the people don’t trust the system, it doesn’t matter how
+technically elegant it is.
+
+----------------------------------
+Systems can’t replace conversation
+----------------------------------
+
+Too many teams treat documentation as a substitute for talking.
+
+* “Here’s a 50-page doc. Read it.”
+* “It’s all in the library. Good luck.”
+
+The best systems encourage conversation:
+
+* System Slack channels buzzing with questions.
+* Office hours.
+* Regular Q&A.
+* Roadmap check-ins.
+
+-------------------
+Design with empathy
+-------------------
+
+The most successful system teams I know don’t just push
+components. They solve real problems for people:
+
+* What slows your sprint?
+* What irks you about handoff?
+* Where does the system get in your way?
+
+Listen first. Then fix.
+
+-------------------------------
+Machines don’t care. Humans do.
+-------------------------------
+
+You can automate all the design-to-code pipelines in the world,
+but if the humans behind them don’t feel supported, they’ll work
+around it.
+
+It’s been said many times before, and it bears worth repeating:
+
+Design systems are for people.
+
+Design for real people. Build empathy into your system.
+Serve the humans first and the system will follow.
+
+"
+8/12/2025 7:05:48,Design System University <hello@designsystem.university>,Your Design System’s Brand & Reputation,"Whether you like it or not, your design system has a reputation.
+
+You may not agree with it. You can’t control it. But you can
+influence it.
+
+And here’s the part most teams miss:
+That reputation isn’t what’s on your reference site.
+It’s what people say in side chats, after demos, and in 4:59pm
+scramble when they’re trying to ship a feature before clocking
+out for the day.
+
+* “It’s clunky.”
+* “It saved us weeks.”
+* “It’s too rigid.”
+* “I wish we had this years ago.”
+
+​Backstage Capital (
+
+) CEO Arlan Hamilton (
+
+) puts it best:
+
+Reputation is your brand in realtime.
+If your design system’s reputation is bad, no amount of pristine
+documentation will save it.
+If they think it slows them down? They’ll bypass it.
+If they think it’s out of date? They’ll fork it.
+If they think you don’t listen? They’ll build their own.
+
+So how do you improve its reputation?
+
+Step one: Listen
+----------------
+
+You can’t fix a bad reputation if you don’t know what people
+actually think.
+
+* Hold open office hours and ask, “What’s annoying you about the
+system right now?”
+* Shadow teams using your components in real work.
+* Run anonymous surveys; you’ll get the real stuff people won’t
+say out loud.
+* Talk to your system’s loudest critics directly. They’re gold
+mines of feedback—and often become your best champions later.
+
+--------------
+Step Two: Act.
+--------------
+
+Once you know what people really think, act on it.
+
+If they say, “It’s too rigid,” make sure the system is more
+flexible where it makes sense. If they say, “It’s outdated,”
+prune (
+
+) stale parts. Ship visible updates faster. If they say, “Nobody
+listens,” show how user feedback directly changes the roadmap.
+
+Pro tip: share changes publicly.
+
+We heard you hated our old grid system. Here’s what we changed,
+and why.
+
+-----------------------------
+Winning over a skeptical team
+-----------------------------
+
+A nonprofit I worked with had a team that refused to use the
+system’s typography.
+
+“It never fits our marketing landing pages,” they said.
+
+So the design system team sat with them for two sprints. They
+co-designed a new fluid type scale that actually worked for
+marketing needs, then added it to the system.
+
+The skeptics became champions overnight. Not because they were
+forced, but because they were heard.
+
+--------------------------------
+Reputation is trust, built daily
+--------------------------------
+
+You can’t fake reputation. Your design system’s reputation is a
+mirror: it reflects how well you serve your real users.
+
+Manage it actively. Fix the gaps. Celebrate the good.
+
+Your reputation will thank you—and so will your teams.
+
+"
+8/5/2025 7:04:17,Design System University <hello@designsystem.university>,Evolving and Sunsetting Design System Components,"Design system teams love to add things.
+
+New components.
+New variants.
+New tokens.
+
+But the best systems prune more than they add.
+
+Every component has a cost. They must be
+
+* Tested
+* Maintained
+* Documented
+
+If you’re not careful, your system bloats. Before long, you have
+400 icons nobody uses, 7 types of cards for the same content, and
+that one “beta” modal from 2018 still lurking in the repo.
+
+Dead weight makes adoption harder, not easier.
+
+-----------------------------------------------
+The three signs it’s time to sunset a component
+-----------------------------------------------
+
+How do you know when to retire a piece of your system?
+
+Look for:
+
+* Zero usage. If no one’s used a component in 6–12 months, it’s
+fair game for the chopping block.
+* Frequent support tickets. If it’s constantly the subject of
+complaints, bugs, or workarounds, it’s more trouble than it’s
+worth.
+* It solves yesterday’s problem. Maybe that “video hero banner”
+made sense five years ago, but your product no longer uses that
+pattern. Channel Frozen’s Elsa and let it go.
+
+------------------------------------
+How to sunset a component gracefully
+------------------------------------
+
+Sunsetting doesn’t mean chaos. Do it with care.
+
+* Announce deprecation with a clear timeline.
+* Offer a migration path or a replacement pattern.
+* Help teams transition.
+* Archive the old version for reference, but keep it out of
+production.
+
+----------------------------------
+Evolving is not the same as adding
+----------------------------------
+
+Sometimes you don’t need to sunset components as much as you need
+to evolve them.
+
+* Split one rigid component into a more composable set.
+* Version a major change and let both live for a while.
+* Consolidate three similar patterns into one robust solution.
+
+The goal is always the same: less clutter, more clarity.
+
+Healthy systems trim the dead branches
+--------------------------------------
+
+Every system needs regular spring cleaning.
+
+Don’t hoard. Prune.
+
+Your system will be leaner, faster, and easier to love, and
+you’ll automatically increase adoption (
+
+).
+
+"
+7/29/2025 7:03:53,Design System University <hello@designsystem.university>,Design Systems As Time Capsules,"Sometimes I like to think of design systems as time capsules.
+
+Not just for your future self, but for the next designer,
+developer, or product manager… people you may never meet, but who
+will uncover what you’ve left behind.
+
+------------------------------
+Why your future team needs you
+------------------------------
+
+Think back to the last moment you inherited a mess:
+
+* A Figma file with 400 unlinked frames
+* A component library with three conflicting button styles
+* Tokens with no explanation and no clear usage
+
+How did it feel? Probably like opening a time capsule… and
+finding dust.
+
+Your design system is your chance to change that. To leave behind
+something useful. Something thoughtful. Something that says,
+“I’ve been here. Here’s what I learned. that can help you today.”
+
+-------------------------------
+What belongs in a time capsule?
+-------------------------------
+
+Not everything. Just the important stuff, clearly labeled and
+easy to understand:
+
+* A token name that explains the “why,” not just the “what”
+* A code comment that says, “We debated X but chose Y because…”
+* A changelog that says, “Added this state for accessibility
+compliance; request came from legal.”
+
+These little moments of clarity become treasure for the next
+person.
+
+They don’t need to guess. They just need to open the capsule.
+
+-------------------
+Real-world examples
+-------------------
+
+At one company I worked with, every major component included a
+short “why” note in the README. Something like:
+
+“This icon size matches marketing’s paid ad specs. Talk to the
+Brand team before changing.”
+A year later, a new hire avoided a huge inconsistency just
+because of that one note.
+
+Another org added short Loom videos next to major changes.
+Instead of reading dense docs, a dev could watch a 2-minute
+explainer on why the new grid mattered. That grid got adopted
+faster than any other component in the past as a result.
+
+-----------------------------
+Leave something worth finding
+-----------------------------
+
+You don’t have to document everything. But you do need to
+document the stuff that matters.
+
+* A note today prevents confusion tomorrow
+* A comment today avoids a Slack spiral next quarter
+* A changelog today keeps your system alive and trusted
+
+Design systems are time capsules. Fill them with clarity, not
+clutter.
+
+"
+7/22/2025 7:02:18,Design System University <hello@designsystem.university>,The One-Page Design System Manifesto,"Could you explain your design system on a single page?
+
+I’m not talking about your full reference site (
+
+).
+
+I mean a crisp, distilled manifesto that anyone can read in under
+five minutes and immediately know:
+
+* What your system contains
+* How to start using it
+* Who should use it
+* Why it exists
+
+-----------------------
+Why a one-pager matters
+-----------------------
+
+Most design systems drown in documentation: multi-page libraries,
+endless do’s and don’ts, version history going back years.
+
+That’s great for maintainers. It’s terrible for a curious new
+team who just wants to use the thing.
+
+A one-page manifesto forces clarity.
+
+If you can’t say what the system is for in plain language, your
+system is probably trying to be everything for everyone (
+
+). And failing.
+
+---------------------
+What goes on the page
+---------------------
+
+Here’s my go-to outline:
+
+* Name & tagline. “Atlas: our enterprise product design system at
+Olympus Vehicles.”
+* Purpose. Why does it exist? “Atlas helps teams build better
+interfaces so our passengers can enjoy the ride.”
+* Who it’s for. Be explicit. Designers, developers, content
+folks? Specific teams or platforms? “Atlas serves designers,
+engineers, and PMs across our in-vehicle interfaces.”
+* What’s included. Keep it high-level: “Tokens, components,
+templates, docs.”
+* How to start. Link directly to the starter kit, code repo, or
+Figma library… whatever the first step is.
+* What it’s not. Manage expectations: “Atlas should not be used
+across marketing collateral.”
+
+---------------------------
+Where to use your one-pager
+---------------------------
+
+* Pin it to the top of your design system site.
+* Include it in every onboarding doc.
+* Print it out. Stick it on the wall. On bathroom mirrors. Car
+windshields.
+* Use it to pitch skeptical teams.
+* Reference it in budget conversations to remind leadership why
+the system exists.
+
+----------------
+A living promise
+----------------
+
+A one-pager is more than a summary. It’s a promise.
+
+It keeps your system honest.
+
+It reminds you to stay focused on your mission.
+
+Write it. Share it. Update it when your system grows.
+
+One page can align 100 people more than 200 pages ever will.
+
+"
+7/15/2025 7:07:04,Design System University <hello@designsystem.university>,Invisible Design System Work,"One of the biggest challenges in running a design system is that
+the best work is often invisible.
+
+Think about it:
+
+* A developer installs a button component, ships it in a feature,
+and no one ever knows how many hours they didn’t spend building
+it from scratch.
+* A designer uses a spacing token instead of a hardcoded value,
+but no one stops the sprint to applaud that decision.
+* An accessibility fix baked into some core components prevents
+an issue from ever reaching the auditing team.
+
+Nobody sees the friction you removed. They only see what’s still
+visible—and sometimes they don’t see anything at all.
+
+----------------------------------
+Why invisible work matters so much
+----------------------------------
+
+When we do our jobs right as system builders, people barely
+notice.
+
+They just do their work as usual.
+
+But faster. Better.
+
+The design system’s fingerprints are everywhere, but the hands
+are hidden.
+
+And yet, that invisible success is the easiest thing for
+leadership to overlook when budget season rolls around.
+
+So how do you justify funding (
+
+) for something nobody notices?
+
+--------------------------------------
+Visibility ≠ value… unless you show it
+--------------------------------------
+
+You can’t count on others to connect the dots. You have to tell
+the story. Loudly, repeatedly, and with real numbers.
+
+Good system teams make invisible value visible:
+
+* They track adoption metrics (
+
+): which components, tokens, and libraries are used the most.
+* They calculate time saved: “This component has shipped 147
+times this quarter. Building it from scratch would have cost an
+average of 4 hours each. That’s 588 hours saved.”
+* They spotlight bugs that never happened: “This standardized
+form caught a contrast issue that would have failed an audit.”
+* They collect testimonials: “We rebuilt the onboarding flow 2
+days faster thanks to the system.”
+
+--------------------
+Ritualize your proof
+--------------------
+
+​Make sharing the proof a routine (
+
+):
+
+* Do a quarterly “State of the System” recap. Show usage stats,
+wins, and impact.
+* Feature short stories in team meetings: “This team saved a
+sprint by using our templates.”
+* Send a quick email every time the system helps a product ship
+faster.
+* Create a #design-system-wins channel in Slack.
+
+Celebrate every invisible success visibly.
+
+-----------------------------------
+Your invisible work deserves credit
+-----------------------------------
+
+Your system work might feel quiet, but that’s what makes it
+powerful.
+
+Don’t hide the magic. Pull it out into the light.
+
+If you don’t, you risk watching your best work quietly fade into
+the background—and your funding fade with it.
+
+Tell the story. Show the receipts. Keep the invisible visible.
+
+"
+7/8/2025 7:02:47,Design System University <hello@designsystem.university>,The Cost of Consistency,"One of the promises design systems love to make is “consistency
+at scale.”
+
+It’s right there on the first slide of every pitch deck:
+
+Use our system, and your products will feel cohesive,
+recognizable, on-brand, and trustworthy.
+It’s compelling… and mostly true. But what people don’t talk
+about enough is what that consistency costs. Because here’s the
+truth: consistency isn’t free. It’s a currency. And that currency
+is paid for in negotiation, alignment, and a little bit of
+creative sacrifice.
+
+-----------------------------------------
+Why consistency costs more than you think
+-----------------------------------------
+
+When you tell a team, “Please use this component instead of
+designing your own,” you’re not just offering them a convenience.
+You’re asking them to give something up: their creative freedom,
+their unique twist, their time-tested hack that works for them.
+
+Multiply that by dozens of teams and hundreds of designers and
+engineers, and you start to see why alignment is so hard.
+
+Every new variant you say no to? That’s a small battle. Every
+custom edge-case you push back on? Another negotiation.
+
+Consistency feels cheap to the design system team because we’re
+on the inside looking out. But to the people doing the day-to-day
+product work, consistency can feel like someone else’s rules.
+
+--------------------------------------
+The hidden value: trust and time saved
+--------------------------------------
+
+So why fight for it? Because when consistency works, it pays
+dividends:
+
+* Users benefit. Familiar patterns build trust. When buttons look
+and behave the same across screens, users feel more confident and
+less confused.
+* Teams benefit. A reusable component saves hours or days.
+Instead of reinventing a modal or date picker, you drop it in,
+adjust it a bit, and move on to the real work.
+* Products benefit. Accessibility, responsive behavior,
+localization: you handle it once, for everyone.
+
+But this only works if the system’s consistency is perceived as
+valuable, not just by you, but by the teams you’re asking to
+adopt it.
+
+-------------------------
+How to pay the price well
+-------------------------
+
+Too many design system teams get this backward: they see pushback
+as a sign that product teams don’t “get it.”
+
+But resistance is normal! It’s a sign you’re asking for a
+trade-off. You do the work to make it easy for them to let go.
+
+You have to make the trade worth it.
+
+Here’s what I tell design system teams:
+
+* Make it easy to adopt. If using your component takes more
+effort than building from scratch, no one will do it. Smooth out
+the rough edges: clear documentation, copy-paste code snippets,
+robust Figma libraries, easy overrides.
+* Show the payoff. Don’t just say, “Use this.” Show how it saves
+time, reduces bugs, or improves accessibility. Track the hours
+saved and make that visible.
+* Respect what people give up. Acknowledge the trade-off openly.
+“I know this new grid limits some of your layout creativity.
+Here’s why it’s worth it: it unifies responsive breakpoints
+across every app.”
+* Keep improving. Take a deep breath. Listen for real friction.
+If teams keep customizing your component, ask why. Maybe your
+“one-size-fits-all” pattern needs a more flexible API.
+
+---------------------------------------
+The trust bank: earn interest over time
+---------------------------------------
+
+Think of consistency as a trust bank. Early on, withdrawals are
+high: you’re asking people to invest trust without much proof.
+But every successful adoption, every story of time saved, and
+every bug prevented adds to your bank balance.
+
+Over time, your system becomes the default because it’s the
+easiest, safest path. Not because people are forced to use it.
+
+Consistency is expensive. But when you pay the price in trust, in
+listening, and in iteration, you end up with a system people want
+to use, not one they resent.
+
+That’s the real payoff.
+
+"
+6/17/2025 7:04:16,Design System University <hello@designsystem.university>,An Introduction to MCP for Design Systems,"If you work on a design system, you’ve likely been asked the same
+question a hundred times:
+
+Can’t we just generate the code from the Figma file?
+Until now, the answer has been “sort of.”
+
+Designs could be exported, plugins could guess at styles, and AI
+could try to interpret screenshots. But all of those methods
+lacked real context. They couldn’t see what your design actually
+meant… its intent, tokens, variables, or components.
+
+That’s what Figma’s new Dev Mode MCP server changes.
+
+-------------------------------------
+What is MCP, and why should you care?
+-------------------------------------
+
+MCP stands for Model Context Protocol, a new standard for feeding
+AI tools the real, structured data behind your design.
+
+​Figma just released their Dev Mode MCP server earlier this month
+(
+
+).
+
+With the Dev Mode MCP server enabled, your Figma file becomes an
+interactive context layer that AI coding tools can access. It’s
+like giving your dev tools X-ray vision: instead of guessing at
+your spacing, colors, or component logic, they now know.
+
+That means:
+
+* Higher-fidelity code generation that respects your system’s
+styles, tokens, and layout
+* Faster handoff and iteration, especially with AI-enhanced IDEs
+like Cursor (
+
+)​
+* More reliable design-to-code workflows, especially when your
+design system is cleanly structured
+
+The better your design system, the better the code that comes
+out.
+
+For more context about MCPs, Figma has a great primer in their
+resource library (
+
+).
+
+------------------------------------------
+Want to try it? Start here, with examples.
+------------------------------------------
+
+If you’re curious about how this works and want to kick the tires
+yourself, here are a few resources to get you started.
+
+​Design system teacher Joey Banks explores and explains the
+basics (
+
+).
+
+​ (
+
+)​UI/UX instructor Gary Simon shows how to convert a Figma design
+into HTML and CSS using Tailwind (
+
+).
+
+​ (
+
+)Front-end development agency Southleft founder/CEO TJ Pitre has
+been sharing his experiences with the earlier Figma-Context-MCP (
+
+) and then eventually with Figma’s newer Dev Mode MCP server (
+
+).
+
+------------
+What’s next?
+------------
+
+If you’ve already built a thoughtful design system, you’re well
+set up to give this a shot.
+
+MCP finally lets your system talk back.
+
+You’re not just handing over a Figma file anymore. You’re
+providing code-ready context, instantly usable by developers, AI
+tools, and anything else wired into your product pipeline.
+
+And if you haven’t structured your Figma files yet?
+
+This is the wake-up call to start.
+
+Try it out today:
+
+* Turn on the MCP server in Figma (via Preferences in the desktop
+app).
+* Open Cursor (
+
+), paste in your design frame, and prompt: “Use the MCP server to
+build this with Tailwind CSS.”
+
+Then sit back and watch your system go to work.
+
+"
+6/3/2025 7:04:08,Design System University <hello@designsystem.university>,Design System Success Metrics from a Consultant,"As a consultant, I know my time with a design system team is
+temporary. Whether I’m there for weeks or months, I’m on borrowed
+time.
+
+So I pay close attention to signals. Tiny moments that tell me
+something is shifting, not just in the product, but in the team
+itself.
+
+Here’s one of the clearest signs that change is taking root:
+
+When I first arrive, most teams work traditionally in their
+typical tools: designers in Sketch and Figma, engineers in code
+editors, product folks in documents and decks.
+
+At some point—typically after introducing and role-playing enough
+hot potato (
+
+)—I hear a designer say:
+
+Lemme just hop into Storybook real quick and make the change
+myself.
+A designer.
+
+It’s usually a minor tweak: a hex code update, a copy edit, a
+spacing fix.
+
+They’re not making some grand philosophical statement or career
+shift.
+
+They’re doing what they normally do: trying to get something done
+as quickly and well as they can.
+
+But their repertoire of options has organically expanded.
+
+Ownership grows. Separate roles start to come together. Tools
+become shared. Discipline lines become blurrier. The system
+becomes something shared.
+
+I’ve found this moment to be a consistent leading indicator of
+more collaborative changes to come, where an entire team is
+embracing working software as the real signal of efficacy (
+
+)—and how the broader organization will soon follow.
+
+"
+5/20/2025 7:00:08,Design System University <hello@designsystem.university>,Why “Consistency” is a Bad Design System Goal,"If your design system’s top goal is “consistency,” you’re aiming
+too low.
+
+Consistency is table stakes. It’s a side effect, not a value
+proposition.
+
+When leadership asks, “Why are we investing in a design system?”
+the answer can’t be:
+
+“So our buttons look the same.”
+Here’s a better way to think about it:
+
+Design systems should solve business-critical problems. Problems
+like speed, quality, scalability, and governance.
+
+Consistency is just the scaffolding. It’s a by-product, not the
+business case.
+
+The best systems I’ve seen are built to:
+
+* Unblock engineering bottlenecks
+* Speed up cross-functional workflows
+* Empower junior contributors to ship with confidence
+* Scale UX decisions across brands, markets, and devices
+
+Those are goals worth investing in.
+
+So if your pitch deck or vision doc says your system’s job is
+“consistency,” here’s a homework assignment:
+
+Replace that word with a business problem your system actually
+solves.
+
+Where to find that?
+
+Download the deck that a VP presented at the most recent company
+all-hands meeting. Find the most frequently mentioned words or
+phrases.
+
+At the last company I consulted with, that was a passed-around
+deck the CTO created. On the overview page was this sentence:
+
+The focus of our work remains on four key platforms:
+So our mission became to tie design system work to the work
+happening within those four platforms.
+
+Suddenly, people started appreciating the design system more.
+
+Magically, the user interfaces across all four platforms started
+to become more consistent.
+
+"
+4/29/2025 7:03:37,Design System University <hello@designsystem.university>,A Design System Team Is Not a Design Standards Team,"If your design system team is primarily focused on reviewing work
+and enforcing consistency, you’re not running a system team.
+
+You’re running a standards committee.
+
+That’s a critical mistake.
+
+Design standards and design systems are both important, but they
+serve different purposes.
+
+When you conflate the two, you end up with a team that’s stuck in
+endless review cycles, slowing down product teams instead of
+helping them move faster.
+
+------------------------------------------
+Design standards teams focus on evaluation
+------------------------------------------
+
+* Primary role: Assess quality after work is produced.
+* Main activities: Reviews, audits, critiques, design QA.
+* Goal: Maintain a consistent, accessible, high-quality user
+experience across the product.
+* Position: Gatekeeper. Approve or reject.
+
+This is necessary. Every organization that cares about user
+experience needs a mechanism to enforce standards.
+
+But it is fundamentally reactive work.
+
+---------------------------------------
+Design system teams focus on enablement
+---------------------------------------
+
+* Primary role: Create tools that help teams produce high-quality
+work independently.
+* Main activities: Build components, patterns, documentation,
+starter kits, templates.
+* Goal: Make it easier, faster, and more reliable to produce work
+that already meets standards.
+* Position: Enabler. Remove obstacles.
+
+This is proactive work.
+
+Good system teams aren’t just telling people what good looks
+like. They’re making it easier to achieve good by default.
+
+---------------------------
+Why the distinction matters
+---------------------------
+
+If your system team spends most of its time reviewing Figma
+files, holding design critiques, and giving feedback on work
+that’s already 90% complete, you’re reacting after the hard work
+is done. That means you’re probably slowing teams down at the
+most expensive moment: right before launch.
+
+Instead, system teams should be:
+
+* Building composable assets and flexible templates
+* Providing robust, adaptable documentation
+* Offering clear examples and starter kits that accelerate
+early-stage design
+
+The better your system team gets at proactive enablement, the
+less your organization has to rely on painful late-stage reviews.
+
+Good design work flows through strong systems, not around them.
+
+------------------------------------
+How to reset your design system team
+------------------------------------
+
+If you realize your system team has drifted into a standards
+enforcement role, here’s how to course-correct:
+
+* Clarify your charter. Explicitly define your team’s mission as
+enablement, not enforcement. Write it down. Share it widely.
+* Shift your metrics. Stop measuring success by how many files
+you review. Start measuring success by how often your assets and
+guidance are used without intervention.
+* Rebuild trust through tools. Ask product teams what slows them
+down. Build solutions that solve those problems before they
+become quality issues.
+* Partner with standards teams; don’t replace them. Standards
+review still needs to happen. But it’s a different discipline.
+System teams should collaborate with standards reviewers, not
+become them.
+
+Standards teams audit outcomes
+
+Systems teams shape outcomes.
+
+If you’re doing both at once, you’re probably doing neither well.
+
+Get clear on your role, and you’ll build a system that product
+teams actually want to use, not just tolerate.
+
+"
+4/22/2025 7:43:44,Design System University <hello@designsystem.university>,Governance Isn’t a Flowchart,"Many teams think design system governance is about having a
+process.
+
+So they make a flowchart.
+
+Or a diagram.
+
+Or a checklist.
+
+And they call that governance.
+
+But governance isn’t a flow.
+
+The teams I’ve seen fail at governance all have something in
+common: they built a process, but they didn’t build trust.
+
+* They wrote the rules, but they didn’t get buy-in.
+* They made a new Figma library, but no one used it.
+* They published the flowchart, but no one followed it.
+
+And then they wondered why their system wasn’t getting adopted.
+
+Good governance isn’t documentation (
+
+).
+
+It’s alignment over time. That only happens through understanding
+the current culture.
+
+Most governance diagrams overcomplicate the answer that actually
+matters: who does what, and when?
+
+You discover this by talking to people about what they actually
+do, not writing down what you wish they’d do.
+
+Once you know this, write it down in a simple list:
+
+WHO:Design system core team​
+​WHAT: Approves net-new components
+​WHEN: During weekly governance review
+
+WHO:Individual designers​
+​WHAT: Propose updates to existing components
+​WHEN: Anytime—via design tokens repo
+
+WHO:Engineering leads​
+​WHAT: Flag performance concerns with components
+​WHEN: Before major releases
+
+WHO:Product managers​
+​WHAT: Request new patterns based on user needs
+​WHEN: During quarterly planning
+
+WHO:QA / Accessibility team​
+​WHAT: Report bugs or accessibility regressions
+​WHEN: As part of sprint testing
+
+WHO:Everyone​
+​WHAT: Follows the contribution model
+​WHEN: Always
+
+You don’t need a giant diagram.
+
+You need clarity on who’s responsible, what they’re responsible
+for, and when it happens. Without that, even the cleanest process
+doc is useless.
+
+Don’t start with a diagram. Start with shared understanding.
+
+Talk to your contributors. Define the values behind your
+decisions. Document the actual behavior of your teams, not the
+fantasy version. And yes, write it down if you need to. But don’t
+mistake the artifact for the alignment.
+
+At the end of the day, governance isn’t a flowchart.
+
+It’s the ongoing work of keeping a system alive, trusted, and
+evolving.
+
+"
+3/19/2024 7:01:03,Design System University <hello@designsystem.university>,How design systems can foster culture change,"Maintaining design systems isn’t just for the employee who
+started the program. There’s not really a need for someone to
+“police” the structure.
+
+Instead, it’s a group enterprise. It’s about actively using it
+across your organization and finding ways to adapt the design
+system over time.
+
+In order for your design system to thrive, you need to do three
+things.
+
+---------------
+1. Collaborate.
+---------------
+
+Etsy has a design system council comprised of executives,
+accessibility and performance gurus, and people who build
+different products to support the brand — web, iOS, Android — as
+well as subject matter experts.
+
+The team meets every month and provides organizational
+governance.
+
+If your organization doesn’t have access to Etsy’s level of
+expertise, it might make sense to serve on an advisory board.
+
+Multiple perspectives help navigate the politics and ensure the
+system remains relevant and useful in support of the company’s
+mission.
+
+-----------------------------
+2. Keep cranking on products.
+-----------------------------
+
+The way to improve your design system is to keep making products.
+
+Your organization’s governance committee helps you identify
+components that need to be added, tweaked, or even eliminated
+because they’re no longer necessary.
+
+As you continue to build, introduce one or two checkpoints that
+give your governance committee a chance to review what’s working,
+what’s not working, and how to address the changes that need to
+be made to the design system.
+
+---------------
+3. Communicate.
+---------------
+
+Your design system — just like any other product or service —
+needs good customer support. So set up a communication channel to
+communicate and respond to the people who use the system.
+
+In addition, I like regular Town Hall meetings, which can provide
+updates on the roadmap, new releases, or as a chance to recognize
+a particular person or team for extraordinary or innovative
+contribution to the product.
+
+When you’re seeking input and responding to feedback, your design
+system itself becomes a catalyst for culture change.
+
+It’s not immediate, but happens over time. Because people in the
+organization start to see they all share ownership in the design
+system and throughout the company.
+
+Contributing to culture change is one of the most gratifying
+professional outcomes you can achieve. It’s infinitely more
+rewarding than trying to police a design system.
+
+"
