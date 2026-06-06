@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Systems as Knowledge Graphs — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./component-architecture.html">Component Architecture →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Design Systems as Knowledge Graphs</h1>
+    <p><em>Deconstructing design systems as non-linear hyperobjects composed of transcluded content, bidirectional links, unresolved fragments, and structured queries.</em></p>
+
+    <h2>Beyond the product metaphor</h2>
+    <p>While design systems are commonly treated as standalone software products, libraries, or documentation sites, Chase McCoy argues they represent something far more complex. Good systems are <strong>hyperobjects</strong> that capture decisions, language, patterns, history, and the collective institutional knowledge of an organization.<sup><a href="#s-1">1</a></sup> Instead of flat, linear files, a design system resembles a <strong>knowledge graph</strong>—a collection of interlinked descriptions of entities, concepts, and objects.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>The four graph mechanics</h2>
+    <p>McCoy identifies four core patterns derived from knowledge graph software (such as Roam Research, Obsidian, and Notion) that can be directly applied to design system architecture:<sup><a href="#s-1">1</a></sup></p>
+    
+    <ul>
+      <li><strong>Transclusion:</strong> Storing information (styles, tokens, guidelines, properties) in its minimum viable format so it can be referenced and dynamically embedded across multiple contexts.<sup><a href="#s-1">1</a></sup> Future updates propagate automatically, preventing documentation drift. Real-world implementations include:
+        <ul>
+          <li><em>Seeds design system:</em> Embeddable, hoverable tags for tokens, components, and properties that show inline details without switching context.<sup><a href="#s-1">1</a></sup></li>
+          <li><em>Kiwi Orbit:</em> Inline transclusion tags displaying component metadata directly inside documentation prose.<sup><a href="#s-1">1</a></sup></li>
+        </ul>
+      </li>
+      <li><strong>Bidirectional links:</strong> Making components and documents aware of where they are referenced.<sup><a href="#s-1">1</a></sup> For instance, if a <code>Button</code> component consumes an <code>Icon</code>, the documentation for <code>Button</code> shows it imports <code>Icon</code>, and the documentation for <code>Icon</code> dynamically lists <code>Button</code> as a consumer. This relationship can be visualized as a visual graph or navigated using layered sliding cards (similar to Andy Matuschak's sliding pane interface).<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Fragments (Red Links):</strong> Creating placeholder entities in the graph that do not yet exist, inspired by Wikipedia's "red links."<sup><a href="#s-1">1</a></sup> These fragments prevent new pages from being orphaned, establish a clear backlog of design system needs, and lower the friction for community-driven contributions.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Queries:</strong> Exposing system content to logical search operators (e.g., query for <code>icons AND onboarding</code> to find onboarding-related assets) and transcluding the results dynamically.<sup><a href="#s-1">1</a></sup> Shopify's Polaris design system implements a version of this by exposing a GraphQL API of its tokens, components, pages, and examples.<sup><a href="#s-1">1</a></sup></li>
+    </ul>
+
+    <h2>The Agentic Frontier: Ideal for LLM consumption</h2>
+    <p>While originally proposed in 2021 to improve human authoring and navigation, McCoy's knowledge-graph framework aligns precisely with the requirements of **Agentic AI** and LLM-assisted file management. By converting implicit code relationships into explicit graph edges, the graph structure resolves the major limitations of traditional file management:<sup><a href="#s-2">2</a></sup><sup><a href="#s-3">3</a></sup></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Knowledge Graph Mechanic</th>
+          <th>LLM Context Optimization</th>
+          <th>Agentic Failure Resolved</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Transclusion</strong></td>
+          <td>Generates precise, decoupled <strong>"context bubbles"</strong> (e.g., passing only the spacing token subset to the prompt).<sup><a href="#s-2">2</a></sup></td>
+          <td>Resolves <em>Monolithic component definitions</em>; prevents token bloat and hallucination.<sup><a href="#s-2">2</a></sup></td>
+        </tr>
+        <tr>
+          <td><strong>Bidirectional Links</strong></td>
+          <td>Allows the orchestration layer to trace downstream <strong>dependencies</strong> and run targeted tests when code is changed.<sup><a href="#s-2">2</a></sup></td>
+          <td>Resolves <em>Documentation drift</em>; ensures changes don't silently break consuming layers.<sup><a href="#s-2">2</a></sup></td>
+        </tr>
+        <tr>
+          <td><strong>Fragments</strong></td>
+          <td>Acts as an explicit, machine-readable **task backlog** for autonomous agents.<sup><a href="#s-2">2</a></sup></td>
+          <td>Prevents <em>Orphaned assets</em>; guides agents to fill identified system gaps safely.<sup><a href="#s-2">2</a></sup></td>
+        </tr>
+        <tr>
+          <td><strong>Queries</strong></td>
+          <td>Allows agents to query data structures programmatically (<strong>"JSON for MCP, Markdown for LLM"</strong>).<sup><a href="#s-3">3</a></sup></td>
+          <td>Resolves <em>Unstructured docs in MCP</em>; provides clean schemas instead of bloated prose.<sup><a href="#s-3">3</a></sup></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Perspectives: Linear documents vs. Networked graphs</h2>
+    <p>A central tension exists in how we structure design system knowledge:</p>
+    <ul>
+      <li><strong>Linear, product-centric documentation (Traditional):</strong> Documentation modeled after standard software libraries—long, top-to-bottom documents. While easy for humans to read sequentially, it hides relationships, duplicates information, and is highly prone to drift as the codebase evolves.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Networked, graph-centric documentation (McCoy):</strong> Documentation modeled as a web of addressable, transcluded nodes. While structurally resilient, keeping it human-friendly requires custom UI layers (such as transclusion hovers or sliding panels).<sup><a href="#s-1">1</a></sup></li>
+    </ul>
+    <p>In the context of modern development, this debate is resolved by maintaining a **dual-interface system**: exposing human-friendly markdown interfaces for designers and developers, while mapping the underlying system metadata into a structured, queryable JSON knowledge graph (e.g., via MCP servers) for machine agents.<sup><a href="#s-3">3</a></sup></p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Design%20systems%20as%20knowledge%20graphs.txt">Design systems as knowledge graphs — Chase McCoy (08/2021)</a></li>
+      <li id="s-2"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+      <li id="s-3"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./what-is-a-design-system.html">What Is a Design System?</a></li>
+      <li><a href="./systems-thinking.html">Systems Thinking for Design Systems</a></li>
+      <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
+      <li><a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
