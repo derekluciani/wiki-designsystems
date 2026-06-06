@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Metrics & the Value of a System — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./agentic-readiness.html">Agentic Readiness & Architecture →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Success Metrics & the Value of a System</h1>
+    <p><em>Consistency is table stakes, not the value proposition — the real case is the business problem the system solves.</em></p>
+
+    <h2>Consistency is a bad top-line goal</h2>
+    <p>Dan Mall's sharpest argument: if your system's top goal is "consistency," you're aiming too low. Consistency is a <strong>by-product</strong>, not a value proposition — the answer to "why are we investing in a design system?" can't be "so our buttons look the same."<sup><a href="#s-1">1</a></sup> Better systems are built to unblock engineering bottlenecks, speed cross-functional workflows, empower junior contributors, and scale UX decisions across brands and markets.<sup><a href="#s-1">1</a></sup></p>
+    <p>His homework assignment: replace "consistency" in your vision doc with a business problem the system actually solves — ideally one drawn from the words a VP or CTO uses at the all-hands. At one company, tying design-system work to "four key platforms" from the CTO's deck made people value the system more — and, ironically, the UIs became <em>more</em> consistent as a result.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Efficiency numbers earn trust</h2>
+    <p>The quantitative case is well documented: Uber's Base system let adopting teams ship 3× faster with 4× fewer visual bugs and half the UI code.<sup><a href="#s-2">2</a></sup> These are the numbers a new team uses to earn internal credibility — without them, "you're just another initiative asking people to change how they work."</p>
+
+    <h2>Leading indicators over lagging metrics</h2>
+    <p>Mall pays attention to <strong>behavioral signals</strong> as leading indicators. His favorite: the moment a <em>designer</em> says "lemme just hop into Storybook and make the change myself." Roles converging, tools becoming shared, discipline lines blurring — that's the system becoming something owned in common, and it reliably precedes broader collaborative change.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Don't let savings vanish into throughput</h2>
+    <p>A maturity trap Mall flags: when a system halves delivery time, sprint commitments often just double — the saved time disappears into throughput instead of going to maintenance, documentation, or quality. "Speed isn't the problem. Treating speed as the point is."<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Perspectives: is consistency the point?</h2>
+    <p>This is one of the corpus's central debates, and the camps are closer than they appear.</p>
+    <ul>
+      <li><strong>Mall:</strong> consistency is table stakes / a by-product; the goal is the business problem solved.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Zhang:</strong> consistency is the concrete Stage-1 deliverable that earns a new team its trust (the 3×/4× numbers are <em>consistency</em> numbers).<sup><a href="#s-2">2</a></sup></li>
+      <li><strong>Frost:</strong> reframes the whole frame — systems enable "flexibility, not uniformity"; good architecture lets brands look <em>different</em> while sharing a core.<sup><a href="#s-3">3</a></sup></li>
+    </ul>
+    <p>Synthesis: consistency is a necessary early proof point and a by-product of good architecture — but a poor <em>north star</em>. The durable goal is the business outcome (speed, scale, quality) that consistency quietly enables. See <a href="./token-architecture.html">Token Architecture</a> for the "flexibility, not uniformity" mechanism.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions.csv">Dan Mall / Design System University email essays ("Why Consistency is a Bad Design System Goal," "Success Metrics from a Consultant," "Keep the Savings")</a></li>
+      <li id="s-2"><a href="../raw/Design%20System%20Team%20Maturity.txt">Design System Team Maturity — Ricky Zhang (article, 06/2026)</a></li>
+      <li id="s-3"><a href="../raw/Design%20Token%20Architecture%20with%20Brad%20Frost.txt">Design Token Architecture — Brad Frost (video, 04/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./team-maturity.html">Design System Team Maturity</a></li>
+      <li><a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a></li>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+      <li><a href="./dan-mall.html">Dan Mall</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

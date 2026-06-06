@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoption, Contribution & Trust — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./success-metrics.html">Success Metrics →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Adoption, Contribution & Trust</h1>
+    <p><em>Adoption is won by removing friction and earning reliability — not by mandates or by asking product teams to act like system teams.</em></p>
+
+    <h2>Why product teams don't contribute</h2>
+    <p>Dan Mall names the irony: the teams a system is built for are often the least likely to contribute back, and without contributions systems become stale bottlenecks.<sup><a href="#s-1">1</a></sup> Two truths most teams miss:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Too many new things.</strong> Over 40% of human action is habitual; new tools ask people to rewire habits, not just adopt software.</li>
+      <li><strong>It's not their job.</strong> Product teams exist to ship products. "Contribute to the design system" slides to the bottom of the backlog when deadlines loom.</li>
+    </ul>
+    <p>The fix is to <strong>flip the frame</strong>: don't ask for help, remove friction. Make contribution the path of least resistance by integrating the system into teams' natural workflow and reducing cognitive load.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Trust comes from reliability</h2>
+    <p>Zhang frames the Stage-2 ownership tension the same way: you want consistency and rigor, product teams want to ship fast. You can't org-chart your way out of it — trust is earned by partnering closely, investing in test coverage so teams trust your releases, and showing up when needed.<sup><a href="#s-2">2</a></sup> Once teams feel heard they act like co-owners: better bug reports, real improvements, constructive pushback.</p>
+
+    <h2>Own the migrations</h2>
+    <p>A concrete trust-builder: the system team does the migration work itself rather than blasting a breaking change and watching timelines slip for months. Use codemods where possible — Sourcegraph automated 95% of one migration — and go into product codebases to update the UI and request review.<sup><a href="#s-2">2</a></sup></p>
+
+    <h2>Cross-product awareness as a byproduct</h2>
+    <p>Embedded with enough teams, the system team sees patterns no single squad can: two squads with the same problem who don't know the other exists, local pain points that are actually systemic.<sup><a href="#s-2">2</a></sup> This cross-org vantage becomes one of the team's most valuable assets at maturity.</p>
+
+    <h2>Perspectives: convenience vs. mandate</h2>
+    <p>Both sources land on the same answer from different directions: adoption is won by <strong>convenience and reliability</strong>, not mandate. Zhang warns top-down teams not to "force adoption so hard that teams resent you," and Mall's whole "remove friction" thesis is the bottom-up version of the same lesson.<sup><a href="#s-1">1</a></sup><sup><a href="#s-2">2</a></sup> The agentic workflows (see <a href="./ai-assisted-authoring.html">AI-Assisted Authoring</a>) push this further — meeting designers and developers inside the tools they already use rather than as a separate bot.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions.csv">Dan Mall / Design System University email essays ("Why Product Teams Don't Contribute," "Time to Involvement")</a></li>
+      <li id="s-2"><a href="../raw/Design%20System%20Team%20Maturity.txt">Design System Team Maturity — Ricky Zhang (article, 06/2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./team-maturity.html">Design System Team Maturity</a></li>
+      <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>
+      <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+      <li><a href="./token-pipelines.html">Token Pipelines (co-creation)</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

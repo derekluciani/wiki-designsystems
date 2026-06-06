@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Architecture: Web Components & the Layer Cake — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./systems-thinking.html">Systems Thinking →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Component Architecture: Web Components & the Layer Cake</h1>
+    <p><em>How to structure components so they survive framework churn and vary by product without fragmenting.</em></p>
+
+    <h2>Web Components as the delivery vehicle</h2>
+    <p>Frost strongly recommends <strong>Web Components</strong> for delivering a design system across different tech stacks and frameworks, because they bundle HTML, CSS, and JS into a single reusable package that any framework can consume.<sup><a href="#s-1">1</a></sup> The payoff is reach: one component implementation serves React, Vue, server-rendered pages, and whatever comes next.</p>
+
+    <h2>The "layer cake"</h2>
+    <p>Frost's compositional model has two tiers:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Basement / base layer</strong> — primitive base components shared by everyone.</li>
+      <li><strong>Recipe layer</strong> — more complex, composed components (cards, headers) that may legitimately vary by product.</li>
+    </ul>
+    <p>Separating the two lets the shared core stay stable while product teams assemble product-specific "recipes" on top.</p>
+
+    <h2>Build on native standards</h2>
+    <p>A guiding principle is to build on native web standards wherever possible, because this ensures longevity as specific frameworks come and go.<sup><a href="#s-1">1</a></sup> The bet is that the platform outlives any given framework.</p>
+
+    <h2>Keep tokens out of component logic</h2>
+    <p>Frost insists design tokens be kept separate from component logic so they can be themed and updated independently.<sup><a href="#s-1">1</a></sup> This is the architectural seam that the <a href="./token-architecture.html">token architecture</a> page develops in depth.</p>
+
+    <h2>Perspectives: web-standard reach vs. typed-framework rigor</h2>
+    <p>Frost's web-standards bet optimizes for cross-framework <em>longevity</em>. The type-safety camp optimizes for <em>compile-time correctness</em> inside a typed framework (typically React + TypeScript), accepting framework coupling in exchange for guardrails that forbid invalid prop combinations.<sup><a href="#s-2">2</a></sup> Both want resilient components; they disagree on whether resilience comes from the platform or from the type system. See <a href="./type-safe-systems.html">Type-Safe Design Systems</a>.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Design%20System%20with%20Brad%20Frost.txt">Design Systems with Brad Frost (video, 05/2024)</a></li>
+      <li id="s-2"><a href="../raw/Guide%20to%20Type-Safe%20Design%20Systems.txt">Guide to Type-Safe Design Systems — Kathleen McMahon (video, 05/2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+      <li><a href="./type-safe-systems.html">Type-Safe Design Systems</a></li>
+      <li><a href="./what-is-a-design-system.html">What Is a Design System?</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

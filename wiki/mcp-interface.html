@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP & the Machine-Readable Interface — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./agent-trust-levels.html">Governance & Trust Levels for Agents →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">MCP & the Machine-Readable Interface</h1>
+    <p><em>The Model Context Protocol is the connective tissue between a design system and an agent — and how you structure what it exposes makes or breaks accuracy and cost.</em></p>
+
+    <h2>What MCP does</h2>
+    <p>The Model Context Protocol is a standard for feeding AI tools the real, structured data behind a design — its intent, tokens, variables, and components — rather than letting them guess from screenshots.<sup><a href="#s-1">1</a></sup> Figma's Dev Mode MCP server turns a Figma file into an interactive context layer that AI coding tools can query: "X-ray vision" for spacing, color, and component logic, enabling higher-fidelity code generation, especially when the system is cleanly structured.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Storybook MCP as connective tissue</h2>
+    <p>In the agentic-2026 session, the Storybook MCP server is demonstrated as the connective tissue that exposes design-system components, APIs, and interaction tests to AI agents in a structured, <strong>token-optimized</strong> format.<sup><a href="#s-2">2</a></sup> The system's components, not generic web knowledge, become the agent's vocabulary.</p>
+
+    <h2>JSON for MCP, Markdown for LLM</h2>
+    <p>The most important structural lesson: early attempts dumped Markdown docs into an MCP server, causing high token usage, hallucinations, and poor adherence to component contracts. Encoding component APIs and variants as <strong>structured JSON</strong> instead reduced token usage by ~80% (per Indeed's case study) and dramatically improved accuracy and cost.<sup><a href="#s-3">3</a></sup></p>
+    <p>The emergent pattern is <strong>"JSON for MCP, Markdown for LLM"</strong>: machine-readable structured data (props, variants, allowed values) as JSON schemas; human-oriented guidance and interaction rules as Markdown. Metadata stays under source control with a pipeline that converts MDX/Storybook docs into MCP-readable JSON whenever components change.<sup><a href="#s-3">3</a></sup></p>
+
+    <h2>Expose foundations, not just components</h2>
+    <p>A specific failure mode: MCP interfaces that reveal components but omit foundations (spacing, typography) force agents to guess and break brand consistency.<sup><a href="#s-3">3</a></sup> This is the practical cash-value of the <a href="./token-architecture.html">tokens-as-API</a> idea — the foundation layer must be machine-visible too.</p>
+
+    <h2>Perspectives: structured data vs. prose</h2>
+    <p>The corpus is unusually unanimous here: machine interfaces want <strong>structure</strong>, humans want <strong>prose</strong>, and conflating them is the original sin of design-system MCP work.<sup><a href="#s-3">3</a></sup> The Figma Dev Mode MCP and Storybook MCP are both instances of the same move — give the agent the structured truth (tokens, variants, tests) rather than a rendered picture or a wall of docs.<sup><a href="#s-1">1</a></sup><sup><a href="#s-2">2</a></sup> See <a href="./ai-assisted-authoring.html">AI-Assisted Authoring</a> for MCP in a real authoring loop.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions.csv">Dan Mall / Design System University ("An Introduction to MCP for Design Systems")</a></li>
+      <li id="s-2"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
+      <li id="s-3"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./ai-assisted-authoring.html">AI-Assisted Component Authoring</a></li>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

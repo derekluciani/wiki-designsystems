@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modular & Parametric Scales — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./type-safe-systems.html">Type-Safe Design Systems →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Modular & Parametric Scales</h1>
+    <p><em>Generating typography, spacing, and density from base values and ratios — so the system scales by math instead of by hand.</em></p>
+
+    <h2>The origin problem</h2>
+    <p>Nate Baldwin's case study starts concretely: his team at Intuit supported button heights of 24/36/48px on an 8-pixel grid. When marketing needed larger buttons, the grid mechanically produced 56 and 64px — but those increments weren't <em>proportional</em>, which is how rigid pixel grids accumulate inconsistency.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Ditch the pixel grid for modular scales</h2>
+    <p>Baldwin explicitly criticizes rigid pixel grids as non-proportional and prone to inconsistency, advocating <strong>modular scales</strong> — a base value and a ratio — to generate values instead.<sup><a href="#s-1">1</a></sup> The same modular formula should drive <strong>spacing</strong> as well as type, so spacing stays proportional to text size and visual relationships hold.</p>
+
+    <h2>Responsive typography</h2>
+    <p>Use conditional ratios and base font sizes that adapt to viewport width (small, medium, large, widescreen), and use <strong>REM units</strong> for text so the system respects the user's browser-level font-size preference — an accessibility requirement, not a nicety.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Size vs. density</h2>
+    <p>A key distinction Baldwin draws:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Size</strong> affects the overall scale of an element, including its text.</li>
+      <li><strong>Density</strong> affects only the internal padding of a component.</li>
+    </ul>
+    <p>Separating these dimensions means a density change doesn't break content hierarchy. Padding in component <strong>archetypes</strong> is defined via relative indices (e.g., −4, −1, 0, 1) rather than hard-coded pixels, making it responsive and adjustable via the scale.</p>
+
+    <h2>Tooling</h2>
+    <p>Baldwin points to parametric tools: <strong>Proportio</strong> (his own open-source tool for proportional type/spacing/component systems), <strong>Utopia.fyi</strong> (CSS <code>clamp()</code> for fluid scaling across viewports), and <strong>Token Studio</strong> (graph-based, editable representations of system structure).<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Perspectives: parametric generation vs. hand-tuned scales</h2>
+    <p>Baldwin's parametric stance is a clear position in a live debate: should scales be <em>generated</em> from constants and ratios, or hand-picked for each step? His argument is that parameterization makes the system "inherently scalable and dynamic" and is the only approach that survives requests like "we need a bigger button" without breaking proportion.<sup><a href="#s-1">1</a></sup> It connects directly to the <a href="./systems-thinking.html">systems-thinking</a> principles of encapsulation and archetypes, and the generated values feed the <a href="./token-architecture.html">token architecture</a>.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Scalable%20scales%20that%20scale%20-%20Nate%20Baldwin%20at%20Into%20Design%20Systems.txt">Scalable scales that scale — Nate Baldwin (video, 04/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./systems-thinking.html">Systems Thinking for Design Systems</a></li>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+      <li><a href="./nate-baldwin.html">Nate Baldwin</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

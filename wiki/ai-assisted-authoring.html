@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Assisted Component Authoring — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./brad-frost.html">Brad Frost →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">AI-Assisted Component Authoring</h1>
+    <p><em>A real, end-to-end loop for building design-system components with AI — where the speed changes but the quality gates do not.</em></p>
+
+    <h2>The Monday.com workflow</h2>
+    <p>Elad Mizrahi describes a concrete ten-step loop for authoring components in Monday's Vibe system with Cursor and Figma MCP.<sup><a href="#s-1">1</a></sup> The shape:</p>
+    <ol>
+      <li><strong>Design in Figma</strong> as usual — but annotate <em>for AI</em>: short, technical, visually explicit (make spacing visible so AI can infer measurements), context-rich.</li>
+      <li><strong>Generate a component spec</strong> via an internal VS Code extension that analyzes the Figma frame and produces a structured technical spec (structure, props, tokens, visual rules); the human reviews and confirms it.</li>
+      <li><strong>Use Figma MCP</strong> to pull screenshots and connect components to "code connect," giving Cursor the visual context to "see" the design.</li>
+      <li><strong>Load Cursor Rules</strong> — persistent <code>.cursor/rules</code> files set up once by engineering, covering structure, styling conventions, Storybook story format, and accessibility (semantic HTML, ARIA, keyboard nav).</li>
+      <li><strong>Prompt Cursor to generate</strong> the component — types, structure, styling, tests — following Monday's conventions. Typical accuracy: 70–90%, higher for simple components.</li>
+      <li><strong>Generate Storybook stories</strong> automatically (props docs, usage, dos/don'ts) inferred from existing patterns.</li>
+      <li><strong>Update visuals</strong> by dropping SVGs/illustrations into Cursor and prompting replacement.</li>
+      <li><strong>Review and iterate locally</strong> — feed Cursor screenshots of actual vs. expected for targeted fixes.</li>
+      <li><strong>Quality check</strong> — push to a branch, open a PR; engineering reviews code quality, a11y, standards, tests; CI runs.</li>
+      <li><strong>Publish to Vibe</strong>, kept in sync across Storybook and Figma so docs aren't maintained twice.</li>
+    </ol>
+
+    <h2>"The speed changes. The quality gates do not."</h2>
+    <p>The defining principle of the workflow: AI compresses the build loop from meetings to minutes, but the human review, accessibility checks, CI, and Figma-side design-system approval all remain.<sup><a href="#s-1">1</a></sup> This is the operational form of the <a href="./agent-trust-levels.html">trust-level</a> discipline — humans keep the merge.</p>
+
+    <h2>"Mouth coding" and role shift</h2>
+    <p>Frost's complementary framing: this shift lets non-engineers (PMs, sales leads) effectively "code" by prompting agents to assemble interfaces, while engineers retain control through the underlying system's rigor and governance.<sup><a href="#s-2">2</a></sup> The component-authoring loop is where that promise becomes concrete.</p>
+
+    <h2>Perspectives: rules and specs as the real product</h2>
+    <p>What makes the Monday loop produce <em>Monday-quality</em> code isn't the model — it's the Cursor Rules and the structured spec.<sup><a href="#s-1">1</a></sup> This echoes the readiness thesis: the leverage is in the constraint system, not the generator. The same artifacts that make humans productive (clear conventions, good docs, tokens) are what make agents productive — see <a href="./agentic-readiness.html">Agentic Readiness</a> and <a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a>.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/This%20is%20how%20I%20use%20AI%20for%20Design%20Systems%20at%20Monday.com.txt">This is how I use AI for Design Systems at Monday.com — Elad Mizrahi (video, 02/2026)</a></li>
+      <li id="s-2"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
+      <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./agent-trust-levels.html">Governance & Trust Levels for Agents</a></li>
+      <li><a href="./evals-observability.html">Evals & Observability</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

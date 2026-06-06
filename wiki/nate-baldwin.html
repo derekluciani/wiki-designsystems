@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nate Baldwin — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./what-is-a-design-system.html">What Is a Design System? →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Nate Baldwin</h1>
+    <p><em>The corpus's voice on the mathematics of design systems — parametric, proportional scales over rigid pixel grids.</em></p>
+
+    <h2>Who he is in this corpus</h2>
+    <p>Nate Baldwin (formerly of Intuit; creator of the open-source tool <strong>Proportio</strong>) brings a rigorously <strong>parametric</strong> view: design foundations should be generated from constants and ratios, not hand-set in pixels. His talk "Scalable scales that scale" is the corpus's deepest treatment of the math beneath tokens.</p>
+
+    <h2>Core positions</h2>
+    <ul>
+      <li><strong>Systems-oriented method:</strong> encapsulation, parameterization, archetypes, and diagrams.<sup><a href="#s-1">1</a></sup> See <a href="./systems-thinking.html">Systems Thinking</a>.</li>
+      <li><strong>Ditch pixel grids</strong> for modular scales (base value + ratio) driving both type and spacing.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Responsive type</strong> via conditional ratios and REM units that respect user font-size preferences.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Size vs. density</strong> as separate dimensions; padding defined via relative indices in component archetypes.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Tooling:</strong> Proportio, Utopia.fyi (CSS <code>clamp()</code>), Token Studio.<sup><a href="#s-1">1</a></sup></li>
+    </ul>
+
+    <h2>Where he sits in the debates</h2>
+    <p>Baldwin is the clearest advocate for <strong>parametric generation</strong> over hand-tuned values — the position that scales must be computed from a system's constants to stay proportional under change. His method is the operational complement to Frost's token architecture: Frost says <em>structure</em> your tokens in tiers; Baldwin says <em>generate</em> their values from math. See <a href="./parametric-scales.html">Modular & Parametric Scales</a> and <a href="./token-architecture.html">Token Architecture</a>.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Scalable%20scales%20that%20scale%20-%20Nate%20Baldwin%20at%20Into%20Design%20Systems.txt">Scalable scales that scale — Nate Baldwin (video, 04/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./parametric-scales.html">Modular & Parametric Scales</a></li>
+      <li><a href="./systems-thinking.html">Systems Thinking for Design Systems</a></li>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

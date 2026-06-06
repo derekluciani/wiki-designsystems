@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Pipelines: JSON, Style Dictionary & Figma Variables — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./parametric-scales.html">Modular & Parametric Scales →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Token Pipelines: JSON, Style Dictionary & Figma Variables</h1>
+    <p><em>The plumbing that turns a single token source of truth into platform-specific output — and the naming contract that holds design and code together.</em></p>
+
+    <h2>JSON as the tool-agnostic source of truth</h2>
+    <p>Frost recommends storing the design-token source of truth as <strong>JSON files</strong> so they are tool-agnostic and transformable, then using <strong>Style Dictionary</strong> (or similar) to transform that JSON into whatever platform-specific output is needed — CSS custom properties, iOS/Android values, React Native tokens.<sup><a href="#s-1">1</a></sup> One source serves every downstream platform.</p>
+
+    <h2>The Figma ↔ code naming contract</h2>
+    <p>The token names in Figma (via Figma Variables) must map <strong>1:1</strong> to the names in JSON/code. This shared naming <em>is</em> the contract and API between design and development; misalignment here is the most common source of confusion and breakage.<sup><a href="#s-1">1</a></sup> The vocabulary becomes shared across designers, developers, QA, CMS systems, and AI tooling.</p>
+
+    <h2>Typed tokens close the loop</h2>
+    <p>Kathleen McMahon extends the pipeline into the type system: pull variables from Figma through Style Dictionary to <strong>generate TypeScript definitions</strong>. Typed tokens prevent silent failures and keep multi-brand systems in sync, because a renamed or removed token surfaces as a compile error rather than a runtime surprise.<sup><a href="#s-2">2</a></sup> This is where the token pipeline meets <a href="./type-safe-systems.html">type-safe systems</a>.</p>
+
+    <h2>Perspectives: handoff vs. co-creation</h2>
+    <p>Frost is pointed about ownership. Designers have had naming/variable tools (Token Studio, Figma Variables) only since summer 2023 — roughly two years — while developers have named variables for decades. His prescription: developers should <strong>not passively accept whatever a designer exports</strong> from Figma Variables, but proactively co-create the token architecture, "even if it means picking up tickets not formally assigned to you."<sup><a href="#s-1">1</a></sup> Co-created systems work vastly better than waterfall handoffs. This reframes a perennial org tension (covered on <a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a>) as a technical-collaboration problem, not just a process one.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Design%20Token%20Architecture%20with%20Brad%20Frost.txt">Design Token Architecture — Brad Frost (video, 04/2025)</a></li>
+      <li id="s-2"><a href="../raw/Guide%20to%20Type-Safe%20Design%20Systems.txt">Guide to Type-Safe Design Systems — Kathleen McMahon (video, 05/2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+      <li><a href="./type-safe-systems.html">Type-Safe Design Systems</a></li>
+      <li><a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
