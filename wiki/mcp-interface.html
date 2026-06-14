@@ -25,7 +25,7 @@
 
     <h2>JSON for MCP, Markdown for LLM</h2>
     <p>The most important structural lesson: early attempts dumped Markdown docs into an MCP server, causing high token usage, hallucinations, and poor adherence to component contracts. Encoding component APIs and variants as <strong>structured JSON</strong> instead reduced token usage by ~80% (per Indeed's case study) and dramatically improved accuracy and cost.<sup><a href="#s-3">3</a></sup></p>
-    <p>The emergent pattern is <strong>"JSON for MCP, Markdown for LLM"</strong>: machine-readable structured data (props, variants, allowed values) as JSON schemas; human-oriented guidance and interaction rules as Markdown. Metadata stays under source control with a pipeline that converts MDX/Storybook docs into MCP-readable JSON whenever components change.<sup><a href="#s-3">3</a></sup></p>
+    <p>The emergent pattern is <strong>"JSON for MCP, Markdown for LLM"</strong>: machine-readable structured data (props, variants, allowed values) as JSON schemas; human-oriented guidance and interaction rules as Markdown. Metadata stays under source control with a pipeline that converts MDX/Storybook docs into MCP-readable JSON whenever components change.<sup><a href="#s-3">3</a></sup> Atlassian implemented this pattern by distributing modular instruction blocks (types, examples, guidelines) to their MCP server (<code>@atlaskit/ads-mcp</code>) and other agents using a structured <code>offerings.json</code> schema (see <a href="./agentic-content-templates.html">Agentic Content & Prototyping Templates</a>).</p>
 
     <h2>Expose foundations, not just components</h2>
     <p>A specific failure mode: MCP interfaces that reveal components but omit foundations (spacing, typography) force agents to guess and break brand consistency.<sup><a href="#s-3">3</a></sup> This is the practical cash-value of the <a href="./token-architecture.html">tokens-as-API</a> idea — the foundation layer must be machine-visible too.</p>
@@ -51,6 +51,7 @@
       <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
       <li><a href="./ai-assisted-authoring.html">AI-Assisted Component Authoring</a></li>
       <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+      <li><a href="./agentic-content-templates.html">Agentic Content & Prototyping Templates</a></li>
     </ul>
   </footer>
 

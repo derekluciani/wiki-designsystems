@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic Content & Prototyping Templates — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation matching catalog order (links from AI-Assisted Component Authoring to Brad Frost) -->
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./brad-frost.html">Brad Frost →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Agentic Content & Prototyping Templates</h1>
+    <p><em>Managing agentic content as structured blocks, leveraging hybrid code templates, and using configuration files to prevent code-generation hallucinations.</em></p>
+
+    <h2>Introduction</h2>
+    <p>Atlassian's case study on AI prototyping demonstrates that autonomous models can effectively utilize design systems for rapid prototyping when grounded in structured rules and templates. By pairing design system rules with preconfigured code, they achieved about 70% component accuracy in a single pass from an image screenshot, which continuously improved over iterations.<sup><a href="#s-1">1</a></sup> This workflow shifts the design-engineering interface from handoffs to active "handshakes."<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>What is Agentic Content?</h2>
+    <p>Atlassian defines <strong>Agentic Content</strong> as <em>"the practical, plain‑language instructions, examples, and constraints we feed to agents and LLMs so they know what to do and how to respond."</em><sup><a href="#s-1">1</a></sup> Under this definition, instructions are no longer simple static prompts but are treated as a structured, maintainable design system asset. Key practices include:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Granular Building Blocks:</strong> Breaking prompts and documentation down into structured segments, including guidance, code examples, TypeScript types, keywords, and metadata.</li>
+      <li><strong>Offerings Schema:</strong> Defining a schema (like Atlassian's <code>offerings.json</code>) that routes package-specific instructions to the appropriate tools, keeping prompt context synchronized.</li>
+      <li><strong>Tool Integration:</strong> Routing this structured content to power a dozen core tools, including MCP servers (such as <code>@atlaskit/ads-mcp</code>), prototyping tools, AI-powered code editors, and custom search/research agents (like Rovo).</li>
+    </ul>
+
+    <h2>Perspectives: Consolidated Guidelines vs. Context Bubbles</h2>
+    <p>A key tension emerged when deciding how to structure design-system instructions for AI agents:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>The Context Bubble Approach:</strong> As outlined in <a href="./agentic-readiness.html">Agentic Readiness</a>, many teams split instructions into separate, isolated files for tokens, buttons, and typography. This restricts token consumption and helps agents focus on isolated context.</li>
+      <li><strong>The Consolidated Guidelines Approach:</strong> Atlassian found that most AI prototyping tools struggled to parse multiple files for context. To resolve this, they consolidated button, typography, and token guidelines into a single <code>guidelines.md</code> file (~2,000 lines).</li>
+    </ul>
+    <p>To prevent this monolithic file from causing prompt bloat or hallucinated details, Atlassian adopted a vendor recommendation: placing a <strong>Table of Contents (TOC) with high-priority rules at the very top</strong>. This priority-header structure optimized generation speeds and significantly reduced hallucinated component imports or API usage.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Structured Configuration over Code Generation</h2>
+    <p>A common failure mode in AI code generation is the rewriting of established component code for trivial design variations. For instance, prompting an agent to "change the top-left navigation logo to Confluence" often causes the model to rewrite navigation logic, revert to obsolete component APIs, or break imports.<sup><a href="#s-1">1</a></sup></p>
+    <p>Atlassian resolved this by shifting UI choices into a <strong>JSON configuration file</strong>. The AI model edits only the JSON configuration, leaving the underlying React component code untouched. This constraints-based approach dropped logo-related hallucinations and API regressions to near zero, proving that <em>structured configurations are more deterministic and reliable than open-ended code-generation prompts</em>.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Hybrid Templates and Figma Inheritance</h2>
+    <p>Relying solely on text instructions was insufficient to eliminate made-up imports or incorrect component APIs. Atlassian combined guidelines with structured code templates:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Fast Template:</strong> Optimized for speed, containing 2,000 lines of prototyping guidance covering 8 core component packages.</li>
+      <li><strong>Full Template:</strong> Designed for complex interactions, containing 2,500 lines of guidance covering 17 component packages.</li>
+    </ul>
+    <p>These templates preconfigure complex elements like navigation, feature flags, and theme switchers. Furthermore, the template hierarchy is organized to mirror Atlassian's <strong>Figma library inheritance model</strong> (from core to local product templates). Since designers and developers were already familiar with this structure, it aligned with their existing mental model, reducing setup friction and speeding up onboarding.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Organizational Scaling & Evals</h2>
+    <p>Teaching AI to use design systems at scale is a socio-technical problem. Atlassian raised organization-wide confidence and adoption through:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Champions Program:</strong> Training 6–10% of users as experts who run workshops, Loom walkthroughs, and office hours to support their teams.</li>
+      <li><strong>AI Product Builders Week:</strong> A company-wide event where over 1,000 employees paused regular work to build prototypes, producing 115 new ways to use AI and 77 Loom explainer videos.</li>
+      <li><strong>Automated Evals:</strong> Recognizing that prompt-tuning and templates are evolving steps, Atlassian's future roadmap focuses on automating evaluations and benchmarking to test design system outputs programmatically, ensuring the system consistently promotes accurate generations.<sup><a href="#s-1">1</a></sup> See <a href="./evals-observability.html">Evals & Observability</a>.</li>
+    </ul>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/integrating-design-systems-for-ai-prototyping-at-scale.txt">Turning Handoffs into Handshakes: Integrating Design Systems for AI Prototyping at Scale — Lewis-Ethan Healey, Kylor Hall (article, 11/2025)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
+      <li><a href="./ai-assisted-authoring.html">AI-Assisted Component Authoring</a></li>
+      <li><a href="./evals-observability.html">Evals & Observability</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

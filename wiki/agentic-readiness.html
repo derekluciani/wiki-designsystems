@@ -32,7 +32,7 @@
     <p>The report describes a recurring shape: <strong>always-on design foundations</strong>, <strong>on-demand component metadata</strong> via APIs/MCP servers, and <strong>orchestration rules</strong> governing what agents can do.<sup><a href="#s-2">2</a></sup> Control flow is usually workflow-oriented (clearly defined steps with limited autonomy per step) rather than a single free-running agent: client → orchestration layer → tools (MCP server, Figma API, token service, CI, Storybook) → target repos.<sup><a href="#s-2">2</a></sup></p>
 
     <h2>Layered architecture for "context bubbles"</h2>
-    <p>Large product companies have restructured systems into independent layers — <strong>foundations</strong> (tokens/primitives), <strong>visual style</strong>, and <strong>behavioral logic</strong> — so agents can reason about small "context bubbles" (just spacing tokens, just button styles) instead of parsing monolithic component definitions.<sup><a href="#s-2">2</a></sup> This is the same decomposition principle from <a href="./systems-thinking.html">systems thinking</a>, now serving machines as well as humans.</p>
+    <p>Large product companies have restructured systems into independent layers — <strong>foundations</strong> (tokens/primitives), <strong>visual style</strong>, and <strong>behavioral logic</strong> — so agents can reason about small "context bubbles" (just spacing tokens, just button styles) instead of parsing monolithic component definitions.<sup><a href="#s-2">2</a></sup> This is the same decomposition principle from <a href="./systems-thinking.html">systems thinking</a>, now serving machines as well as humans. However, this file-splitting approach presents a practical tension with tool-specific limits, where consolidating guidelines into a single file with priority headers is sometimes favored to prevent context-parsing failures (see <a href="./agentic-content-templates.html">Agentic Content & Prototyping Templates</a>).</p>
 
     <h2>Failure modes specific to design systems</h2>
     <p>Five recurring failures when connecting agents to design systems:<sup><a href="#s-2">2</a></sup></p>
@@ -66,6 +66,7 @@
       <li><a href="./evals-observability.html">Evals & Observability</a></li>
       <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
       <li><a href="./itai-vonshak.html">Itai Vonshak</a></li>
+      <li><a href="./agentic-content-templates.html">Agentic Content & Prototyping Templates</a></li>
     </ul>
   </footer>
 
