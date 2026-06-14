@@ -1,0 +1,129 @@
+Title: Turning Handoffs into Handshakes: Integrating Design Systems for AI Prototyping at Scale
+Source: https://www.atlassian.com/blog/design/turning-handoffs-into-handshakes-integrating-design-systems-for-ai-prototyping-at-scale
+Author: Lewis-Ethan Healey, Kylor Hall
+Date: November 26, 2025
+
+---
+
+Design is changing, and so are our tools. At Atlassian, we’re bringing AI into design and engineering with purpose. Early on, we doubted it could meet our design‑system standards; we’ve since learned it can when grounded in collaboration, efficiency, and craft.
+
+AI reduces inefficiencies and augments people. It takes first passes on ideation, UI comps, and PRDs so teams focus on decisions, not repetition. With AI prototyping, we turn handoffs into handshakes, enabling true collaboration across crafts.
+
+AI has flipped the industry: wireframes, specs, and code now happen in minutes. From a screenshot, AI prototyping reaches about 70% Atlassian Design System accuracy in one pass, improving over iterations. It’s both a scary and exciting time to be a designer.
+
+Design systems drive consistency, coherence, and brand. In AI‑driven workflows, they keep fast change in sync at enterprise scale. A single source of truth for tokens, components, and patterns accelerates adoption and reduces repetitive UI generations and compositions.
+
+In this article we share how we taught AI to utilise our design system – turning minimal prompts into high-quality prototypes.
+
+Example of replicating a screenshot using our starter template
+
+
+
+## Making AI work for our Design System
+
+At first, teaching AI to understand our design system felt impossible. In a non-deterministic world, how do you ensure generations are consistent and predictable? We came across many hurdles along the way:
+
+Configuration: Our public npm packages didn’t work with any AI prototyping tools, so we had to bump a minor version of every component in our design system with a custom fix.
+
+Styling: Our component styling is generated using a proprietary library, Compiled – a custom tool that merges all styles together into a single, performant file. Most AI prototyping tools don’t support this kind of compiler, while we work on supporting these tools, our temporary solution was to include a CSS file for each component directly in our prototypes. This ensured everything looked as intended.
+
+Imports: AI would often get packages or code samples wrong (even with instruction), telling us it had the right code, when it had not – so we had to use a hybrid approach of pre-coded templates and instructions.
+
+We ended up with about 2,000 lines of custom instructions, focusing on foundational UI elements like tokens, icons, and buttons. More complex components were handled in the base template or left out for now.
+
+We initially organized our instructions into separate files optimized for token usage, e.g., button.md or typography.md. However, most prototyping tools struggled to parse multiple files for context, so a single guidelines.md file was favored.
+
+We identified an optimal structure for the single file that places a table of contents with a few high-priority lines of instructions at the top. This was recommended to us by a vendor, and upon experimentation, it felt like generations were faster and reduced hallucinations.
+
+Example of instructions with priority guidance at the top
+
+
+
+## Reducing design system hallucinations
+
+Our biggest challenge was reducing “hallucinations”— plausible-looking but wrong outputs that broke things. In prototypes, this can mean incorrect component imports, wrong token names, icons that seem on-brand but don’t exist, or the wrong size/name applied to the right thing.
+
+This isn’t unique to prototyping: AI often invents facts, APIs, or filenames when context is thin. Providing a table of icons, packages, and keywords helped, but there’s still room for improvement.
+
+Example of contextual icons AI struggles with due to naming
+
+Looking ahead, we hope that tools will fetch icons directly from package entry points, TypeScript information, or even an MCP tool call, though not every tool supports that yet. As AI accelerates our workflows, it’s still human judgment and cultural context that define the quality and meaning of the work.
+
+
+
+## Templates: the secret to speed and accuracy
+
+Our guidelines, prompts, and instructions helped, but they didn’t solve everything. To make generations faster and more accurate, we needed a new strategy that combines structure with flexibility. Templates became our secret weapon.
+
+Combining preconfigured code with focused instructions cut frustration, curbed hallucinations, and took us from screenshot to interactive prototype in minutes —especially for navigation. When we relied on instructions alone, AI often got a detail wrong, like a made-up import or the incorrect logo. But with our hybrid approach of templates plus instructions, those errors dropped to nearly zero.
+
+Preconfigured code also improves screenshot matching: the model leans on existing component APIs — even without explicit training — so it can accurately recreate complex navigation from an image.
+
+We started with two templates: Fast (for speed) and Full (for complex interactions). Each template bundles our design system instructions, relevant feature flags, navigation, and a theme switcher, giving teams a reliable, high-quality starting point every time.
+
+Video walkthrough of some key elements of the core templates
+
+
+
+## Configuration files for more deterministic changes
+
+Because our templates were generic and product‑agnostic, we needed a safe, configurable way to swap logos—crucial in Atlassian’s diverse product landscape to preserve brand accuracy and consistency at scale. Our initial prompt-based approach (“Change the top-left logo to Confluence”) triggered hallucinations. The model would rewrite code that shouldn’t change, or revert to older component APIs that we no longer use.
+
+We solved this by moving top‑nav choices into a JSON config. The model edits the config, not the code, so updates don’t touch the navigation implementation, and logo‑related hallucinations dropped to near zero. Lesson learned: structured configuration beats open‑ended prompting; the more constraints we added, the more reliable the outputs became.
+
+
+
+## Proliferating templates across the org
+
+To truly scale AI prototyping, every app and collection needs a template. The more experiences that are templatized, the faster teams can move from idea to interaction, and the more consistent those experiences become. Templates give designers and developers a reliable, high-quality starting point that removes setup friction and keeps everything aligned to the design system from the first prompt.
+
+We weren’t starting from scratch. Atlassian already had a well-defined inheritance model for our Figma libraries, which outlines how components and patterns relate across products. Designers were already familiar with this structure, so we adapted the same mental model for AI templates. This meant people could quickly understand how templates were organized, making onboarding faster and adoption more natural.
+
+A diagram showing our template hierarchy from core to local
+
+To support scaling, we created enablement materials that met people where they were. These included a Loom walkthrough on building and using templates, along with optional 1:1 training sessions for teams that wanted deeper guidance. These touchpoints helped bridge the gap between AI curiosity and confidence, turning templates into an everyday part of how teams prototype.
+
+Proliferating templates wasn’t just about efficiency. It was about establishing a shared foundation across products, empowering teams to scale experimentation, maintain design system integrity, and work faster and smarter within a consistent experience framework.
+
+
+
+## Building confidence at scale
+
+High‑quality AI prototyping can’t live with a select few. Because this was precedent‑setting work in a rapidly changing landscape—with technology and industry standards evolving in real-time—we had to balance speed with scale: raising a reliable baseline while meeting people where they were. That’s why we invested in collective learning: a champions program (6–10% of users trained as experts), workshops, Loom walkthroughs, and office hours. Design Ops and the Design System team built self‑serve courses, and our champions amplified them across nearly 1,000 product designers and product managers.
+
+The results were clear: confidence went up, repeat work went down, collaboration was stronger, and even our President, Anu Bharadwaj, took the course. We launched live training that blended workshops, structured courses, and real prototyping projects so teams could learn by doing. Rather than a one‑and‑done onboarding, we treated this as a cultural shift to elevate everyone’s AI acumen. It was a level‑setting effort, meeting people where they were across widely varying skill levels, from beginners to advanced prototypers.
+
+To sustain that momentum, we launched AI Product Builders Week, a company-wide initiative where teams paused regular work to explore and experiment with AI. Over 1,000 Atlassians took part, creating capstone projects, attending masterclasses, and sharing learnings through 77 Loom explainers and a collective playbook of 115 new ways to use AI in their work. Guest speakers like Amjad Masad (CEO of Replit) and Danny Wu (Head of AI Product at Canva) helped inspire teams to push boundaries and think bigger.
+
+(Left) Anu’s post about our AI week, (Right) A example of our Replit Masterclass in Zoom
+
+By the end of the week, 85% of participants said they felt more confident using AI tools. The highlight was seeing teams implement their learnings — from production-ready prototypes that matched Atlassian’s design system to automating customer feedback loops and building personalized learning systems with Rovo.
+
+Atlassian is, at its core, a company of builders. When everyone, regardless of role or skill set, can confidently experiment with AI, we unlock new ways to learn, connect, and create together.
+
+
+
+## Maintaining and evolving agentic content
+
+We’ve kept pace by relentlessly iterating on our agentic content. Agentic content is the practical, plain‑language instructions, examples, and constraints we feed to agents and LLMs so they know what to do and how to respond. We started by using AI to draft our first llms.txt instruction manifests, then spent six months taming the complexity. Today, that content now powers a dozen core tools: our MCP server (@atlaskit/ads-mcp), AI prototyping tools, AI‑powered code editors, and multiple Rovo and Rovodev agents.
+
+As we scaled, our focus shifted from asking “What should we tell the model?” to “How do we ensure those instructions stay accurate, maintained, and deliver the outcomes we expect?” We broke prompts and documentation into structured building blocks—guidance, examples, types, keywords, and metadata—organized per package and offering. This level of granularity and formatting lets us route the right instructions to the right places, keeping our content fully aligned across the system.
+
+Diagram and code of our offerings.json schema helps power many outputs
+
+Now that this content reflects our system, we’re looking ahead to automating evaluations and benchmarking, so we can ensure our design system consistently promotes accurate outcomes.
+
+We’re also starting to share this structured content more broadly:
+
+- Our documentation website, atlassian.design
+- 20k+ lines searchable through our MCP for development
+- 5k lines of “all” guidance for deep research (50+ component packages)
+- 2k lines of “fast” prototyping guidance (8 component packages)
+- 2.5k lines of “full” prototyping guidance (17 component packages)
+
+
+## What we learned (and what’s next)
+
+We didn’t get everything right at first. While our prototypes look and feel like Atlassian, generating production-quality code at scale remains challenging, and discovery is still a work in progress. We’ve made real progress by empowering others to drive change, building expertise across the organization, and staying transparent about our wins and setbacks.
+
+What’s next is intentionally temporary and evolving. Tooling is advancing rapidly, and the notion of “control” over user interfaces is shifting. That brings both opportunity and ambiguity, we’ll navigate both. The expectation for businesses is to do more, faster, and our job is to keep pace without compromising quality or the integrity of our design system.
