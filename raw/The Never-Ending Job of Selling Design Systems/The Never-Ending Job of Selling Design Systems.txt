@@ -1,0 +1,135 @@
+Video title: The Never-Ending Job of Selling Design Systems
+Author: Ben Callahan
+Date: 02/11/2021
+Url: https://alistapart.com/article/selling-design-systems
+
+I’m willing to bet that you probably didn’t start your web career because you wanted to be a politician or a salesperson. But here’s the cold, hard truth, friend: if you want to work on design systems, you don’t have a choice. Someone has to pay for your time, and that means someone has to sell what you do to an audience that speaks value in an entirely different language. 
+
+Article Continues Below
+Share this:
+Become a patron
+It’s not exactly easy to connect the benefits of a design system directly to revenue. With an ecomm site, you can add a feature and measure the impact. With other conversion-based digital experiences, if your work is good, your customers will convert more. But because a design system is (usually) an internal tool, it’s just harder to connect those dots. 
+
+This article boils down the methods I’ve put into practice convincing executives not just to fund the initial push of design system work, but to keep funding it. I’ll share how I’ve adjusted the language I use to describe common design system benefits, allowing me to more clearly communicate with decision makers.
+
+Know your audience
+In my experience, design systems can be owned by information technology teams, marketing and communications departments, or (best case scenario) cross-disciplinary teams that bring many specialists together. The first thing you need to do is determine where the system lives, as in which department owns and cares for it. 
+
+If it’s part of IT, for example, you need to think like a CIO or an IT Director and speak to their objectives and values. These leaders are typically more internally focused; they’ll filter the value of the design system in terms of the employees of the company. In contrast, if the system belongs to Marketing, put on your CMO or Marketing Director hat. Marketing teams are often externally focused; they think in terms of B2B audiences and end users. 
+
+The way organizations structure the ownership of a design system can be more complex, but let’s use these two paths (internal vs external) as frameworks for building a persuasive case for those owners.
+
+Internal-orientation motivators
+Based on the research we’ve done since 2018, there are three very specific internal motivators for having a design system:
+
+Efficiency
+Onboarding
+Scale.
+Efficiency benefit
+Design systems allow for the rapid prototyping of new ideas using existing, production-ready components. They allow teams to reuse design and code, and they allow individuals to focus their creative energy on new problems instead of wasting it on old ones. Executives and decision-makers may abstractly understand all that, but you need to be able to tell them what it will take to realize the efficiency benefit. 
+
+There’s a theoretical maximum to how productive a team can be. When you talk about a design system creating more efficiency in your processes, you’re really talking about raising the ceiling on that max. As happens with so many things in life, though, that comes with a trade-off. Early on, while a team is actually building the system, they won’t be as productive on the rest of their work.
+
+The efficiency curve looks like this:
+
+The Design System Efficiency Curve. Line graph illustrating the curvilinear relationship of productivity over time in terms of overall efficiency, in situations of transition from having no design system in place through in-process set up of the system, to eventually having an established design system. Productivity is represented on the y-axis and Time on the x-axis. Starting at 0,0 productivity dips down as the team diverts resources to set up the system, but eventually surpasses standard productivity once the system is in place.
+Figure 1. With Productivity on the y-axis and Time on the x-axis, the Design System Efficiency Curve dips down at the start as the team ramps up on the system, but eventually surpasses standard productivity once the system is in place.
+If you’re talking to an executive, it’s important to acknowledge this dip in productivity. 
+
+Spend some time working out these specific calculations for your organization. For example, you might need four team members for three months to reach a point where the system will save everyone on the team approximately two hours per week. You’re candidly acknowledging the necessary investment while demonstrating the eventual benefits. And make sure to mention that the productivity benefits will continue indefinitely! The math will almost always end up on your side. 
+
+Another critical point to raise is that simply having a design system has a cumulative effect on the efficiency of your teams. Since the system is an internal tool that can be used 1) across multiple products or experiences, 2) by many teams throughout the organization, and 3) in many phases of the product design and development process, you are gaining efficiencies on many levels. 
+
+The team working on in-store kiosks can build their interface with a well-tested set of components. Your UX people can use the system to prototype and test with production-ready code. The people responsible for grooming the backlog know there is a stable pattern library upon which they are building new features or fixing old ones. Anyone looking for answers to what, why, or how your organization designs and builds products will find those answers in the living system.
+
+The efficiency at each of these (and many other) decision points is how we can raise the ceiling on our total possible efficiency. How this plays out is very different in each organization. I’m here to tell you that part of the work is thinking about how a design system will impact every part of your process—not just design or development.
+
+What to measure
+Action: Measure the cost of productivity with and without a design system.
+
+If you aren’t already, start measuring how productive your team is now. The easiest way to do this is to break your team’s work down into measurable cycles. Once you have a rough idea of how much you can get done in a cycle of work, you’ll be able to compare your efficiency before the system was in place with your efficiency after. This kind of measurable benefit will speak volumes to your executive team.
+
+Onboarding benefits
+Growth is expensive. When you hire a new team member, you don’t just supply a salary and benefits. You need a computer, a desk, a chair, accounts to all the software/services…the list goes on. And all these expenses hit before your new employee is a fully contributing member of the team. You won’t start to recoup your investment for a few months, at least. 
+
+Design systems can reduce the time it takes your new hire to become a productive contributor. Once you have a healthy design system in place, you’re able to provide an employee with a clearly-defined and effective toolset that is well-documented and can be applied across multiple initiatives. More specifically, assigning new hires to start out working on the design system team will allow them to quickly learn how your organization designs and builds digital products.
+
+Onboarding Model. Diagram illustrating the movement and eventual cycling (depicted by arrows pointing to the right) of individuals in a "Hiring Pool"(represented by a cluster of dots on the left of the graphic) into the DS Team (design system team), represented by a diamond shape in the center of the graphic, then exiting the DS Team to join Other Teams (smaller diamond shapes on the right of the graphic), and finally, back into the DS Team (dashed-line arrow looping below and to the left, back into the DS Team diamond shape).
+Figure 2. A Model for Onboarding. As you bring people into your organization from your hiring pool, consider having them start on your design system team and then rotate out onto other teams. As you grow, folks who haven’t had a turn on the system team can rotate in as well.
+
+On the left in Fig. 2, you have a pool of potential employees. As you hire individuals, you can bring them into the design system team, where they’ll gain a deep understanding of how your organization builds digital products. Once they’re up to speed, you can seamlessly move them to another product, discipline, or feature-based team where they’ll take this knowledge and hit the ground running. Additionally, your organization can benefit from having all team members (even those who have been around for a while) periodically work a rotation with the design system team. This continuously spreads the design system expertise around the organization and makes it part of the fabric of how you work.
+
+And don’t think this approach is only valuable for designers or developers. A healthy design system team comprises people from many disciplines. In addition to team member rotation, building in time to mentor folks from many different disciplines can prove tremendously valuable in the long run. A highly functional design system team can serve as an ideal model of workflow and can educate many team members dispersed throughout the organization about how to approach their work.
+
+Believe me, executives’ eyes will light up when you share how a design system can ensure high productivity in record time. As a caution, though, rotating people in and out of any team too often can leave them feeling exhausted and can make it hard for them to be productive. Remember, you have the flexibility to scale this to a level that makes sense for your team. Be smart and use this approach as it works in your context.
+
+What to measure
+Action: Measure the time it takes for teams to become productive.
+
+As new people are added, a team typically returns to the “forming” stage of Tuckman’s stages of group development. This is part of the reason that growth is expensive. But with a design system in place and a healthy culture, you can reduce the time it takes the team to get back to “performing.”
+
+Scale benefits
+Traditionally, you have to hire more people to scale productivity. A design system enables a team to accomplish more with less. Reusability is a major reason teams choose to work in a more systematic way. Small teams with an effective system can design, build, and maintain hundreds of sites each year. They’d never come close without a design system to work with. 
+
+UX Pin has a design system guide that starts by acknowledging something that most of us ignore.
+
+Scaling design through hiring, without putting standards in place, is a myth. With every new hire, new ideas for color palettes, typography and patterns appear in the product, growing the inconsistency and increasing the maintenance cost. Every new hire increases the design entropy.
+
+A well-executed system allows a team to scale while keeping design entropy at bay.
+
+What to measure
+Action: Compare the amount of people on your team to the amount of work they are accomplishing.
+
+Adding people to a team doesn’t necessarily mean they’ll get more work done faster. This is well-documented in historical software books like Fred Brooks’ The Mythical Man-Month. Eventually, you will have to investigate changing other factors (besides just adding more people) to increase productivity. A good design system can be one of these factors that increases the productivity of the team members you already have. It’s this change in productivity over scale that you need to measure and compare in order to prove value for this benefit.
+
+External-orientation motivators
+Let’s shift to thinking about the benefits that a design system offers to end-users. The four primary external motivators are:
+
+Consistency
+Trust
+Accessibility
+Usability.
+Consistency and Trust benefits
+Consistency is widely assumed to be the primary benefit of a design system. We identify dozens of button designs, color variations, and inconsistent typefaces in hopes of convincing higher-ups to allow us to build a system to bring it all in line. After working on design systems for the last five or six years, I can say with confidence that a design system will not make your product more consistent. 
+
+You see, us web designers and developers are very scrappy. We can create the most inconsistent experiences within even the most rigid systems. It’s not the system itself that creates consistency, it’s the culture of an organization. It’s all of the unspoken expectations—the filters through which we make decisions—that give us the confidence to pause and ask if the work we’re doing fits culturally with the product we’re building. A good CMO knows this, and they won’t buy the oversimplified idea that a design system will solve the rampant inconsistencies in our work. 
+
+Because of this, these executives often have a different (and easier to measure) question: “Does it convert?” This perspective and line of conversation is not an ideal approach. Believe me, we can create experiences that convert but are not good for our users or our brands. Given this, a conversation with your CMO might go better if you shift the language to talk about trust instead.
+
+With inconsistent experiences, your users subconsciously lose trust in your brand. They’ve been conditioned to expect a certain kind of user experience, and that’s what they should be given, even across multiple websites or products. Vanessa Mitchell wrote about why brand trust is more vital to survival now than it’s ever been:
+
+“Brand trust as an ‘“insurance policy”’ against future issues is not a new concept. Most organizations know trust bestowed by the consumer can not only make or break a business, it can also ensure you survive a problem in the future. But few achieve brand trust adequately, preferring to pay lip service rather than delve into what it really means: Authentically caring about customers and their needs.”
+
+When your customer is using your product to accomplish a very specific task, that one task is the only thing that matters to them. Creating a consistent experience that works for everyone and allows them to accomplish their goals is building trust. CMOs need to understand how design systems empower trusted relationships so those relationships contribute to your bottom line.
+
+What to measure
+Action: Measure the engagement of your customers.
+
+Customer engagement can be measured with web analytics platforms. What you’re looking for will vary depending on the context for your organization, but trends in things like time on site, visit frequency, subscription rates, and bounce rates will give you meaningful data to work with. It’s also very common to track customer engagement with metrics like Net Promoter Score (NPS) by asking simple questions of customers repeatedly over time. There are so many ways to structure tests of the usability of your work, so I’d encourage you to loop in the UX team to help you find tests that will demonstrate the user engagement success of the design system effort.
+
+Accessibility benefits
+Accessibility can be a tremendous benefit of a design system. Do the work properly the first time, then allow that beautifully accessible component to serve your customers each time it is used. Certainly, it’s not a fail-safe measure—there is still integration-level testing to ensure component accessibility translates to the larger experience—but ensuring the accessibility of individual components will result in more accessible experiences. And integrating good accessibility practices into your system means more folks within your organization are aligned with this important work. 
+
+You might find at first that marketers aren’t all that interested in accessibility, but they should be. Did you know that there were 814 web accessibility related lawsuits (just in the US!) in 2017? Did you know that there were almost 2,300 in 2018? That’s a 181% increase. This must be a priority. First, because it’s the right thing to do. Second, because it’s important to the sustainability of the business. A design system can help you address this issue, and it can help you maintain compliance as you grow. This is the kind of message that resonates with leadership.
+
+What to Measure
+Action: Measure your compliance to accessibility guidelines over time.
+
+Many organizations have a regular cadence of accessibility audits across their digital properties. While some of this can be automated, there’s always a manual aspect needed to truly evaluate the accessibility of a site or application. Tracking how often regressions occur in the properties served by your design system can be a great way to demonstrate the value that system is bringing to the organization.
+
+Usability benefits
+As with so many aspects of a design system, usability benefits come from repetition. Design system pros often hope to focus energy on solving a usability challenge only once before moving on to the next problem. This absolutely is a benefit of a well-constructed system. It’s also very true that “familiarity breeds usability.” Your customers will learn to use your products and begin to subconsciously rely on that familiarity with the experience to lower their cognitive load. This should be just as important to our executive leadership as it is to those of us who are practitioners. 
+
+You can also reframe this benefit in the context of conversion. Helping our users accomplish their goals is helping them convert. They are there to use your product. So make it easy to do, and they’ll do it more. This is what businesses need and what executives want to see—improving the business by helping customers. As mentioned above, we want to make sure we’re doing this in healthy ways for both our users and our brands.
+
+What to Measure
+Action: This might be the easiest one—measure conversion!
+
+Running usability studies will help to validate and measure the success of your work with the system, which many organizations are already doing. Your goal should be to validate that components are usable, which will allow you to build a culture of user-centered design. Setting the bar for what it takes to evolve the system—such as requiring that changes are tested with real users—introduces this idea into the core of all your processes, where it should be.
+
+Sell investment, not cost
+Knowing how and which internal and external motivators to touch on during conversations is significant, but there’s one last thing I’d like to mention, and it has to do with your way of thinking. A major factor in many of these conversations lies simply in how we frame things: move the conversation about the cost of building a design system into a conversation about the present and residual benefits of the investment you’re making. It’s easy to view the time and effort required to build a system as an investment in ultimately delivering high-quality digital products. But leadership will be more willing to consider realistic budgets and timelines if you talk about it like a long-term investment that has benefits on multiple levels throughout the business. This also leaves you with the ability to regularly remind them that this product will never be done—it will require ongoing funding and support.
+
+A design system project will not succeed if you don’t convince others that it’s the right thing to do. Successful, sustainable design systems start with the people, so you have to begin by building consensus. Building a design system means you’re asking everyone to change how they work—everyone has to be on board.
+
+This concept of collaboration is so core to the work of design systems that it led all of us here at Sparkbox to look for opportunities to better understand how teams around the world are designing, building, and using a more systematic approach to digital product design. For the last three years, we’ve been gathering and sharing data in the form of the Design Systems Survey and the Design System Calendar. If you are considering a design system for your organization, or if you work with a design system team, the survey and calendar may be helpful in your quest to build better products.
