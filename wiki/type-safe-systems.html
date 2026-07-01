@@ -22,6 +22,7 @@
 
     <h2>Discriminated unions and <code>never</code></h2>
     <p>For component props, the recommendation is to use <code>interface</code> for common shapes and <code>type</code> for variants, and to deploy the <code>never</code> type to <strong>forbid invalid prop combinations</strong>. The type system thereby acts as a guardrail for accessibility and correct usage — invalid states become unrepresentable.<sup><a href="#s-1">1</a></sup></p>
+    <p>Mall frames this as the move from documenting intent to <strong>encoding</strong> it: prose can say which prop combinations are invalid, but a component API that rejects those combinations at the type level turns guidance into an enforced system boundary.<sup><a href="#s-2">2</a></sup></p>
 
     <h2>Type-safe styling</h2>
     <p>Approaches like <strong>tailwind-variants</strong> or <strong>CVA (Class Variance Authority)</strong> ensure styles only apply to valid variants, preventing CSS bloat and configuration errors.<sup><a href="#s-1">1</a></sup></p>
@@ -38,6 +39,7 @@
     <h4>Sources</h4>
     <ol>
       <li id="s-1"><a href="../raw/Guide%20to%20Type-Safe%20Design%20Systems.txt">Guide to Type-Safe Design Systems — Kathleen McMahon (video, 05/2026)</a></li>
+          <li id="s-2"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions%20%28Part%202%29.txt">Dan Mall Design Systems Email Content Extractions (Part 2)</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>

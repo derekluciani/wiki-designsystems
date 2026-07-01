@@ -34,6 +34,9 @@
     <h2>Keep tokens out of component logic</h2>
     <p>Frost insists design tokens be kept separate from component logic so they can be themed and updated independently.<sup><a href="#s-1">1</a></sup> This is the architectural seam that the <a href="./token-architecture.html">token architecture</a> page develops in depth.</p>
 
+    <h2>Adaptability needs encoded boundaries</h2>
+    <p>Mall's Part 2 essays add a usability constraint to architecture: components still need to be adaptable, but the boundaries of adaptability should live in the component system rather than in documentation that every consumer must remember under deadline pressure. Layout components that own spacing, token pipelines that validate resolution, and APIs that make invalid usage difficult are architectural choices, not merely documentation choices.<sup><a href="#s-3">3</a></sup></p>
+
     <h2>Perspectives: web-standard reach vs. typed-framework rigor</h2>
     <p>Frost's web-standards bet optimizes for cross-framework <em>longevity</em>. The type-safety camp optimizes for <em>compile-time correctness</em> inside a typed framework (typically React + TypeScript), accepting framework coupling in exchange for guardrails that forbid invalid prop combinations.<sup><a href="#s-2">2</a></sup> Both want resilient components; they disagree on whether resilience comes from the platform or from the type system. See <a href="./type-safe-systems.html">Type-Safe Design Systems</a>.</p>
   </article>
@@ -43,6 +46,7 @@
     <ol>
       <li id="s-1"><a href="../raw/Design%20System%20with%20Brad%20Frost.txt">Design Systems with Brad Frost (video, 05/2024)</a></li>
       <li id="s-2"><a href="../raw/Guide%20to%20Type-Safe%20Design%20Systems.txt">Guide to Type-Safe Design Systems — Kathleen McMahon (video, 05/2026)</a></li>
+          <li id="s-3"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions%20%28Part%202%29.txt">Dan Mall Design Systems Email Content Extractions (Part 2)</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>

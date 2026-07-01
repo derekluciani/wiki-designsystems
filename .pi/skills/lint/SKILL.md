@@ -1,6 +1,7 @@
 ---
 name: wiki-lint
 description: Run this skill when the user asks to check the content quality of the wiki.
+disable-model-invocation: false
 ---
 
 Use this skill as an instruction set. Follow the workflow in order.

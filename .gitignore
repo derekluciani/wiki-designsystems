@@ -16,3 +16,4 @@ build/
 # System/IDE logs and cache
 .DS_Store
 .eslintcache
+skills/.DS_Store

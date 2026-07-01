@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Sovereignty & Token Capital — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation matching catalog order (links from Agentic Content & Prototyping Templates to Brad Frost) -->
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./brad-frost.html">Brad Frost →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Model Sovereignty & Token Capital</h1>
+    <p><em>The ultimate strategic asset of the modern firm is not the baseline AI model, but a model-agnostic learning loop that compounds human ingenuity and tokenized capabilities.</em></p>
+
+    <h2>The two capitals: human and token</h2>
+    <p>In the transition to an AI-driven economy, every firm must manage and scale two distinct forms of capital:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Human Capital:</strong> The knowledge, judgment, relationships, ingenuity, and pattern recognition of a firm's people. This capital remains the primary driver of token capital growth, as human agency sets ambitious goals, connects dots across domains, and recognizes patterns that matter most.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Token Capital:</strong> The firm's proprietary AI capability it builds and owns (AI models, custom systems, and data loops).<sup><a href="#s-1">1</a></sup> In design systems, token capital comprises design tokens, component libraries, design-system-aware MCP (Model Context Protocol) servers, and structured guidelines.</li>
+    </ul>
+    <p>Crucially, human capital does not become less valuable as token capital grows; it becomes *more* valuable. Without human direction, compute simply runs in circles.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>The compounding learning loop</h2>
+    <p>The core competitive advantage is not selecting the best baseline model, but building a learning loop on top of models where human capital and token capital compound.<sup><a href="#s-1">1</a></sup> Organizations must turn their workflows, domain knowledge, and judgment into AI systems that improve with use. This forms a compounding "hill climbing machine" that accelerates through:<sup><a href="#s-1">1</a></sup></p>
+    <ul>
+      <li><strong>Private Evals:</strong> Custom benchmarks capturing model performance against real outcomes that matter to the business (e.g., component accuracy, design-system compliance) rather than generic public benchmarks.<sup><a href="#s-1">1</a></sup> (See <a href="./evals-observability.html">Evals & Observability</a>).</li>
+      <li><strong>Private Reinforcement Learning (RL):</strong> Training environments where models grow stronger on real trace logs (such as developer usage, corrections, and manual design reviews) from inside the organization.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Knowledge Bases:</strong> Structuring institutional memory to make it queryable and increase token efficiency.<sup><a href="#s-1">1</a></sup></li>
+    </ul>
+    <p>Unlike standard depreciating assets, this learning loop compounds over time: every improved workflow generates better training signals, accelerating the accumulation of unique tacit knowledge.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Model sovereignty: the "company veteran" test</h2>
+    <p>A major risk of the agentic shift is ceding control and value to model providers. A firm's ultimate test of sovereignty is its ability to switch out a "generalist" base model without losing the "company veteran" expertise built into its learning system.<sup><a href="#s-1">1</a></sup></p>
+    <p>In design engineering, this sovereignty is preserved when the design system is the source of truth. Design tokens, structured component APIs (<a href="./token-architecture.html">tokens-as-API</a>), and Storybook eval suites remain model-agnostic interfaces. The underlying LLM may generate UI code, but the design system ensures compliance, protecting the organization's unique visual identity and technical standards regardless of which model is currently running. This separation of concerns prevents vendor lock-in.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Macroeconomic equilibrium: frontier ecosystems</h2>
+    <p>Nadella warns of a political economy issue: if AI value only accrues to a few monolithic frontier models, the resulting displacement of knowledge work will mimic the hollowing out of industrial economies in early globalization/outsourcing waves.<sup><a href="#s-1">1</a></sup> The stable equilibrium requires building a <strong>frontier ecosystem</strong> rather than just a frontier model. In this ecosystem, value is distributed broadly because every company maintains its own learning loop to compound its institutional knowledge.<sup><a href="#s-1">1</a></sup></p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/A%20frontier%20without%20an%20ecosystem%20is%20not%20stable%20%28State%20of%20the%20industry%29.txt">A frontier without an ecosystem is not stable (State of the industry) — Satya Nadella (06/2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./evals-observability.html">Evals & Observability</a></li>
+      <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
