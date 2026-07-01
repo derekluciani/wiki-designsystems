@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measuring Design Systems — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./agentic-readiness.html">Agentic Readiness & Architecture →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Measuring Design Systems</h1>
+    <p><em>Measurement is not a dashboard exercise: it is the discipline of tying system work to outcomes, adoption, quality, trust, and change over time.</em></p>
+
+    <h2>Start with outcomes, not available data</h2>
+    <p>The strongest through-line across the measurement sources is that metrics have little value in a vacuum. Teams should begin with the outcomes they are trying to prove or improve — awareness, adoption, quality, efficiency, business risk, accessibility, community health — and only then choose indicators.<sup><a href="#s-1">1</a></sup><sup><a href="#s-2">2</a></sup><sup><a href="#s-4">4</a></sup> Jina Anne and Joshua Sortino make the same point from principles: if consistency or efficiency are explicit goals, derive measures from those goals rather than collecting arbitrary counts.<sup><a href="#s-1">1</a></sup></p>
+    <p>Curtis's OKR framing is useful because it separates aspiration from evidence: the objective states where the system wants to go; key results pace whether it is getting there.<sup><a href="#s-2">2</a></sup> That makes measurement a strategic mechanism, not a post-hoc proof deck.</p>
+
+    <h2>Adoption is the anchor metric</h2>
+    <p>Curtis's blunt claim: a system does not succeed when it launches a living style guide or releases a code kit; value is realized when product teams ship features using the system's parts.<sup><a href="#s-2">2</a></sup> Adoption can be measured at multiple resolutions:</p>
+    <ul>
+      <li><strong>Initiated adoption</strong> — products install the package or use at least one core concern such as color, typography, forms, or buttons.<sup><a href="#s-2">2</a></sup></li>
+      <li><strong>Graded adoption / coverage</strong> — products reach defined levels based on parts used, coverage across features, and implementation precision.<sup><a href="#s-2">2</a></sup><sup><a href="#s-4">4</a></sup></li>
+      <li><strong>Migration adoption</strong> — teams upgrade from an old system or dependency to the new one.<sup><a href="#s-2">2</a></sup></li>
+      <li><strong>Adoption age / freshness</strong> — dependencies stay within an acceptable age threshold rather than silently fossilizing.<sup><a href="#s-2">2</a></sup><sup><a href="#s-4">4</a></sup></li>
+    </ul>
+    <p>The sophisticated version is automated repo scanning that shows component usage, deprecations, dependency age, and adoption waves across business units; the scrappy version is a spreadsheet of adopter teams with quarterly check-ins. Both can guide investment if they reveal where the system is used, stale, blocked, or irrelevant.<sup><a href="#s-4">4</a></sup></p>
+
+    <h2>Efficiency is powerful and slippery</h2>
+    <p>Efficiency is one of the easiest value stories to sell and one of the hardest to prove. Anne and Sortino recommend estimating time designers spend recreating elements, time engineers spend asking for specs, and time needed to onboard designers, while warning that time saved is difficult to track because people usually refill it with more work.<sup><a href="#s-1">1</a></sup> Curtis similarly notes that efficiency studies are expensive and confounded by skill, attitude, codebase condition, priorities, and work habits; the resulting formulas may persuade leaders, but they are rarely statistically clean.<sup><a href="#s-4">4</a></sup></p>
+    <p>The synthesis: use efficiency as a business narrative when it matches executive goals, but do not pretend it is a clean physical measurement. Treat it as one input alongside adoption, quality, satisfaction, and risk reduction.</p>
+
+    <h2>Communication is measurable infrastructure</h2>
+    <p>Measurement often starts in the communication layer: advisory boards, office hours, support intake, Slack channels, demos, critiques, onboarding sessions, and repeated questions reveal awareness, confusion, demand, and trust.<sup><a href="#s-1">1</a></sup><sup><a href="#s-2">2</a></sup><sup><a href="#s-4">4</a></sup> These are not vanity metrics if they feed decisions: repeated support themes identify common problem areas; attendance and participation reveal community health; repeated confusion tests whether the system team's message is landing.<sup><a href="#s-1">1</a></sup><sup><a href="#s-4">4</a></sup></p>
+    <p>This connects measurement to politics. Metrics are alliance-building tools: they help tailor the value story to adopters, sponsors, and leadership, whose incentives may differ from the system team's own motivation.<sup><a href="#s-4">4</a></sup></p>
+
+    <h2>Quality has to be decomposed</h2>
+    <p>"Quality" is too broad to measure until it is broken apart. Hupe, Curtis, and Mall distinguish the quality of the design system's outputs from the quality of the end-user product experience: the system team shares responsibility for the latter but can measure the former more directly.<sup><a href="#s-3">3</a></sup> Candidate quality dimensions include accessibility criteria, alignment across Figma/code/docs naming, component behavior under fixed/fluid layouts, use of the system to make the system, and known gaps or release-readiness boundaries.<sup><a href="#s-3">3</a></sup></p>
+    <p>The useful concept is the <strong>quality leak</strong>: a small naming or behavior inconsistency in one component may seem harmless, but multiplied across dozens of components and thousands of usages it becomes a visible degradation in product experience.<sup><a href="#s-3">3</a></sup></p>
+
+    <h2>Predictability is a maturity metric</h2>
+    <p>Mature systems do not merely publish changes; they help adopters anticipate and absorb change. Curtis argues that effective systems prepare users to change at predictable rates, with visible release cadence, clear communication, sensitivity to upgrade burden, and versioning choices that avoid forcing unrelated component upgrades.<sup><a href="#s-3">3</a></sup> Quarterly enhancement releases, annual breaking-change windows, component status labels like "upcoming Q4," and dependency freshness measures all turn predictability into a measurable operating property.<sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup></p>
+
+    <h2>Perspectives: proof, learning, and politics</h2>
+    <p>The measurement debate has three live camps that are better treated as complementary lenses than rivals:</p>
+    <ul>
+      <li><strong>Proof for funding.</strong> Tie the system to business goals, financial outcomes, accessibility risk, or executive priorities so leadership can justify investment.<sup><a href="#s-1">1</a></sup><sup><a href="#s-2">2</a></sup></li>
+      <li><strong>Learning for product management.</strong> Measure adoption, support themes, satisfaction, quality gaps, and dependency age so the system team knows what to build, fix, deprecate, or communicate.<sup><a href="#s-2">2</a></sup><sup><a href="#s-4">4</a></sup></li>
+      <li><strong>Alliance-building.</strong> Use metrics and qualitative stories to understand stakeholder incentives and build champions; the metric that keeps the system funded may not be the metric that motivates makers or adopters.<sup><a href="#s-4">4</a></sup></li>
+    </ul>
+    <p>The durable stance: start small, measure crudely if needed, pair numbers with conversations, and treat the design system less as a perfect source of truth than a visible pursuit of the current best answer.<sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup></p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Measure%20the%20impact%20of%20a%20design%20system.txt">Measure the impact of a design system — Jina Anne and Joshua Sortino</a></li>
+      <li id="s-2"><a href="../raw/Measuring%20Design%20System%20Success.txt">Measuring Design System Success — Nathan Curtis (06/2017)</a></li>
+      <li id="s-3"><a href="../raw/Measuring%20Quality%20in%20Design%20Systems.txt">Measuring Quality in Design Systems — Dan Mall, Nathan Curtis, Amy Hupe (05/2022)</a></li>
+      <li id="s-4"><a href="../raw/Design%20System%20Discussions%20-%20Measurement.txt">Design System Discussions — Measurement — Nathan Curtis, Gabby Hon, Maya Hampton (12/2021)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+      <li><a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a></li>
+      <li><a href="./team-maturity.html">Design System Team Maturity</a></li>
+      <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
