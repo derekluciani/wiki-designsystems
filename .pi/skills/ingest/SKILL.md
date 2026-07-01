@@ -1,6 +1,7 @@
 ---
 name: wiki-ingest
 description: Run this skill when the user asks to ingest a new document into the wiki.
+disable-model-invocation: false
 ---
 
 If the user asks to ingest a document from the `/raw` directory, proceed to `Workflow 1`.

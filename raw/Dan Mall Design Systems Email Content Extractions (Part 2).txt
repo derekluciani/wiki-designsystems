@@ -1,0 +1,76 @@
+Article Title: Dan Mall Design Systems Email Content Extractions (Part 2)
+Author: Murphy Trueman (url: https://www.linkedin.com/in/murphytrueman)
+Dates: 04/28/26 - 06/30/26
+
+
+Heading Title: Writing It Down Isn’t Enough
+
+Five years ago, few design system teams documented why a component existed or when to use it. That's changed. Capturing the reasoning behind decisions is now standard practice. But it only goes so far.
+
+A developer can read the documentation, understand the reasoning, and still implement the component in a way that breaks expectations. Not because they ignored the guidance – because the guidance lived in a document, the implementation lived in code, and nothing connected the two. The prose said one thing. The code allowed something else.
+
+The step beyond documenting intent is encoding it. A component that rejects an invalid prop combination at the type level. A token that resolves correctly because the build pipeline validates it. A layout component that handles spacing internally instead of relying on every consumer to apply the scale manually. These are constraints the system enforces, not constraints that live in a wiki.
+
+Components still need to be adaptable. But the boundaries of that adaptability should be expressed in the system itself, not in a document that assumes every developer will read it, remember it, and follow it under deadline pressure.
+
+
+Heading Title: When a Detached Component Is a Feature Request
+
+A product team detaches a component and modifies it. The design system team notices in an audit, or a pull request, or a Slack thread. The instinct is to treat it as a governance issue. Someone went off-system.
+
+That instinct is usually wrong. A detached component is information. It means the component as shipped didn't do what the product team needed. Maybe the API was too rigid. Maybe a variant was missing. Maybe the component didn't account for a layout context that exists in production but not in the design system's test environment. The product team didn't break the system. They worked around a gap.
+
+High detachment rates for a specific component aren't a discipline problem. They're a signal. If three product teams detached and modified the same component in similar ways, the component has a gap the design system team should close. If one team needed something specific to their product, that's a product-level concern. Either way, the detachment told the design system team something they didn't know.
+
+Governance that punishes workarounds discourages the feedback the system needs to improve. Governance that listens to workarounds gets better with every cycle.
+
+
+Heading Title: The Part Teams Always Skip
+
+The engineering is solid. The design is considered. The accessibility work is thorough. Where most teams fall short is everything around the build – the communication before the work starts and after it ships.
+
+Before the work starts, product teams need to know what's coming. Not a roadmap in a Confluence page nobody checks. A direct heads-up: this component is being worked on, it will be ready in two weeks, here's what it will and won't cover. Without that, product teams build their own version because they didn't know one was on the way. After the work ships, product teams need to know it happened. A version bump in a changelog doesn't register. What registers is someone from the design system team saying: this shipped, here's what changed, here's what it means for your codebase. That takes five minutes and it's the five minutes most teams skip.
+
+The cost compounds. When stakeholders evaluate what the design system team has delivered, they evaluate what they've heard about – not what was actually done. A team that builds twelve components and communicates about three gets evaluated as a team that built three. When budgets tighten, the team with invisible output is the easiest to cut.
+
+Communication takes five minutes. Rebuilding a team's reputation after a budget cut takes much longer.
+
+
+Heading Title: Build for the Person Who Ships It
+
+A component can look right in every review – visually accurate, well-documented, accessible. If the engineer implementing it has to fight the API, override defaults, or read three pages of docs before rendering a basic version, the component won't get used. It will get rebuilt from scratch in less time than the integration would have taken.
+
+Design system teams spend significant time on how components look and far less on how they feel to implement. Review meetings focus on visual accuracy, interaction quality, and accessibility compliance. Those things matter. But the person who determines whether a component actually makes it into production is the engineer dropping it into a codebase with its own constraints, patterns, and deadlines. If the design system component takes more effort than building from scratch, from scratch wins.
+
+The usability test that actually predicts adoption is watching an engineer try to get the component working in their actual codebase. How long until they have a basic version rendering? Where do they get stuck? Those answers tell you more than any design review.
+
+
+Heading Title: Your System Needs Inventors and Maintainers. They Won’t Like Each Other.
+
+Design system teams attract people who value consistency, reliability, and predictability. Product teams attract people who build new things, take creative risks, and move fast through ambiguity. Both instincts are essential. The tension between them shows up in every design system that reaches meaningful adoption.
+
+The failure happens when one side wins completely. A system that serves only maintainers becomes rigid – components are locked down, contribution is gated, and product teams build around the system instead of with it. A system that serves only inventors never stabilizes. There's no predictable foundation for anyone to build on.
+
+The systems that last hold both types. Inventors generate the raw material. Maintainers formalize what works and make it available at scale. A new pattern gets contributed and the maintainer pushes back on the API. An inventor sees a rigid component and builds something outside the system. Both of those are healthy interactions. They only become problems when one side stops listening.
+
+Managing that handoff matters more than resolving the tension. The tension is supposed to be there.
+
+
+Heading Title: Roads Don't Ask to Be Used
+
+Open the docs site. Find the component. Evaluate whether it fits. Decide whether to use it. That decision point is the problem. Every time a product team decides whether to use a design system component, there's a chance they decide not to.
+
+Infrastructure doesn't work that way. Nobody evaluates the road before driving to work. Infrastructure is the thing everything else depends on. Its value is that teams stop thinking about it and start building on top of it. The gap between a catalog and infrastructure is operational – components have clear contracts, health is visible, and when something changes, affected teams find out before they discover it in a broken build.
+
+Most design systems aren't maintained this way. Coverage gets prioritized over reliability. New components ship faster than existing ones get stabilized. Adding features feels like progress. Keeping what's already shipped dependable doesn't feel like anything – until it fails and three product teams are blocked.
+
+The shift from something teams evaluate to something they depend on doesn't happen through messaging. It happens through operational consistency, delivered over months.
+
+
+Heading: The Textbook Nobody Read
+
+Design system documentation tends to get written early. Before the components have been through a real product build. Before a product team has pushed back on a pattern or hit an edge case the original design didn't anticipate. The guidelines go up, the pages look complete, and the system looks ready.
+
+Then product teams start using it. The documentation describes how things were imagined, not how they behave under pressure. A component that looked complete has a gap that only surfaces next to production data. Teams fill in those gaps on their own and don't update anything upstream. The documentation and the reality drift apart.
+
+The documentation was fine. It was just early. Documentation written before real usage can only describe intent. Documentation written after a real build describes what was tested, what failed, what held up. When the next team picks it up, they're reading a record, not a hypothesis.

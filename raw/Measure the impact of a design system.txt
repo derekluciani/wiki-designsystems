@@ -1,0 +1,21 @@
+Article Title: Measure the impact of a design system
+Author: Jina Anne, Joshua Sortino
+Date: n/a
+Url: https://askplaybook.com/measure-the-impact-of-a-design-system/answers
+
+Track your communication.
+The impact of a design system reveals itself through communication. Do you have a regularly-scheduled design systems advisory board or office hour? Who comes to those? What questions are they asking? If you have a support intake system, what questions come up the most? Focus your time on the common problem areas that surface.
+
+Start with your design principles and goals.
+Your principles and goals, derived from user research, should drive your metrics. Otherwise, you’re collecting information that can be arbitrary. If consistency is one of your principles, measure how many components you’ve merged. If you have efficiency as a principle, you can measure how fast it takes to roll out a feature. Note: it’s difficult to track time saved because most people will fill that time with more tasks.
+
+Using the company’s business or financial goals is a very powerful tool for proving the value of a design system. Design systems offer some effective methods to optimize a design and engineering organization.
+
+Calculate the amount of time designers spend creating elements from scratch and compare to how much time would be saved with a design system.
+Without a design system, designers must re-create every (or most) elements in their designs. This is time consuming. By showing the amount of time that could be saved with a design system, you are able to prove the value in terms of hours given back to the organization.
+
+Similarly, determine how much time engineers spend asking designers for specs and clarification.
+Engineers will often need the exact measurements of elements in a design. When no design system exists, they will need to re-ask these measurements every time. Additionally, other questions may frequently be repeated without a source of truth. Show how many hours would be saved if a design system existed.
+
+Track how long it takes to onboard a designer.
+When new designers join, how long does it take for them to understand your design language? Show the value of a design system by explaining how much faster designers could be on boarded.

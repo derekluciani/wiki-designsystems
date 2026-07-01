@@ -1,6 +1,7 @@
 ---
 name: wiki-query
 description: Run this skill when the user asks a question about the content in the wiki.
+disable-model-invocation: false
 ---
 
 Use this skill as an instruction set. Follow the workflow in order.

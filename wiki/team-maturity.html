@@ -27,6 +27,7 @@
       <li><strong>Shared language.</strong> The longer-lasting effect is a common vocabulary — a designer labels something <code>bg-primary</code> in Figma and an engineer uses the same token in code. No guesswork.</li>
     </ul>
     <p>Origin shapes Stage 1: <strong>top-down</strong> systems (sponsor, budget) must prove efficiency fast without forcing adoption; <strong>bottom-up</strong> systems (no sponsor, an engineer just started it) grow by helping the teams hurting most and letting word of mouth spread. Either way, the stage ends when the team starts behaving like a product team — docs, onboarding, internal marketing.<sup><a href="#s-1">1</a></sup></p>
+    <p>Callahan adds a concrete onboarding model: rotate new hires through the design system team so they learn how the organization designs and builds digital products before moving into product teams. Used carefully, this turns the system team into an organizational learning engine rather than only a component factory.<sup><a href="#s-6">6</a></sup></p>
 
     <h2>Stage 2 — Enforcement</h2>
     <p>Once adoption is broad, the problem flips from adoption to <strong>scale</strong>: teams use components in unintended ways, requests pile up, and decisions that were fine small buckle under load. The team shifts from serving to governing.<sup><a href="#s-1">1</a></sup></p>
@@ -47,6 +48,12 @@
 
     <h2>Stage 3 — Core infrastructure</h2>
     <p>The system stops being a library that makes devs faster and becomes infrastructure the whole product ecosystem runs on. What defines it is <strong>reach</strong>: sitting at the bottom of the dependency tree, a change at the core propagates everywhere instantly. GitHub's Primer reworked its contrast strategy in one token update that fixed hundreds of a11y issues across 1,000+ spots; Atlassian rolled new typefaces across 18+ products via the system rather than a multi-month coordination effort.<sup><a href="#s-1">1</a></sup></p>
+    <p>Mall describes the same threshold as the difference between a catalog and infrastructure: roads do not ask to be used. A mature system becomes something teams depend on because component contracts are clear, operational health is visible, and affected teams hear about changes before discovering them in broken builds.<sup><a href="#s-3">3</a></sup></p>
+    <p>The measurement literature gives Stage 3 operational signals: dependency age stays within thresholds, teams adopt upgrades rather than fossilizing on old packages, release cadence is predictable, and component status communicates timing clearly enough that product teams can decide whether to wait or build locally.<sup><a href="#s-4">4</a></sup><sup><a href="#s-5">5</a></sup></p>
+    <p>Callahan's scale argument belongs here too: hiring alone increases design entropy unless standards and reusable patterns absorb the added complexity. A system changes the productivity-per-headcount curve by letting existing teams accomplish and maintain more work without linear staffing growth.<sup><a href="#s-6">6</a></sup></p>
+
+    <h2>Inventors and maintainers</h2>
+    <p>The organizational tension is not a bug. Product teams act as <strong>inventors</strong>, generating new raw material under ambiguity; system teams act as <strong>maintainers</strong>, stabilizing what works and making it available at scale. The failure mode is letting either side win completely: pure maintenance becomes rigidity, while pure invention never stabilizes into a dependable foundation.<sup><a href="#s-3">3</a></sup></p>
 
     <h2>Perspectives: enforcement vs. service</h2>
     <p>Zhang's Stage 2 is explicitly about <strong>enforcement</strong> — linters that block PRs, owning governance. Dan Mall pushes back on letting enforcement become the identity: "a design system team is not a design standards team," and a team that mostly reviews and enforces is "running a standards committee," a critical mistake.<sup><a href="#s-2">2</a></sup> The reconciliation: enforce through tooling and trust (Zhang's lint-as-teacher, owning migrations) rather than through gatekeeping reviews. See <a href="./governance.html">Governance</a> and <a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a>.</p>
@@ -57,12 +64,17 @@
     <ol>
       <li id="s-1"><a href="../raw/Design%20System%20Team%20Maturity.txt">Design System Team Maturity — Ricky Zhang (article, 06/2026)</a></li>
       <li id="s-2"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions.csv">Dan Mall / Design System University email essays</a></li>
+      <li id="s-3"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions%20%28Part%202%29.txt">Dan Mall Design Systems Email Content Extractions (Part 2)</a></li>
+      <li id="s-4"><a href="../raw/Measuring%20Design%20System%20Success.txt">Measuring Design System Success — Nathan Curtis (06/2017)</a></li>
+      <li id="s-5"><a href="../raw/Measuring%20Quality%20in%20Design%20Systems.txt">Measuring Quality in Design Systems — Dan Mall, Nathan Curtis, Amy Hupe (05/2022)</a></li>
+          <li id="s-6"><a href="../raw/The%20Never-Ending%20Job%20of%20Selling%20Design%20Systems/The%20Never-Ending%20Job%20of%20Selling%20Design%20Systems.txt">The Never-Ending Job of Selling Design Systems — Ben Callahan (02/2021)</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
       <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>
       <li><a href="./adoption-and-trust.html">Adoption, Contribution & Trust</a></li>
       <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+      <li><a href="./measuring-design-systems.html">Measuring Design Systems</a></li>
       <li><a href="./type-safe-systems.html">Type-Safe Design Systems</a></li>
     </ul>
   </footer>

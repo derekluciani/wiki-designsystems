@@ -27,11 +27,21 @@
     <p>A structural approach to lowering contribution friction is the use of **fragments** or "red links" within the system documentation graph, as advocated by Chase McCoy.<sup><a href="#s-3">3</a></sup> By declaring placeholders for missing components or features directly in the documentation, teams are presented with a clear, predefined backlog. This prevents new pages from being orphaned, signals where help is needed, and guides contributors directly to the gaps.<sup><a href="#s-3">3</a></sup> See <a href="./knowledge-graphs.html">Design Systems as Knowledge Graphs</a>.</p>
     <p>Itai Vonshak extends this focus on friction, questioning if design systems have ever achieved internal <strong>product-market fit</strong>.<sup><a href="#s-4">4</a></sup> He argues that design system teams spend far more time selling the system and trying to convince product teams to adopt it than they do actually designing it. A core driver of this adoption gap is the <strong>"unread novels" problem</strong>: design patterns are frequently documented as dead text rather than being encapsulated directly in code. Because they require reading a manual, they fall by the wayside.<sup><a href="#s-4">4</a></sup></p>
 
+    <h2>Selling is continuous</h2>
+    <p>Callahan names the uncomfortable operating reality: design-system work requires politics and sales because someone has to keep funding internal tooling whose revenue impact is indirect. The persuasive move is to know the sponsor's orientation — internal efficiency/onboarding/scale for IT-like owners, external trust/accessibility/usability for marketing-like owners — and translate system work into that value language.<sup><a href="#s-8">8</a></sup></p>
+
     <h2>Trust comes from reliability</h2>
     <p>Zhang frames the Stage-2 ownership tension the same way: you want consistency and rigor, product teams want to ship fast. You can't org-chart your way out of it — trust is earned by partnering closely, investing in test coverage so teams trust your releases, and showing up when needed.<sup><a href="#s-2">2</a></sup> Once teams feel heard they act like co-owners: better bug reports, real improvements, constructive pushback.</p>
+    <p>Mall adds that communication is part of reliability: product teams need direct notice before a component is coming and after it ships, because a roadmap page or changelog entry often does not register. If teams do not know a component is imminent, they may build their own; if they do not hear what shipped, stakeholders evaluate only the visible fraction of the system team's work.<sup><a href="#s-5">5</a></sup></p>
+
+    <h2>Developer experience predicts adoption</h2>
+    <p>A component can be visually correct, accessible, and documented yet still fail adoption if the engineer has to fight the API, override defaults, or read extensively before rendering the basic case. Mall's practical test is to watch an engineer implement the component in a real product codebase: time-to-first-render and points of confusion predict adoption better than a design review alone.<sup><a href="#s-5">5</a></sup></p>
 
     <h2>Own the migrations</h2>
     <p>A concrete trust-builder: the system team does the migration work itself rather than blasting a breaking change and watching timelines slip for months. Use codemods where possible — Sourcegraph automated 95% of one migration — and go into product codebases to update the UI and request review.<sup><a href="#s-2">2</a></sup></p>
+
+    <h2>Adoption health checks</h2>
+    <p>Measurement sources turn adoption into a relationship-management practice: track who comes to office hours, what support questions repeat, which teams are using stale dependencies, and where adopters report being partially adopted rather than "done." Even a manual spreadsheet of product teams, design/dev contacts, adoption level, blockers, and quarterly check-ins can reveal where to focus attention.<sup><a href="#s-6">6</a></sup><sup><a href="#s-7">7</a></sup></p>
 
     <h2>Cross-product awareness as a byproduct</h2>
     <p>Embedded with enough teams, the system team sees patterns no single squad can: two squads with the same problem who don't know the other exists, local pain points that are actually systemic.<sup><a href="#s-2">2</a></sup> This cross-org vantage becomes one of the team's most valuable assets at maturity.</p>
@@ -47,6 +57,10 @@
       <li id="s-2"><a href="../raw/Design%20System%20Team%20Maturity.txt">Design System Team Maturity — Ricky Zhang (article, 06/2026)</a></li>
       <li id="s-3"><a href="../raw/Design%20systems%20as%20knowledge%20graphs.txt">Design systems as knowledge graphs — Chase McCoy (08/2021)</a></li>
       <li id="s-4"><a href="../raw/The%20Broken%20Promises%20of%20Design%20Systems.txt">The Broken Promises of Design Systems — Itai Vonshak (article, 10/2024)</a></li>
+      <li id="s-5"><a href="../raw/Dan%20Mall%20Design%20Systems%20Email%20Content%20Extractions%20%28Part%202%29.txt">Dan Mall Design Systems Email Content Extractions (Part 2)</a></li>
+      <li id="s-6"><a href="../raw/Measure%20the%20impact%20of%20a%20design%20system.txt">Measure the impact of a design system — Jina Anne and Joshua Sortino</a></li>
+      <li id="s-7"><a href="../raw/Design%20System%20Discussions%20-%20Measurement.txt">Design System Discussions — Measurement — Nathan Curtis, Gabby Hon, Maya Hampton (12/2021)</a></li>
+          <li id="s-8"><a href="../raw/The%20Never-Ending%20Job%20of%20Selling%20Design%20Systems/The%20Never-Ending%20Job%20of%20Selling%20Design%20Systems.txt">The Never-Ending Job of Selling Design Systems — Ben Callahan (02/2021)</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
@@ -54,6 +68,7 @@
       <li><a href="./team-maturity.html">Design System Team Maturity</a></li>
       <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>
       <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+      <li><a href="./measuring-design-systems.html">Measuring Design Systems</a></li>
       <li><a href="./token-pipelines.html">Token Pipelines (co-creation)</a></li>
       <li><a href="./itai-vonshak.html">Itai Vonshak</a></li>
     </ul>
