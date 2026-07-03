@@ -41,6 +41,10 @@
     <h2>Specs as a pipeline, not a handoff</h2>
     <p>The workflow moves beyond designer-to-developer handoff. Curtis describes tools that fetch Figma data, scan a library, generate YAML specs, and compare raw design data against structured output; those specs then feed code generation, documentation, QA, accessibility audits, visual review, and agent workflows.<sup><a href="#s-1">1</a></sup> The important constraint is that commands are scripted and deterministic, not merely natural-language prompts, so agents work faster and with fewer ambiguous interpretations.<sup><a href="#s-1">1</a></sup></p>
 
+    <h2>Contracts, manifests, and MCP payloads</h2>
+    <p>The 2026 MCP cases show components-as-data becoming an implementation pattern, not only a design argument. Indeed parsed MDX into per-component JSON files for MCP/RAG retrieval; Storybook uses manifests and MCP documentation endpoints so agents can inspect component docs, stories, and tests; Primer exposes components, examples, patterns, tokens, and usage guidance through an installable MCP package.<sup><a href="#s-2">2</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup> Primitiv pushes the pattern further by scanning Figma, code, Storybook, and token files, reconciling conflicts, and serving a design-system contract with component provenance, inferred rules, conflicts, and violations.<sup><a href="#s-5">5</a></sup></p>
+    <p>The distinction matters: a component spec describes intent; a manifest exposes runtime/documentation facts; a reconciled contract asserts which facts win when sources disagree. Mature agent-facing systems may need all three.</p>
+
     <h2>ADRs as schema governance</h2>
     <p>Structured component data creates governance questions that cannot be left implicit: should geometry use left/right or start/end? Should naming use leading/trailing? How should token references map to component bindings? Curtis recommends architectural decision records (ADRs) that capture context, alternatives, rationale, and the decision, then implement the choice in schema, TypeScript types, and tools.<sup><a href="#s-1">1</a></sup></p>
     <p>This is governance at the schema layer: decisions become durable because they are both recorded and encoded.</p>
@@ -57,11 +61,16 @@
     <h4>Sources</h4>
     <ol>
       <li id="s-1"><a href="../raw/Components%20as%20Data%20for%20Humans%20and%20Machines.rtf">Components as Data for Humans and Machines — Nathan Curtis (04/2026)</a></li>
+      <li id="s-2"><a href="../raw/mcp/agentic-ai-indeed-machine-readable-mcp-benchmark-2026-07-03.md">Indeed machine-readable design-system MCP benchmark: JSON vs Markdown/TOON</a></li>
+      <li id="s-3"><a href="../raw/mcp/agentic-ai-storybook-mcp-react-self-healing-loop-2026-07-03.md">Storybook MCP for React: Component context, story previews, and self-healing tests</a></li>
+      <li id="s-4"><a href="../raw/mcp/agentic-ai-primer-mcp-github-design-system-2026-07-03.md">GitHub Primer MCP: Public design-system server for tokens, components, and patterns</a></li>
+      <li id="s-5"><a href="../raw/mcp/agentic-ai-primitiv-contract-reconciliation-mcp-2026-07-03.md">Primitiv: Reconciled design-system contract served via MCP</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
       <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
       <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
+      <li><a href="./mcp-case-studies.html">MCP Case Studies & Agent-Ready Infrastructure</a></li>
       <li><a href="./component-architecture.html">Component Architecture: Web Components & the Layer Cake</a></li>
       <li><a href="./token-pipelines.html">Token Pipelines: JSON, Style Dictionary & Figma Variables</a></li>
       <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>

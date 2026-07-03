@@ -29,6 +29,10 @@
       <li><strong>Tool Integration:</strong> Routing this structured content to power a dozen core tools, including MCP servers (such as <code>@atlaskit/ads-mcp</code>), prototyping tools, AI-powered code editors, and custom search/research agents (like Rovo).</li>
     </ul>
 
+    <h2>Skills, plugins, and routing files as design-system assets</h2>
+    <p>The MCP case studies broaden “agentic content” beyond prompt blocks. Figma's official skills encode implementation, rule-generation, and library-generation workflows with mandatory sequencing and checkpoints; Miro's Aura work uses root Claude routing plus skills for icon search, token search, and wrap-up review; Indeed's progressive-context plugin routes agents to foundations, quality/taste, implementation, composition, spatial rhythm, and MCP lookup at different moments.<sup><a href="#s-2">2</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup> Storybook similarly recommends <code>AGENTS.md</code>/<code>CLAUDE.md</code> instructions that require agents to use MCP before UI work and never hallucinate component properties.<sup><a href="#s-5">5</a></sup></p>
+    <p>The pattern: MCP answers stable questions; skills and routing files encode process. A mature design system maintains both as first-class artifacts.</p>
+
     <h2>Perspectives: Consolidated Guidelines vs. Context Bubbles</h2>
     <p>A key tension emerged when deciding how to structure design-system instructions for AI agents:<sup><a href="#s-1">1</a></sup></p>
     <ul>
@@ -62,11 +66,16 @@
     <h4>Sources</h4>
     <ol>
       <li id="s-1"><a href="../raw/integrating-design-systems-for-ai-prototyping-at-scale.txt">Turning Handoffs into Handshakes: Integrating Design Systems for AI Prototyping at Scale — Lewis-Ethan Healey, Kylor Hall (article, 11/2025)</a></li>
+      <li id="s-2"><a href="../raw/mcp/agentic-ai-figma-mcp-design-system-tools-skills-2026-07-03.md">Figma MCP: Design-system search, variables, Code Connect, canvas write tools, and skills</a></li>
+      <li id="s-3"><a href="../raw/mcp/agentic-ai-miro-aura-mcp-claude-skills-2026-07-03.md">Miro Aura: Design-system MCP + Claude Code skills</a></li>
+      <li id="s-4"><a href="../raw/mcp/agentic-ai-indeed-progressive-context-plugin-2026-07-03.md">Indeed progressive context plugin: Beyond MCP toward layered context architecture</a></li>
+      <li id="s-5"><a href="../raw/mcp/agentic-ai-storybook-mcp-react-self-healing-loop-2026-07-03.md">Storybook MCP for React: Component context, story previews, and self-healing tests</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
       <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
       <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
+      <li><a href="./mcp-case-studies.html">MCP Case Studies & Agent-Ready Infrastructure</a></li>
       <li><a href="./ai-assisted-authoring.html">AI-Assisted Component Authoring</a></li>
       <li><a href="./evals-observability.html">Evals & Observability</a></li>
       <li><a href="./sovereignty-and-token-capital.html">Model Sovereignty & Token Capital</a></li>
