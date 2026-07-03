@@ -23,6 +23,12 @@
     <h2>Storybook Evals</h2>
     <p>Frost and team describe using <strong>Storybook Evals</strong> to benchmark a design system against test prompts — tracking performance over time, detecting drift, and understanding the trade-offs between speed, cost, and quality.<sup><a href="#s-2">2</a></sup> Evals turn "does the agent do a good job?" from a vibe into a measured, repeatable signal. Atlassian's agentic roadmap similarly prioritizes the transition from template prompt-tuning to automated evaluations and benchmarking to programmatically verify design system compliance at scale (see <a href="./agentic-content-templates.html">Agentic Content & Prototyping Templates</a>).</p>
 
+    <h2>Benchmarking the interface itself</h2>
+    <p>The newer MCP cases make the interface itself an eval target. Indeed's reported benchmark compared 8 MCP configurations across 1,056 prompt events to judge token efficiency and accuracy of metadata formats, with JSON winning for structured component metadata.<sup><a href="#s-3">3</a></sup> Primer Brand's in-flight MCP work includes an eval dashboard comparing output with and without the MCP server, while Spotify's reported framework evaluates generated components against Encore components, lint errors, similarity scores, and visual output.<sup><a href="#s-4">4</a></sup><sup><a href="#s-5">5</a></sup></p>
+
+    <h2>Executable loops and CI gates</h2>
+    <p>Storybook's MCP server turns evaluation into an executable authoring loop: agents can preview stories, run interaction and accessibility tests, fix failures, and rerun the tests.<sup><a href="#s-6">6</a></sup> Primitiv extends the validation surface into governance by offering strict verification in CI and MCP tools for conflicts, inferred rules, and violations, making the agent-readable contract enforceable before merge rather than merely consultable during prompting.<sup><a href="#s-7">7</a></sup></p>
+
     <h2>Broader agentic safety practices</h2>
     <p>Beyond evals, teams apply general safety practices: guardrails on allowed actions, logging and auditing of agent decisions, and circuit breakers for jailbreak-like prompts or out-of-scope tasks. Human-in-the-loop review stays central, especially for changes affecting governance, brand, or accessibility.<sup><a href="#s-1">1</a></sup></p>
 
@@ -38,11 +44,17 @@
     <ol>
       <li id="s-1"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
       <li id="s-2"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
+      <li id="s-3"><a href="../raw/mcp/agentic-ai-indeed-machine-readable-mcp-benchmark-2026-07-03.md">Indeed machine-readable design-system MCP benchmark: JSON vs Markdown/TOON</a></li>
+      <li id="s-4"><a href="../raw/mcp/agentic-ai-primer-mcp-github-design-system-2026-07-03.md">GitHub Primer MCP: Public design-system server for tokens, components, and patterns</a></li>
+      <li id="s-5"><a href="../raw/mcp/agentic-ai-spotify-encore-ai-ready-mcp-layered-architecture-2026-07-03.md">Spotify Encore: AI-ready design system via MCP, evaluation, and layered architecture</a></li>
+      <li id="s-6"><a href="../raw/mcp/agentic-ai-storybook-mcp-react-self-healing-loop-2026-07-03.md">Storybook MCP for React: Component context, story previews, and self-healing tests</a></li>
+      <li id="s-7"><a href="../raw/mcp/agentic-ai-primitiv-contract-reconciliation-mcp-2026-07-03.md">Primitiv: Reconciled design-system contract served via MCP</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
       <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
       <li><a href="./agent-trust-levels.html">Governance & Trust Levels for Agents</a></li>
+      <li><a href="./mcp-case-studies.html">MCP Case Studies & Agent-Ready Infrastructure</a></li>
       <li><a href="./ai-assisted-authoring.html">AI-Assisted Component Authoring</a></li>
       <li><a href="./agentic-content-templates.html">Agentic Content & Prototyping Templates</a></li>
       <li><a href="./sovereignty-and-token-capital.html">Model Sovereignty & Token Capital</a></li>

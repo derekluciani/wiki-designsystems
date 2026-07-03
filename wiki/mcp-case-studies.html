@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Case Studies & Agent-Ready Infrastructure — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./agent-trust-levels.html">Governance &amp; Trust Levels for Agents →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">MCP Case Studies &amp; Agent-Ready Infrastructure</h1>
+    <p><em>Current design-system MCP practice is converging on a stack: structured contracts, routed context, skills, evals, and governance — not a single magic server.</em></p>
+
+    <h2>MCP as a production surface</h2>
+    <p>The frontier cases show MCP moving from a protocol curiosity into a maintained design-system surface. Figma exposes design context, variables, Code Connect mappings, library search, screenshots, assets, and remote canvas-write tools through its MCP server, while its official skills prescribe step-by-step workflows for implementing designs, creating design-system rules, and generating Figma libraries from code and tokens.<sup><a href="#s-1">1</a></sup> GitHub Primer distributes <code>@primer/mcp</code> as a package for tokens, components, examples, patterns, and usage guidance, and a Primer Brand PR adds smoke tests and eval-dashboard work around brand-specific MCP output.<sup><a href="#s-6">6</a></sup> Storybook exposes a running Storybook as an MCP endpoint where agents can query documentation, preview stories, and run tests.<sup><a href="#s-9">9</a></sup></p>
+    <p>The implication is architectural: the design system is no longer only a website, Figma library, and npm package. It also has an <strong>agent-facing API surface</strong> that needs versioning, smoke tests, routing rules, and output design.</p>
+
+    <h2>Case comparison</h2>
+    <table>
+      <thead>
+        <tr><th>Case</th><th>Agent-facing move</th><th>What it teaches</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Figma MCP</td><td>Design extraction, variables, Code Connect, library search, screenshots, asset flows, remote write tools, and official skills.</td><td>Design-to-code becomes design-to-code-to-rules; Code Connect and variables are anti-slop mechanisms.<sup><a href="#s-1">1</a></sup></td></tr>
+        <tr><td>Indeed benchmark</td><td>MDX parsed into per-component JSON, indexed for MCP/RAG; 8 configurations and 1,056 prompt events compared metadata formats.</td><td>Format is governance: JSON reportedly matched or beat hybrid Markdown+JSON at far lower token cost for structured component metadata.<sup><a href="#s-2">2</a></sup></td></tr>
+        <tr><td>Indeed progressive context</td><td>MCP for components/tokens/icons plus layered plugin context for foundations, recipes, implementation rules, and quality standards.</td><td>MCP retrieval can be correct while UI quality still drifts; context timing matters.<sup><a href="#s-3">3</a></sup></td></tr>
+        <tr><td>Miro Aura</td><td>Design-system MCP, Claude routing instructions, skills for icon/token search, wrap-up checks, and contribution flows.</td><td>AI must be onboarded like a new team member; metadata, negative constraints, and routing rules reduce support burden and misuse.<sup><a href="#s-4">4</a></sup></td></tr>
+        <tr><td>NYSDS</td><td>Refactored token MCP tools with recommended/primitive/all filters, raw JSON responses, read-only hints, and semantic-token descriptions.</td><td>Agent-safe APIs may intentionally hide primitives, omit misleading fields, and default to semantic tokens.<sup><a href="#s-5">5</a></sup></td></tr>
+        <tr><td>Primer</td><td>Public MCP package for Primer React; brand-specific MCP work with eval and CI smoke-test affordances.</td><td>Public design systems are shipping MCP as developer infrastructure, not just publishing human docs.<sup><a href="#s-6">6</a></sup></td></tr>
+        <tr><td>Primitiv</td><td>Scans Figma, code, Storybook, tokens, and adapters; reconciles conflicts into <code>primitiv.contract.json</code>; serves context, conflicts, inferred rules, and violations via MCP.</td><td>Retrieval gives access; reconciliation creates an auditable source of truth.<sup><a href="#s-7">7</a></sup></td></tr>
+        <tr><td>Spotify Encore</td><td>Reported MCP workstream plus layered architecture separating foundations, component style, and behavior.</td><td>Design-system relevance shifts toward being present where agents generate UI, and architecture can reduce context burden.<sup><a href="#s-8">8</a></sup></td></tr>
+        <tr><td>Storybook MCP</td><td>Docs, development, and testing toolsets over live Storybook: component docs, story instructions, previews, and tests.</td><td>Storybook becomes an executable agent runtime: retrieval, preview, test, fix, rerun.<sup><a href="#s-9">9</a></sup></td></tr>
+      </tbody>
+    </table>
+
+    <h2>The emerging stack</h2>
+    <p>Across cases, the durable pattern is not “add MCP.” It is a stack of complementary surfaces:</p>
+    <ul>
+      <li><strong>Structured contracts</strong> for deterministic facts: component props, variants, tokens, examples, and allowed values. Indeed's JSON benchmark, Primer's package, Storybook manifests, and Primitiv's contract all live here.<sup><a href="#s-2">2</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-7">7</a></sup><sup><a href="#s-9">9</a></sup></li>
+      <li><strong>Layered guidance</strong> for judgment: spatial rhythm, composition, brand feel, accessibility expectations, implementation rules, and taste. Indeed's plugin architecture and Spotify's layered Encore workstream both point beyond component lookup.<sup><a href="#s-3">3</a></sup><sup><a href="#s-8">8</a></sup></li>
+      <li><strong>Skills and routing rules</strong> for process: Figma's official skills, Miro's icon/token and wrap-up skills, and Storybook's recommended <code>AGENTS.md</code>/<code>CLAUDE.md</code> instructions tell agents when and how to use the system.<sup><a href="#s-1">1</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-9">9</a></sup></li>
+      <li><strong>Validation and evals</strong> for trust: Indeed's format benchmark, Primer Brand eval work, Spotify's reported visual/lint/similarity framework, Storybook's test loop, and Primitiv's CI verification all make agent output measurable.<sup><a href="#s-2">2</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-8">8</a></sup><sup><a href="#s-9">9</a></sup><sup><a href="#s-7">7</a></sup></li>
+    </ul>
+
+    <h2>Perspectives: retrieval vs. reconciliation</h2>
+    <p><strong>The retrieval camp</strong> treats the main problem as access: expose the right docs, tokens, components, variables, stories, and examples so agents stop guessing. Figma, Primer, Storybook, NYSDS, and Miro all strengthen this position by making previously human-oriented system knowledge directly queryable.<sup><a href="#s-1">1</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-9">9</a></sup><sup><a href="#s-5">5</a></sup><sup><a href="#s-4">4</a></sup></p>
+    <p><strong>The reconciliation camp</strong> argues that access is insufficient when Figma, code, Storybook, docs, and token files disagree. Primitiv's thesis — “Retrieval gives you data. Reconciliation gives you truth.” — makes conflict resolution the missing layer before MCP retrieval.<sup><a href="#s-7">7</a></sup> Indeed's deprecated active-card example supports the same warning from another angle: if documentation contains stale instruction, the agent's faithful compliance amplifies the system's truth debt.<sup><a href="#s-3">3</a></sup></p>
+    <p>Position: retrieval is the first maturity threshold; reconciliation is the second. A design-system MCP that retrieves stale or contradictory data can become an accelerant for drift, while a reconciled contract can become a governance artifact.</p>
+
+    <h2>Perspectives: MCP vs. skills, plugins, and rules</h2>
+    <p>MCP is best for stable, shared, queryable capabilities: get a component, find a token, retrieve docs, inspect violations, preview stories. Skills, plugins, and root rules are better for task choreography: when to call tools, which references to load, how to perform wrap-up checks, and what process gates must not be skipped.<sup><a href="#s-1">1</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-9">9</a></sup> Treating these as substitutes is a category error; the frontier systems combine them.</p>
+
+    <h2>What these cases prove — and do not prove</h2>
+    <p>They prove that design systems are becoming machine-facing infrastructure: MCP packages, token filters, eval harnesses, CI checks, skills, and layered context libraries are now part of the field's operating model. They do <em>not</em> prove that any single MCP server guarantees brand-quality UI. The strongest cases still depend on clean metadata, negative constraints, explicit routing, tests, human checkpoints, and source-of-truth hygiene.<sup><a href="#s-1">1</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-7">7</a></sup></p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/mcp/agentic-ai-figma-mcp-design-system-tools-skills-2026-07-03.md">Figma MCP: Design-system search, variables, Code Connect, canvas write tools, and skills</a></li>
+      <li id="s-2"><a href="../raw/mcp/agentic-ai-indeed-machine-readable-mcp-benchmark-2026-07-03.md">Indeed machine-readable design-system MCP benchmark: JSON vs Markdown/TOON</a></li>
+      <li id="s-3"><a href="../raw/mcp/agentic-ai-indeed-progressive-context-plugin-2026-07-03.md">Indeed progressive context plugin: Beyond MCP toward layered context architecture</a></li>
+      <li id="s-4"><a href="../raw/mcp/agentic-ai-miro-aura-mcp-claude-skills-2026-07-03.md">Miro Aura: Design-system MCP + Claude Code skills</a></li>
+      <li id="s-5"><a href="../raw/mcp/agentic-ai-nysds-mcp-token-tools-2026-07-03.md">New York State Design System MCP token tools: Semantic-token filtering for agents</a></li>
+      <li id="s-6"><a href="../raw/mcp/agentic-ai-primer-mcp-github-design-system-2026-07-03.md">GitHub Primer MCP: Public design-system server for tokens, components, and patterns</a></li>
+      <li id="s-7"><a href="../raw/mcp/agentic-ai-primitiv-contract-reconciliation-mcp-2026-07-03.md">Primitiv: Reconciled design-system contract served via MCP</a></li>
+      <li id="s-8"><a href="../raw/mcp/agentic-ai-spotify-encore-ai-ready-mcp-layered-architecture-2026-07-03.md">Spotify Encore: AI-ready design system via MCP, evaluation, and layered architecture</a></li>
+      <li id="s-9"><a href="../raw/mcp/agentic-ai-storybook-mcp-react-self-healing-loop-2026-07-03.md">Storybook MCP for React: Component context, story previews, and self-healing tests</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./mcp-interface.html">MCP &amp; the Machine-Readable Interface</a></li>
+      <li><a href="./agentic-readiness.html">Agentic Readiness &amp; Architecture</a></li>
+      <li><a href="./components-as-data.html">Components as Data</a></li>
+      <li><a href="./evals-observability.html">Evals &amp; Observability</a></li>
+      <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+      <li><a href="./agentic-content-templates.html">Agentic Content &amp; Prototyping Templates</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

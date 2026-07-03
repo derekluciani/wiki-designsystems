@@ -10,7 +10,7 @@
 
   <nav class="wiki-nav markdown-body">
     <p><a href="../index.html">← Return to Index</a></p>
-    <p><a href="./agent-trust-levels.html">Governance & Trust Levels for Agents →</a></p>
+    <p><a href="./mcp-case-studies.html">MCP Case Studies &amp; Agent-Ready Infrastructure →</a></p>
   </nav>
 
   <article class="markdown-body">
@@ -20,18 +20,28 @@
     <h2>What MCP does</h2>
     <p>The Model Context Protocol is a standard for feeding AI tools the real, structured data behind a design — its intent, tokens, variables, and components — rather than letting them guess from screenshots.<sup><a href="#s-1">1</a></sup> Figma's Dev Mode MCP server turns a Figma file into an interactive context layer that AI coding tools can query: "X-ray vision" for spacing, color, and component logic, enabling higher-fidelity code generation, especially when the system is cleanly structured.<sup><a href="#s-1">1</a></sup></p>
 
+    <h2>From interface to infrastructure</h2>
+    <p>Recent public and practitioner cases show MCP becoming a maintained production surface for design systems rather than a one-off bridge. Figma exposes design context, variable definitions, Code Connect maps, library search, screenshots, asset transfer, and remote write operations; Primer distributes <code>@primer/mcp</code> as an installable design-system package; Storybook exposes a running Storybook at an MCP endpoint with documentation, preview, and testing toolsets.<sup><a href="#s-6">6</a></sup><sup><a href="#s-11">11</a></sup><sup><a href="#s-14">14</a></sup> See <a href="./mcp-case-studies.html">MCP Case Studies &amp; Agent-Ready Infrastructure</a>.</p>
+
     <h2>Storybook MCP as connective tissue</h2>
-    <p>In the agentic-2026 session, the Storybook MCP server is demonstrated as the connective tissue that exposes design-system components, APIs, and interaction tests to AI agents in a structured, <strong>token-optimized</strong> format.<sup><a href="#s-2">2</a></sup> The system's components, not generic web knowledge, become the agent's vocabulary.</p>
+    <p>In the agentic-2026 session, the Storybook MCP server is demonstrated as the connective tissue that exposes design-system components, APIs, and interaction tests to AI agents in a structured, <strong>token-optimized</strong> format.<sup><a href="#s-2">2</a></sup> Storybook's public MCP server operationalizes that idea: agents can query docs, generate or update stories, preview story output, and run Storybook tests, including accessibility checks when configured.<sup><a href="#s-14">14</a></sup> The system's components, not generic web knowledge, become the agent's vocabulary.</p>
 
     <h2>Component specs as MCP payloads</h2>
     <p>Curtis's components-as-data argument points to what MCP should expose next: not just component names and prose docs, but compact structured specs that describe props, anatomy, defaults, bindings, variants, slots, and constraints. This moves agents from interpreting rendered artifacts to querying component intent as data.<sup><a href="#s-5">5</a></sup></p>
 
     <h2>JSON for MCP, Markdown for LLM</h2>
     <p>The most important structural lesson: early attempts dumped Markdown docs into an MCP server, causing high token usage, hallucinations, and poor adherence to component contracts. Encoding component APIs and variants as <strong>structured JSON</strong> instead reduced token usage by ~80% (per Indeed's case study) and dramatically improved accuracy and cost.<sup><a href="#s-3">3</a></sup></p>
+    <p>Indeed's newer benchmark sharpens this from rule of thumb into an evaluation claim: a reported 8-configuration, 1,056-prompt comparison found JSON equal or better than hybrid Markdown+JSON for structured component metadata while using far fewer tokens; Markdown remained useful for natural-language rules and instructions.<sup><a href="#s-7">7</a></sup> NYSDS reaches the same split at token-tool scale by returning raw JSON for token lookup while moving theme guidance into Markdown guide content.<sup><a href="#s-10">10</a></sup></p>
     <p>The emergent pattern is <strong>"JSON for MCP, Markdown for LLM"</strong>: machine-readable structured data (props, variants, allowed values) as JSON schemas; human-oriented guidance and interaction rules as Markdown. Metadata stays under source control with a pipeline that converts MDX/Storybook docs into MCP-readable JSON whenever components change.<sup><a href="#s-3">3</a></sup> Atlassian implemented this pattern by distributing modular instruction blocks (types, examples, guidelines) to their MCP server (<code>@atlaskit/ads-mcp</code>) and other agents using a structured <code>offerings.json</code> schema (see <a href="./agentic-content-templates.html">Agentic Content & Prototyping Templates</a>).</p>
 
     <h2>Expose foundations, not just components</h2>
-    <p>A specific failure mode: MCP interfaces that reveal components but omit foundations (spacing, typography) force agents to guess and break brand consistency.<sup><a href="#s-3">3</a></sup> This is the practical cash-value of the <a href="./token-architecture.html">tokens-as-API</a> idea — the foundation layer must be machine-visible too.</p>
+    <p>A specific failure mode: MCP interfaces that reveal components but omit foundations (spacing, typography) force agents to guess and break brand consistency.<sup><a href="#s-3">3</a></sup> Indeed's progressive-context work reports exactly this failure: component retrieval worked, but prototypes still drifted on typography hierarchy, spacing, color usage, icon conventions, and brand feel until foundations and recipes were loaded at the right time.<sup><a href="#s-8">8</a></sup> Spotify's reported Encore work reaches a similar conclusion architecturally by separating foundations, component style, and component behavior to reduce context burden for humans and machines.<sup><a href="#s-13">13</a></sup> This is the practical cash-value of the <a href="./token-architecture.html">tokens-as-API</a> idea — the foundation layer must be machine-visible too.</p>
+
+    <h2>Output shaping is governance</h2>
+    <p>An MCP response is not neutral documentation; it steers model behavior. NYSDS deliberately defaults token search to recommended semantic tokens, excludes primitive palette ramps that agents should not use directly, and drops <code>cssValue</code> from discovery responses to discourage primitive-reference misuse.<sup><a href="#s-10">10</a></sup> Miro's Aura work points to the same principle for icons and tokens: add visual descriptions, use cases, categories, and explicit “do not use” constraints when names alone are not machine-usable intent.<sup><a href="#s-9">9</a></sup></p>
+
+    <h2>Retrieval is not reconciliation</h2>
+    <p>MCP can retrieve design-system data, but it does not automatically decide which source is true when Figma, code, Storybook, docs, and token files disagree. Primitiv makes this a first-class layer: scan sources, reconcile conflicts, write a machine-readable contract, then serve context, conflicts, inferred rules, and violations through MCP.<sup><a href="#s-12">12</a></sup> This reframes the mature MCP interface as not merely “how agents access docs,” but “how agents access reconciled system truth.”</p>
 
     <h2>Structured queries and APIs</h2>
     <p>The concept of exposing system schemas programmatically is not new; Shopify's Polaris design system previously pioneered this by offering a GraphQL API to expose components, tokens, pages, and examples directly to consumers.<sup><a href="#s-4">4</a></sup> In an agentic workflow, this query-based structure becomes the interface protocol. By querying the design system as a structured database or knowledge graph rather than traversing human docs, agents can programmatically extract precise context (e.g., retrieving only components matching <code>icons AND onboarding</code>), optimizing performance and accuracy.<sup><a href="#s-4">4</a></sup> See <a href="./knowledge-graphs.html">Design Systems as Knowledge Graphs</a>.</p>
@@ -48,11 +58,21 @@
       <li id="s-3"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
       <li id="s-4"><a href="../raw/Design%20systems%20as%20knowledge%20graphs.txt">Design systems as knowledge graphs — Chase McCoy (08/2021)</a></li>
           <li id="s-5"><a href="../raw/Components%20as%20Data%20for%20Humans%20and%20Machines.rtf">Components as Data for Humans and Machines — Nathan Curtis (04/2026)</a></li>
+      <li id="s-6"><a href="../raw/mcp/agentic-ai-figma-mcp-design-system-tools-skills-2026-07-03.md">Figma MCP: Design-system search, variables, Code Connect, canvas write tools, and skills</a></li>
+      <li id="s-7"><a href="../raw/mcp/agentic-ai-indeed-machine-readable-mcp-benchmark-2026-07-03.md">Indeed machine-readable design-system MCP benchmark: JSON vs Markdown/TOON</a></li>
+      <li id="s-8"><a href="../raw/mcp/agentic-ai-indeed-progressive-context-plugin-2026-07-03.md">Indeed progressive context plugin: Beyond MCP toward layered context architecture</a></li>
+      <li id="s-9"><a href="../raw/mcp/agentic-ai-miro-aura-mcp-claude-skills-2026-07-03.md">Miro Aura: Design-system MCP + Claude Code skills</a></li>
+      <li id="s-10"><a href="../raw/mcp/agentic-ai-nysds-mcp-token-tools-2026-07-03.md">New York State Design System MCP token tools: Semantic-token filtering for agents</a></li>
+      <li id="s-11"><a href="../raw/mcp/agentic-ai-primer-mcp-github-design-system-2026-07-03.md">GitHub Primer MCP: Public design-system server for tokens, components, and patterns</a></li>
+      <li id="s-12"><a href="../raw/mcp/agentic-ai-primitiv-contract-reconciliation-mcp-2026-07-03.md">Primitiv: Reconciled design-system contract served via MCP</a></li>
+      <li id="s-13"><a href="../raw/mcp/agentic-ai-spotify-encore-ai-ready-mcp-layered-architecture-2026-07-03.md">Spotify Encore: AI-ready design system via MCP, evaluation, and layered architecture</a></li>
+      <li id="s-14"><a href="../raw/mcp/agentic-ai-storybook-mcp-react-self-healing-loop-2026-07-03.md">Storybook MCP for React: Component context, story previews, and self-healing tests</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
       <li><a href="./knowledge-graphs.html">Design Systems as Knowledge Graphs</a></li>
       <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./mcp-case-studies.html">MCP Case Studies & Agent-Ready Infrastructure</a></li>
       <li><a href="./components-as-data.html">Components as Data</a></li>
       <li><a href="./ai-assisted-authoring.html">AI-Assisted Component Authoring</a></li>
       <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
