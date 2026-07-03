@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components as Data — Design Systems Wiki</title>
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="wiki-nav markdown-body">
+    <p><a href="../index.html">← Return to Index</a></p>
+    <p><a href="./mcp-interface.html">MCP & the Machine-Readable Interface →</a></p>
+  </nav>
+
+  <article class="markdown-body">
+    <h1 class="wiki-title">Components as Data</h1>
+    <p><em>The next machine-readable frontier after tokens: turning component intent into compact, inspectable, deterministic specs that humans and agents can both use.</em></p>
+
+    <h2>The token treatment for components</h2>
+    <p>Nathan Curtis's core claim is that components should be treated as <strong>structured data</strong>, not merely as Figma visuals, code snippets, or prose documentation.<sup><a href="#s-1">1</a></sup> The analogy is design tokens: tokens now have stable cross-tool representations, but components still lack a comparable standard for describing props, anatomy, defaults, bindings, variants, slots, and code-only constraints.<sup><a href="#s-1">1</a></sup></p>
+    <p>This extends the wiki's <a href="./token-pipelines.html">token pipeline</a> thesis upward: if tokens are the API for design decisions, component specs are the API for component intent.</p>
+
+    <h2>Figma as origin of truth, not final truth</h2>
+    <p>Curtis keeps Figma in the workflow because it remains the dominant collaborative canvas for designers, but he rejects it as the ultimate place to keep truth. His formulation: Figma is an <strong>origin of truth</strong>, while structured specs should become the durable source of truth for a design system.<sup><a href="#s-1">1</a></sup></p>
+    <p>The reason is practical. Figma raw data is too large and noisy for either humans or agents to reason over directly: Curtis cites a five-variant alert component with 126 layers and more than 11,000 key-value pairs, and a button whose raw JSON became 42,065 lines before being compressed into a 442-line YAML spec.<sup><a href="#s-1">1</a></sup> Screenshots and Markdown summaries are also insufficient: they may be compact, but they are not structured enough to express precise design intent or measure exact changes.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Design intent over inference</h2>
+    <p>The point is not to let AI guess better from design artifacts; it is to remove the need for guessing. Curtis argues for explicit, deterministic rules rather than 80–95% inference from noisy inputs, because production design systems need trust closer to 99.9% correctness.<sup><a href="#s-1">1</a></sup> The desired component spec is:</p>
+    <ul>
+      <li><strong>Human-readable</strong> enough for designers to audit.</li>
+      <li><strong>Machine-readable</strong> enough for scripts, agents, and pipelines to consume.</li>
+      <li><strong>Complete</strong> enough to inspect styles, bindings, props, variants, and differences.</li>
+      <li><strong>Compact</strong> enough to avoid drowning agents in irrelevant tool cruft.<sup><a href="#s-1">1</a></sup></li>
+    </ul>
+
+    <h2>The component spec model</h2>
+    <p>Curtis's proposed YAML model describes components through a small set of recurring structures: props, anatomy, default layout, styles, bindings, and variants.<sup><a href="#s-1">1</a></sup> Conceptually, it behaves like CSS: define defaults first, then define variant rules as deltas from the default.</p>
+    <p>The key compression move is to replace variant enumeration with rules. Instead of preserving many redundant disabled button variants, the spec can express one rule such as "if disabled, use the disabled token" or set opacity once.<sup><a href="#s-1">1</a></sup> Instead of carrying Figma's separate <code>showTitle</code> boolean and <code>title</code> string, a spec can translate that into code-like intent: title exists or it does not.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Specs as a pipeline, not a handoff</h2>
+    <p>The workflow moves beyond designer-to-developer handoff. Curtis describes tools that fetch Figma data, scan a library, generate YAML specs, and compare raw design data against structured output; those specs then feed code generation, documentation, QA, accessibility audits, visual review, and agent workflows.<sup><a href="#s-1">1</a></sup> The important constraint is that commands are scripted and deterministic, not merely natural-language prompts, so agents work faster and with fewer ambiguous interpretations.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>ADRs as schema governance</h2>
+    <p>Structured component data creates governance questions that cannot be left implicit: should geometry use left/right or start/end? Should naming use leading/trailing? How should token references map to component bindings? Curtis recommends architectural decision records (ADRs) that capture context, alternatives, rationale, and the decision, then implement the choice in schema, TypeScript types, and tools.<sup><a href="#s-1">1</a></sup></p>
+    <p>This is governance at the schema layer: decisions become durable because they are both recorded and encoded.</p>
+
+    <h2>Perspectives: structured truth vs. collaborative truth</h2>
+    <p>The live tension is not whether specs are useful; it is whether they accidentally recreate handoff. Curtis notes that after generating specs, teams can stop talking and split back into isolated design and development lanes.<sup><a href="#s-1">1</a></sup> The healthier pattern uses specs and agents to create <strong>gated collaboration moments</strong>: planning, spec generation, accessibility audit, visual review, regeneration, and human sign-off.<sup><a href="#s-1">1</a></sup></p>
+    <p>Position: components-as-data is not a replacement for collaboration. It is the shared substrate that lets collaboration happen at higher precision, especially when humans and machines are both changing the system.</p>
+
+    <h2>The maturity horizon: flowing change</h2>
+    <p>Curtis's maturity model is succinct: good design systems ship; better design systems change predictably; the best design systems flow change through an ecosystem in a predictable, performant, error-free way.<sup><a href="#s-1">1</a></sup> Components-as-data is the mechanism for that horizon: decisions can be seen, diffs can be exact, changes can be traced, and machines can propagate intent without inventing it.</p>
+  </article>
+
+  <footer class="markdown-body">
+    <h4>Sources</h4>
+    <ol>
+      <li id="s-1"><a href="../raw/Components%20as%20Data%20for%20Humans%20and%20Machines.rtf">Components as Data for Humans and Machines — Nathan Curtis (04/2026)</a></li>
+    </ol>
+    <h4>Related pages</h4>
+    <ul>
+      <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
+      <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
+      <li><a href="./component-architecture.html">Component Architecture: Web Components & the Layer Cake</a></li>
+      <li><a href="./token-pipelines.html">Token Pipelines: JSON, Style Dictionary & Figma Variables</a></li>
+      <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>
+      <li><a href="./team-maturity.html">Design System Team Maturity</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>

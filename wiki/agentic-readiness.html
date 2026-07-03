@@ -10,7 +10,7 @@
 
   <nav class="wiki-nav markdown-body">
     <p><a href="../index.html">← Return to Index</a></p>
-    <p><a href="./mcp-interface.html">MCP & the Machine-Readable Interface →</a></p>
+    <p><a href="./components-as-data.html">Components as Data →</a></p>
   </nav>
 
   <article class="markdown-body">
@@ -27,6 +27,9 @@
       <li><strong>Coverage</strong> — clear examples, metadata, types, and constraints so agents understand how to use components correctly. (Thorough descriptions and JSDoc comments are essential for agents to interpret a library's intent.)</li>
       <li><strong>Validation</strong> — robust functional, accessibility, and visual tests plus human-in-the-loop sign-offs, acting as guardrails against errors. Tests are the "sauce" that gives confidence in what agents assemble.</li>
     </ul>
+
+    <h2>Components as structured context</h2>
+    <p>Curtis gives a concrete form to machine-readable readiness: components need structured specs, not screenshots, raw Figma dumps, or prose summaries. His YAML-oriented model captures props, anatomy, defaults, styles, bindings, and variants so agents consume design intent directly rather than inferring it from noisy tool data.<sup><a href="#s-4">4</a></sup> See <a href="./components-as-data.html">Components as Data</a>.</p>
 
     <h2>Three elements of the architecture</h2>
     <p>The report describes a recurring shape: <strong>always-on design foundations</strong>, <strong>on-demand component metadata</strong> via APIs/MCP servers, and <strong>orchestration rules</strong> governing what agents can do.<sup><a href="#s-2">2</a></sup> Control flow is usually workflow-oriented (clearly defined steps with limited autonomy per step) rather than a single free-running agent: client → orchestration layer → tools (MCP server, Figma API, token service, CI, Storybook) → target repos.<sup><a href="#s-2">2</a></sup></p>
@@ -58,9 +61,11 @@
       <li id="s-1"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
       <li id="s-2"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
       <li id="s-3"><a href="../raw/The%20Broken%20Promises%20of%20Design%20Systems.txt">The Broken Promises of Design Systems — Itai Vonshak (article, 10/2024)</a></li>
+          <li id="s-4"><a href="../raw/Components%20as%20Data%20for%20Humans%20and%20Machines.rtf">Components as Data for Humans and Machines — Nathan Curtis (04/2026)</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
+      <li><a href="./components-as-data.html">Components as Data</a></li>
       <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
       <li><a href="./agent-trust-levels.html">Governance & Trust Levels for Agents</a></li>
       <li><a href="./evals-observability.html">Evals & Observability</a></li>
