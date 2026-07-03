@@ -41,6 +41,7 @@
 
     <h2>Tokens as the API for the design language</h2>
     <p>The strongest claim: treat tokens not merely as CSS variables but as <strong>the contract between the design system and every consumer</strong> — web, native, CMS, QA automation, and AI tooling alike.<sup><a href="#s-1">1</a></sup> This "tokens-as-API" framing is exactly why tokens matter for <a href="./agentic-readiness.html">agentic readiness</a>: well-named tokens are machine-consumable foundations, and AI workflows depend on agents seeing them.<sup><a href="#s-2">2</a></sup></p>
+    <p>The stable Design Tokens Community Group 2025.10 specification closes part of the standards gap by defining a vendor-neutral exchange format for token files, including required token values, typed tokens, aliases/references, groups, extensions, and JSON Pointer support.<sup><a href="#s-3">3</a></sup> It standardizes the wire format for interoperability; it does <em>not</em> replace the architectural judgment of deciding which tokens are primitive, semantic, or component-level.</p>
 
     <h2>Perspectives: how many tokens is too many?</h2>
     <p>A consistent anti-pattern warning runs through the sources: do <strong>not</strong> create a token for every CSS property on every component. Systems with thousands of component tokens become unmaintainable.<sup><a href="#s-1">1</a></sup> The agentic literature adds a related failure mode — monolithic component definitions that bundle foundations, style, and behavior make it hard for both humans and agents to reason about any one of them.<sup><a href="#s-2">2</a></sup> The shared lesson: let Tier 2 do the heavy lifting; reach for Tier 3 only for genuinely gnarly brand differentiation.</p>
@@ -54,6 +55,7 @@
     <ol>
       <li id="s-1"><a href="../raw/Design%20Token%20Architecture%20with%20Brad%20Frost.txt">Design Token Architecture — Brad Frost (video, 04/2025)</a></li>
       <li id="s-2"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+      <li id="s-3"><a href="https://www.designtokens.org/tr/2025.10/">Design Tokens Community Group 2025.10 specification</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>

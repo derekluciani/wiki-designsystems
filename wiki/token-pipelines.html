@@ -19,6 +19,7 @@
 
     <h2>JSON as the tool-agnostic source of truth</h2>
     <p>Frost recommends storing the design-token source of truth as <strong>JSON files</strong> so they are tool-agnostic and transformable, then using <strong>Style Dictionary</strong> (or similar) to transform that JSON into whatever platform-specific output is needed — CSS custom properties, iOS/Android values, React Native tokens.<sup><a href="#s-1">1</a></sup> One source serves every downstream platform.</p>
+    <p>The stable Design Tokens Community Group 2025.10 specification gives that JSON source a common interchange target: <code>.tokens</code> or <code>.tokens.json</code> files with explicit <code>$value</code>, <code>$type</code>, alias/reference, group, and extension semantics.<sup><a href="#s-4">4</a></sup> For pipelines, the practical implication is to prefer DTCG-shaped token data over bespoke glue formats unless a local constraint forces an extension.</p>
 
     <h2>The Figma ↔ code naming contract</h2>
     <p>The token names in Figma (via Figma Variables) must map <strong>1:1</strong> to the names in JSON/code. This shared naming <em>is</em> the contract and API between design and development; misalignment here is the most common source of confusion and breakage.<sup><a href="#s-1">1</a></sup> The vocabulary becomes shared across designers, developers, QA, CMS systems, and AI tooling.</p>
@@ -39,6 +40,7 @@
       <li id="s-1"><a href="../raw/Design%20Token%20Architecture%20with%20Brad%20Frost.txt">Design Token Architecture — Brad Frost (video, 04/2025)</a></li>
       <li id="s-2"><a href="../raw/Guide%20to%20Type-Safe%20Design%20Systems.txt">Guide to Type-Safe Design Systems — Kathleen McMahon (video, 05/2026)</a></li>
           <li id="s-3"><a href="../raw/Components%20as%20Data%20for%20Humans%20and%20Machines.rtf">Components as Data for Humans and Machines — Nathan Curtis (04/2026)</a></li>
+      <li id="s-4"><a href="https://www.designtokens.org/tr/2025.10/">Design Tokens Community Group 2025.10 specification</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
