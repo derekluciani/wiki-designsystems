@@ -7,13 +7,22 @@
   const defaultFontSize = 14;
   const minFontSize = 11;
   const maxFontSize = 20;
+  const defaultContentWidth = 680;
+  const maxContentWidth = 820;
+  const contentWidthStep = 40;
   const storageKey = 'wikiTextSize';
 
   const clamp = (value) => Math.min(maxFontSize, Math.max(minFontSize, value));
 
   const applyTextSize = (size) => {
     const nextSize = clamp(size);
+    const nextContentWidth = Math.min(
+      maxContentWidth,
+      defaultContentWidth + Math.max(0, nextSize - defaultFontSize) * contentWidthStep
+    );
+
     root.style.setProperty('--root-font-size', `${nextSize}px`);
+    root.style.setProperty('--markdown-body-max-width', `${nextContentWidth}px`);
     localStorage.setItem(storageKey, String(nextSize));
   };
 
