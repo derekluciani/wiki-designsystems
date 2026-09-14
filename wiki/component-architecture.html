@@ -14,7 +14,7 @@
       <button type="button" data-text-size="decrease" aria-label="Decrease text size">A-</button>
       <button type="button" data-text-size="increase" aria-label="Increase text size">A+</button>
     </div>
-    <p><a href="./systems-thinking.html">Systems Thinking →</a></p>
+    <p><a href="./systems-thinking.html">Systems Thinking for Design Systems →</a></p>
   </nav>
 
   <article class="markdown-body">
@@ -22,7 +22,7 @@
     <p><em>How to structure components so they survive framework churn and vary by product without fragmenting.</em></p>
 
     <h2>Web Components as the delivery vehicle</h2>
-    <p>Frost strongly recommends <strong>Web Components</strong> for delivering a design system across different tech stacks and frameworks, because they bundle HTML, CSS, and JS into a single reusable package that any framework can consume.<sup><a href="#s-1">1</a></sup> The payoff is reach: one component implementation serves React, Vue, server-rendered pages, and whatever comes next.</p>
+    <p>Frost strongly recommends <strong>Web Components</strong> as a reusable HTML, CSS, and JavaScript delivery format intended to work across different technology stacks and frameworks.<sup><a href="#s-1">1</a></sup> He presents cross-stack reach as the payoff; this source does not test specific React, Vue, server-rendered, wrapper, event, form, or hydration integrations.</p>
 
     <h2>The "layer cake"</h2>
     <p>Frost's compositional model has two tiers:<sup><a href="#s-1">1</a></sup></p>
@@ -33,7 +33,7 @@
     <p>Separating the two lets the shared core stay stable while product teams assemble product-specific "recipes" on top.</p>
 
     <h2>Build on native standards</h2>
-    <p>A guiding principle is to build on native web standards wherever possible, because this ensures longevity as specific frameworks come and go.<sup><a href="#s-1">1</a></sup> The bet is that the platform outlives any given framework.</p>
+    <p>Frost's guiding principle is to build on native web standards wherever possible to improve longevity as specific frameworks come and go.<sup><a href="#s-1">1</a></sup> It is a bet that the platform will outlive any given framework, not a guarantee that integration costs disappear.</p>
 
     <h2>Keep tokens out of component logic</h2>
     <p>Frost insists design tokens be kept separate from component logic so they can be themed and updated independently.<sup><a href="#s-1">1</a></sup> This is the architectural seam that the <a href="./token-architecture.html">token architecture</a> page develops in depth.</p>
@@ -45,7 +45,8 @@
     <p>Mall's Part 2 essays add a usability constraint to architecture: components still need to be adaptable, but the boundaries of adaptability should live in the component system rather than in documentation that every consumer must remember under deadline pressure. Layout components that own spacing, token pipelines that validate resolution, and APIs that make invalid usage difficult are architectural choices, not merely documentation choices.<sup><a href="#s-3">3</a></sup></p>
 
     <h2>Perspectives: web-standard reach vs. typed-framework rigor</h2>
-    <p>Frost's web-standards bet optimizes for cross-framework <em>longevity</em>. The type-safety camp optimizes for <em>compile-time correctness</em> inside a typed framework (typically React + TypeScript), accepting framework coupling in exchange for guardrails that forbid invalid prop combinations.<sup><a href="#s-2">2</a></sup> Both want resilient components; they disagree on whether resilience comes from the platform or from the type system. See <a href="./type-safe-systems.html">Type-Safe Design Systems</a>.</p>
+    <p>The current corpus establishes two independently advocated priorities rather than a head-to-head verdict. Frost favors Web Components and native standards for cross-stack longevity.<sup><a href="#s-1">1</a></sup> McMahon shows how TypeScript discriminated unions and <code>never</code> can reject invalid prop combinations at compile time, with runtime assertions as a second defense.<sup><a href="#s-2">2</a></sup> Curtis adds that iOS, Android, React, and web require principled mapping across platforms.<sup><a href="#s-4">4</a></sup></p>
+    <p><strong>Interim position:</strong> choose only after testing the actual platform mix, runtime constraints, and required compile-time guarantees. The current sources do not establish a universal winner or substantiate the integration costs of wrappers, custom events, forms, SSR/hydration, accessibility ownership, or a Web Component core with framework adapters. See <a href="./type-safe-systems.html">Type-Safe Design Systems</a>.</p>
   </article>
 
   <footer class="markdown-body">
@@ -62,6 +63,7 @@
       <li><a href="./type-safe-systems.html">Type-Safe Design Systems</a></li>
       <li><a href="./components-as-data.html">Components as Data</a></li>
       <li><a href="./what-is-a-design-system.html">What Is a Design System?</a></li>
+      <li><a href="./broken-promises-of-design-systems.html">The Broken Promises of Design Systems</a></li>
     </ul>
   </footer>
 

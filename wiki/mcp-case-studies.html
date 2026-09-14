@@ -19,49 +19,57 @@
 
   <article class="markdown-body">
     <h1 class="wiki-title">MCP Case Studies &amp; Agent-Ready Infrastructure</h1>
-    <p><em>Current design-system MCP practice is converging on a stack: structured contracts, routed context, skills, evals, and governance — not a single magic server.</em></p>
+    <p><em>Selected 2026 examples suggest a recurring stack—structured contracts, routed context, skills, evals, and governance—while their evidence ranges from public capabilities to unverified internal outcomes.</em></p>
 
     <h2>MCP as a production surface</h2>
-    <p>The frontier cases show MCP moving from a protocol curiosity into a maintained design-system surface. Figma exposes design context, variables, Code Connect mappings, library search, screenshots, assets, and remote canvas-write tools through its MCP server, while its official skills prescribe step-by-step workflows for implementing designs, creating design-system rules, and generating Figma libraries from code and tokens.<sup><a href="#s-1">1</a></sup> GitHub Primer distributes <code>@primer/mcp</code> as a package for tokens, components, examples, patterns, and usage guidance, and a Primer Brand PR adds smoke tests and eval-dashboard work around brand-specific MCP output.<sup><a href="#s-6">6</a></sup> Storybook exposes a running Storybook as an MCP endpoint where agents can query documentation, preview stories, and run tests.<sup><a href="#s-9">9</a></sup></p>
-    <p>The implication is architectural: the design system is no longer only a website, Figma library, and npm package. It also has an <strong>agent-facing API surface</strong> that needs versioning, smoke tests, routing rules, and output design.</p>
+    <p>Public documentation establishes Figma's MCP toolset, the shipped Primer React package, and Storybook's preview React MCP.<sup><a href="#s-1">1</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-9">9</a></sup> Separately, an open Primer Brand PR describes proposed brand-specific tools, smoke tests, and an eval dashboard; that in-flight work is not equivalent to a shipped capability.<sup><a href="#s-6">6</a></sup></p>
+    <p><strong>Position:</strong> where a design system exposes an agent-facing API, teams should treat it as a maintained product surface—with versioning, tests, routing rules, and deliberate output design—rather than assume MCP itself supplies those qualities.</p>
+
+    <h2>Evidence grades used on this page</h2>
+    <ul>
+      <li><strong>Public capability:</strong> documented in an official public repository, merged change, release, or product documentation as of the source's July 2026 retrieval date.</li>
+      <li><strong>Reported internal practice:</strong> described by a practitioner, conference recap, or secondary case report but not independently verified in this corpus.</li>
+      <li><strong>Reported outcome or benchmark:</strong> a quantitative or qualitative result reported by the case, scoped to its own evaluation design and not reproduced here.</li>
+    </ul>
+    <p>Open-source existence establishes that an interface or tool is available; it does not establish organizational adoption, production reliability, or improved outcomes.</p>
 
     <h2>Case comparison</h2>
     <table>
       <thead>
-        <tr><th>Case</th><th>Agent-facing move</th><th>What it teaches</th></tr>
+        <tr><th>Case</th><th>Evidence grade</th><th>Agent-facing move and bounded lesson</th></tr>
       </thead>
       <tbody>
-        <tr><td>Figma MCP</td><td>Design extraction, variables, Code Connect, library search, screenshots, asset flows, remote write tools, and official skills.</td><td>Design-to-code becomes design-to-code-to-rules; Code Connect and variables are anti-slop mechanisms.<sup><a href="#s-1">1</a></sup></td></tr>
-        <tr><td>Indeed benchmark</td><td>MDX parsed into per-component JSON, indexed for MCP/RAG; 8 configurations and 1,056 prompt events compared metadata formats.</td><td>Format is governance: JSON reportedly matched or beat hybrid Markdown+JSON at far lower token cost for structured component metadata.<sup><a href="#s-2">2</a></sup></td></tr>
-        <tr><td>Indeed progressive context</td><td>MCP for components/tokens/icons plus layered plugin context for foundations, recipes, implementation rules, and quality standards.</td><td>MCP retrieval can be correct while UI quality still drifts; context timing matters.<sup><a href="#s-3">3</a></sup></td></tr>
-        <tr><td>Miro Aura</td><td>Design-system MCP, Claude routing instructions, skills for icon/token search, wrap-up checks, and contribution flows.</td><td>AI must be onboarded like a new team member; metadata, negative constraints, and routing rules reduce support burden and misuse.<sup><a href="#s-4">4</a></sup></td></tr>
-        <tr><td>NYSDS</td><td>Refactored token MCP tools with recommended/primitive/all filters, raw JSON responses, read-only hints, and semantic-token descriptions.</td><td>Agent-safe APIs may intentionally hide primitives, omit misleading fields, and default to semantic tokens.<sup><a href="#s-5">5</a></sup></td></tr>
-        <tr><td>Primer</td><td>Public MCP package for Primer React; brand-specific MCP work with eval and CI smoke-test affordances.</td><td>Public design systems are shipping MCP as developer infrastructure, not just publishing human docs.<sup><a href="#s-6">6</a></sup></td></tr>
-        <tr><td>Primitiv</td><td>Scans Figma, code, Storybook, tokens, and adapters; reconciles conflicts into <code>primitiv.contract.json</code>; serves context, conflicts, inferred rules, and violations via MCP.</td><td>Retrieval gives access; reconciliation creates an auditable source of truth.<sup><a href="#s-7">7</a></sup></td></tr>
-        <tr><td>Spotify Encore</td><td>Reported MCP workstream plus layered architecture separating foundations, component style, and behavior.</td><td>Design-system relevance shifts toward being present where agents generate UI, and architecture can reduce context burden.<sup><a href="#s-8">8</a></sup></td></tr>
-        <tr><td>Storybook MCP</td><td>Docs, development, and testing toolsets over live Storybook: component docs, story instructions, previews, and tests.</td><td>Storybook becomes an executable agent runtime: retrieval, preview, test, fix, rerun.<sup><a href="#s-9">9</a></sup></td></tr>
+        <tr><td>Figma MCP</td><td>Public capability</td><td>Official docs describe extraction, variables, Code Connect, library search, screenshots, assets, remote write tools, and skills. Code Connect and variables are intended to steer reuse; some tools are remote-only or select-client-only.<sup><a href="#s-1">1</a></sup></td></tr>
+        <tr><td>Indeed benchmark</td><td>Reported practice + outcome</td><td>A secondary case report describes MDX parsed into JSON and eight configurations with 1,056 input/output events. JSON reportedly matched or exceeded hybrid accuracy at lower token cost for this structured-metadata task; exact results are not canonical benchmarks.<sup><a href="#s-2">2</a></sup></td></tr>
+        <tr><td>Indeed progressive context</td><td>Reported practice + outcome</td><td>The authors report an MCP-plus-plugin architecture and closer alignment after routing foundation, composition, and quality context; the result was not independently reproduced.<sup><a href="#s-3">3</a></sup></td></tr>
+        <tr><td>Miro Aura</td><td>Reported practice + outcome</td><td>A conference-derived report describes MCP, routing instructions, metadata changes, and skills. The team reportedly associated these changes with lower support volume and fewer context-related mistakes; the outcome was not independently verified.<sup><a href="#s-4">4</a></sup></td></tr>
+        <tr><td>NYSDS</td><td>Public capability</td><td>A merged May 2026 change and release refactored token MCP tools around recommended/primitive/all filters, JSON responses, read-only hints, and semantic-token descriptions.<sup><a href="#s-5">5</a></sup></td></tr>
+        <tr><td>Primer</td><td>Public capability + in-flight work</td><td>Primer React publicly ships an MCP package. A separate open Primer Brand PR proposes seven tools, CI smoke testing, and an eval dashboard; one reported example is not a general effectiveness benchmark.<sup><a href="#s-6">6</a></sup></td></tr>
+        <tr><td>Primitiv</td><td>Public project claim</td><td>Public documentation claims multi-source scanning and reconciliation into <code>primitiv.contract.json</code>. It is an open-source tooling example, not evidence of organizational adoption or outcome improvement.<sup><a href="#s-7">7</a></sup></td></tr>
+        <tr><td>Spotify Encore</td><td>Reported internal practice</td><td>A case report describes an MCP workstream and layered architecture. It frames agent-workflow presence and layering as strategies that may reduce context burden.<sup><a href="#s-8">8</a></sup></td></tr>
+        <tr><td>Storybook MCP</td><td>Public preview capability</td><td>Official docs describe React-only preview toolsets for documentation, story development, previews, and configured tests. This establishes capability, not autonomous self-healing effectiveness.<sup><a href="#s-9">9</a></sup></td></tr>
       </tbody>
     </table>
 
     <h2>The emerging stack</h2>
-    <p>Across cases, the durable pattern is not “add MCP.” It is a stack of complementary surfaces:</p>
+    <p>Across this selected case set, the recurring pattern is not merely “add MCP.” It is a stack of complementary surfaces:</p>
     <ul>
-      <li><strong>Structured contracts</strong> for deterministic facts: component props, variants, tokens, examples, and allowed values. Indeed's JSON benchmark, Primer's package, Storybook manifests, and Primitiv's contract all live here.<sup><a href="#s-2">2</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-7">7</a></sup><sup><a href="#s-9">9</a></sup></li>
-      <li><strong>Layered guidance</strong> for judgment: spatial rhythm, composition, brand feel, accessibility expectations, implementation rules, and taste. Indeed's plugin architecture and Spotify's layered Encore workstream both point beyond component lookup.<sup><a href="#s-3">3</a></sup><sup><a href="#s-8">8</a></sup></li>
-      <li><strong>Skills and routing rules</strong> for process: Figma's official skills, Miro's icon/token and wrap-up skills, and Storybook's recommended <code>AGENTS.md</code>/<code>CLAUDE.md</code> instructions tell agents when and how to use the system.<sup><a href="#s-1">1</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-9">9</a></sup></li>
-      <li><strong>Validation and evals</strong> for trust: Indeed's format benchmark, Primer Brand eval work, Spotify's reported visual/lint/similarity framework, Storybook's test loop, and Primitiv's CI verification all make agent output measurable.<sup><a href="#s-2">2</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-8">8</a></sup><sup><a href="#s-9">9</a></sup><sup><a href="#s-7">7</a></sup></li>
+      <li><strong>Structured representations</strong> of props, variants, tokens, examples, and allowed values. Indeed is a reported internal implementation, Primer and Storybook are public capabilities, and Primitiv is a documented project claim.<sup><a href="#s-2">2</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-7">7</a></sup><sup><a href="#s-9">9</a></sup></li>
+      <li><strong>Layered guidance</strong> for judgment: the reported Indeed and Spotify cases describe spatial, compositional, brand, and implementation context beyond component lookup.<sup><a href="#s-3">3</a></sup><sup><a href="#s-8">8</a></sup></li>
+      <li><strong>Skills and routing rules</strong> for process: Figma and Storybook publicly document workflow guidance, while Miro's icon/token and wrap-up skills are reported internal practice.<sup><a href="#s-1">1</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-9">9</a></sup></li>
+      <li><strong>Validation and evals</strong> for trust: the set combines Indeed's reported benchmark, in-flight Primer Brand eval work, Spotify's reported framework, Storybook's documented test loop, and Primitiv's documented CI option.<sup><a href="#s-2">2</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-8">8</a></sup><sup><a href="#s-9">9</a></sup><sup><a href="#s-7">7</a></sup></li>
     </ul>
 
     <h2>Perspectives: retrieval vs. reconciliation</h2>
-    <p><strong>The retrieval camp</strong> treats the main problem as access: expose the right docs, tokens, components, variables, stories, and examples so agents stop guessing. Figma, Primer, Storybook, NYSDS, and Miro all strengthen this position by making previously human-oriented system knowledge directly queryable.<sup><a href="#s-1">1</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-9">9</a></sup><sup><a href="#s-5">5</a></sup><sup><a href="#s-4">4</a></sup></p>
-    <p><strong>The reconciliation camp</strong> argues that access is insufficient when Figma, code, Storybook, docs, and token files disagree. Primitiv's thesis — “Retrieval gives you data. Reconciliation gives you truth.” — makes conflict resolution the missing layer before MCP retrieval.<sup><a href="#s-7">7</a></sup> Indeed's deprecated active-card example supports the same warning from another angle: if documentation contains stale instruction, the agent's faithful compliance amplifies the system's truth debt.<sup><a href="#s-3">3</a></sup></p>
-    <p>Position: retrieval is the first maturity threshold; reconciliation is the second. A design-system MCP that retrieves stale or contradictory data can become an accelerant for drift, while a reconciled contract can become a governance artifact.</p>
+    <p><strong>The retrieval camp</strong> treats the main problem as access: expose the right docs, tokens, components, variables, stories, and examples so agents infer less. Public Figma, Primer, Storybook, and NYSDS interfaces—and the reported Miro Aura practice—illustrate this position at different evidence levels.<sup><a href="#s-1">1</a></sup><sup><a href="#s-6">6</a></sup><sup><a href="#s-9">9</a></sup><sup><a href="#s-5">5</a></sup><sup><a href="#s-4">4</a></sup></p>
+    <p><strong>The reconciliation camp</strong> argues that access is insufficient when Figma, code, Storybook, docs, and token files disagree. Primitiv's documentation makes conflict resolution a layer before retrieval.<sup><a href="#s-7">7</a></sup> Indeed's reported stale-documentation example illustrates the same risk without validating Primitiv's particular approach.<sup><a href="#s-3">3</a></sup></p>
+    <p><strong>Provisional position:</strong> retrieval may be sufficient while sources agree; explicit reconciliation becomes important when they conflict. The corpus does not establish reconciliation as a universal maturity sequence or prove that a generated contract is automatically true.</p>
 
     <h2>Perspectives: MCP vs. skills, plugins, and rules</h2>
-    <p>MCP is best for stable, shared, queryable capabilities: get a component, find a token, retrieve docs, inspect violations, preview stories. Skills, plugins, and root rules are better for task choreography: when to call tools, which references to load, how to perform wrap-up checks, and what process gates must not be skipped.<sup><a href="#s-1">1</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-9">9</a></sup> Treating these as substitutes is a category error; the frontier systems combine them.</p>
+    <p>These cases suggest a useful division: MCP for shared queryable capabilities, and skills, plugins, or rules for task choreography—when to call tools, which references to load, and which process gates to preserve.<sup><a href="#s-1">1</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-9">9</a></sup> Several examples combine them, but the evidence does not establish this as the only viable architecture.</p>
 
-    <h2>What these cases prove — and do not prove</h2>
-    <p>They prove that design systems are becoming machine-facing infrastructure: MCP packages, token filters, eval harnesses, CI checks, skills, and layered context libraries are now part of the field's operating model. They do <em>not</em> prove that any single MCP server guarantees brand-quality UI. The strongest cases still depend on clean metadata, negative constraints, explicit routing, tests, human checkpoints, and source-of-truth hygiene.<sup><a href="#s-1">1</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-7">7</a></sup></p>
+    <h2>What these cases demonstrate—and leave unproven</h2>
+    <p>Public artifacts demonstrate that agent-facing packages, token filters, preview/test loops, and CI affordances exist. Reported internal cases indicate experimentation with layered context, routing, and evals. Together they provide evidence of an emerging practice, but not field-wide adoption or reliable brand-quality outcomes. No single MCP server guarantees fidelity; the cases repeatedly pair interfaces with metadata, negative constraints, routing, tests, human checkpoints, and source-of-truth hygiene.<sup><a href="#s-1">1</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup><sup><a href="#s-7">7</a></sup></p>
   </article>
 
   <footer class="markdown-body">
@@ -85,6 +93,7 @@
       <li><a href="./evals-observability.html">Evals &amp; Observability</a></li>
       <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
       <li><a href="./agentic-content-templates.html">Agentic Content &amp; Prototyping Templates</a></li>
+      <li><a href="./agent-trust-levels.html">Governance &amp; Trust Levels for Agents</a></li>
     </ul>
   </footer>
 
