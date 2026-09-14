@@ -25,10 +25,14 @@
     <p>Nate Baldwin's case study starts concretely: his team at Intuit supported button heights of 24/36/48px on an 8-pixel grid. When marketing needed larger buttons, the grid mechanically produced 56 and 64px — but those increments weren't <em>proportional</em>, which is how rigid pixel grids accumulate inconsistency.<sup><a href="#s-1">1</a></sup></p>
 
     <h2>Ditch the pixel grid for modular scales</h2>
-    <p>Baldwin explicitly criticizes rigid pixel grids as non-proportional and prone to inconsistency, advocating <strong>modular scales</strong> — a base value and a ratio — to generate values instead.<sup><a href="#s-1">1</a></sup> The same modular formula should drive <strong>spacing</strong> as well as type, so spacing stays proportional to text size and visual relationships hold.</p>
+    <p>Baldwin explicitly criticizes rigid pixel grids as non-proportional and prone to inconsistency, advocating <strong>modular scales</strong> — a base value and a ratio — to generate values instead.<sup><a href="#s-1">1</a></sup> The same modular formula can drive <strong>spacing</strong> as well as type, keeping their visual relationships proportional without requiring both scales to use the same units or respond to the same inputs.<sup><a href="#s-1">1</a></sup></p>
 
     <h2>Responsive typography</h2>
-    <p>Use conditional ratios and base font sizes that adapt to viewport width (small, medium, large, widescreen), and use <strong>REM units</strong> for text so the system respects the user's browser-level font-size preference — an accessibility requirement, not a nicety.<sup><a href="#s-1">1</a></sup></p>
+    <p>Baldwin uses conditional ratios and base font sizes that adapt to viewport width, then converts generated text sizes to <code>rem</code>. Because <code>rem</code> follows the browser's root font size, a user's font-size preference changes the type scale while preserving its proportional hierarchy.<sup><a href="#s-1">1</a></sup></p>
+
+    <h2>Accessibility constraints on fluid scales</h2>
+    <p>Viewport-responsive scaling and user-controlled text scaling are separate dimensions. Baldwin's model lets both typography and spacing respond to the viewport, but only text follows the user's preferred font size: text uses <code>rem</code>, while spacing remains in <code>px</code> so the interface does not simply enlarge every spatial value along with the type.<sup><a href="#s-1">1</a></sup></p>
+    <p>This distinction also bounds the fluid-scaling recommendation. Utopia can generate CSS <code>clamp()</code> functions that interpolate between viewport sizes, but Baldwin warns that some <code>clamp()</code>-based formulas can interfere with users' ability to scale text. A mathematically fluid scale therefore still requires accessibility testing and may need correction rather than unconditional adoption.<sup><a href="#s-1">1</a></sup></p>
 
     <h2>Size vs. density</h2>
     <p>A key distinction Baldwin draws:<sup><a href="#s-1">1</a></sup></p>
@@ -39,10 +43,15 @@
     <p>Separating these dimensions means a density change doesn't break content hierarchy. Padding in component <strong>archetypes</strong> is defined via relative indices (e.g., −4, −1, 0, 1) rather than hard-coded pixels, making it responsive and adjustable via the scale.</p>
 
     <h2>Tooling</h2>
-    <p>Baldwin points to parametric tools: <strong>Proportio</strong> (his own open-source tool for proportional type/spacing/component systems), <strong>Utopia.fyi</strong> (CSS <code>clamp()</code> for fluid scaling across viewports), and <strong>Token Studio</strong> (graph-based, editable representations of system structure).<sup><a href="#s-1">1</a></sup></p>
+    <p>Baldwin points to parametric tools: <strong>Proportio</strong> (his own open-source tool for proportional type/spacing/component systems), <strong>Utopia.fyi</strong> (CSS <code>clamp()</code> for fluid scaling across viewports), and <strong>Token Studio</strong> (graph-based, editable representations of system structure). His Utopia recommendation carries the accessibility caveat above; the tool does not make every generated formula safe by default.<sup><a href="#s-1">1</a></sup></p>
 
-    <h2>Perspectives: parametric generation vs. hand-tuned scales</h2>
-    <p>Baldwin's parametric stance is a clear position in a live debate: should scales be <em>generated</em> from constants and ratios, or hand-picked for each step? His argument is that parameterization makes the system "inherently scalable and dynamic" and is the only approach that survives requests like "we need a bigger button" without breaking proportion.<sup><a href="#s-1">1</a></sup> It connects directly to the <a href="./systems-thinking.html">systems-thinking</a> principles of encapsulation and archetypes, and the generated values feed the <a href="./token-architecture.html">token architecture</a>.</p>
+    <h2>Perspectives: mathematical consistency vs. human override</h2>
+    <ul>
+      <li><strong>Parametric consistency:</strong> constants and ratios let a change propagate while preserving hierarchy, avoiding the unclear relative differences produced by a linear pixel grid.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>User-controlled scaling:</strong> proportional viewport behavior is not the same as accessible text resizing. In Baldwin's model, <code>rem</code>-based text follows user preference while pixel-based spacing deliberately does not.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Optical and accessibility correction:</strong> a generated value can be mathematically consistent yet still need adjustment for legibility, optical balance, or user override. Baldwin's <code>clamp()</code> warning is the decisive counterweight to treating fluid generation as self-validating.<sup><a href="#s-1">1</a></sup></li>
+    </ul>
+    <p><strong>Wiki position:</strong> parameterization is a powerful default for generating coherent relationships, not a license to remove human judgment. Preserve the formula where it helps the system change; preserve user control and tested corrections where the formula conflicts with use. This connects to the <a href="./systems-thinking.html">systems-thinking</a> principles of encapsulation and archetypes, and its outputs can feed the <a href="./token-architecture.html">token architecture</a>.</p>
   </article>
 
   <footer class="markdown-body">

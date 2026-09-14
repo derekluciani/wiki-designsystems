@@ -28,13 +28,13 @@
     <ul>
       <li><strong>Systems-oriented method:</strong> encapsulation, parameterization, archetypes, and diagrams.<sup><a href="#s-1">1</a></sup> See <a href="./systems-thinking.html">Systems Thinking</a>.</li>
       <li><strong>Ditch pixel grids</strong> for modular scales (base value + ratio) driving both type and spacing.<sup><a href="#s-1">1</a></sup></li>
-      <li><strong>Responsive type</strong> via conditional ratios and REM units that respect user font-size preferences.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Separate responsive dimensions:</strong> text uses <code>rem</code> so it follows user font-size preferences, while spacing remains in <code>px</code> so it can respond to the viewport without scaling with that preference.<sup><a href="#s-1">1</a></sup></li>
       <li><strong>Size vs. density</strong> as separate dimensions; padding defined via relative indices in component archetypes.<sup><a href="#s-1">1</a></sup></li>
-      <li><strong>Tooling:</strong> Proportio, Utopia.fyi (CSS <code>clamp()</code>), Token Studio.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Tooling with a caveat:</strong> Proportio, Utopia.fyi, and Token Studio; Baldwin warns that some fluid CSS <code>clamp()</code> formulas can interfere with user text scaling and require further accessibility testing.<sup><a href="#s-1">1</a></sup></li>
     </ul>
 
     <h2>Where he sits in the debates</h2>
-    <p>Baldwin is the clearest advocate for <strong>parametric generation</strong> over hand-tuned values — the position that scales must be computed from a system's constants to stay proportional under change. His method is the operational complement to Frost's token architecture: Frost says <em>structure</em> your tokens in tiers; Baldwin says <em>generate</em> their values from math. See <a href="./parametric-scales.html">Modular & Parametric Scales</a> and <a href="./token-architecture.html">Token Architecture</a>.</p>
+    <p>Baldwin is the clearest advocate for <strong>parametric generation</strong> over hand-tuned values: constants and ratios keep relationships proportional under change. His own accessibility caveat prevents that position from becoming mathematical absolutism; generated scales remain subject to user override and testing. His method is the operational complement to Frost's token architecture: Frost says <em>structure</em> your tokens in tiers; Baldwin says <em>generate</em> their values from math. See <a href="./parametric-scales.html">Modular & Parametric Scales</a> and <a href="./token-architecture.html">Token Architecture</a>.</p>
   </article>
 
   <footer class="markdown-body">

@@ -14,7 +14,7 @@
       <button type="button" data-text-size="decrease" aria-label="Decrease text size">A-</button>
       <button type="button" data-text-size="increase" aria-label="Increase text size">A+</button>
     </div>
-    <p><a href="./token-pipelines.html">Token Pipelines →</a></p>
+    <p><a href="./token-pipelines.html">Token Pipelines: JSON, Style Dictionary &amp; Figma Variables →</a></p>
   </nav>
 
   <article class="markdown-body">
@@ -45,10 +45,10 @@
 
     <h2>Tokens as the API for the design language</h2>
     <p>The strongest claim: treat tokens not merely as CSS variables but as <strong>the contract between the design system and every consumer</strong> — web, native, CMS, QA automation, and AI tooling alike.<sup><a href="#s-1">1</a></sup> This "tokens-as-API" framing is exactly why tokens matter for <a href="./agentic-readiness.html">agentic readiness</a>: well-named tokens are machine-consumable foundations, and AI workflows depend on agents seeing them.<sup><a href="#s-2">2</a></sup></p>
-    <p>The stable Design Tokens Community Group 2025.10 specification closes part of the standards gap by defining a vendor-neutral exchange format for token files, including required token values, typed tokens, aliases/references, groups, extensions, and JSON Pointer support.<sup><a href="#s-3">3</a></sup> It standardizes the wire format for interoperability; it does <em>not</em> replace the architectural judgment of deciding which tokens are primitive, semantic, or component-level.</p>
+    <p>Curtis describes design tokens as having a stable definition while component data still lacks a comparable standard.<sup><a href="#s-3">3</a></sup> A shared token representation does not replace the architectural judgment of deciding which tokens are primitive, semantic, or component-level. Version-specific DTCG features and tool interoperability remain outside the local corpus until an approved specification snapshot is added to <code>/raw</code>.</p>
 
     <h2>Agent-safe token APIs</h2>
-    <p>The NYSDS MCP token-tool refactor is a concrete agentic extension of the three-tier model. Its default <code>recommended</code> token filter excludes primitive palette ramps that agents should not use directly, while the <code>primitive</code> and <code>all</code> modes remain available for exceptional cases.<sup><a href="#s-4">4</a></sup> The PR also dropped <code>cssValue</code> from discovery responses to prevent agents from copying primitive references instead of using semantic <code>var()</code> tokens, and it moved theme guidance out of token lookup into Markdown guide content.<sup><a href="#s-4">4</a></sup></p>
+    <p>The NYSDS MCP token-tool refactor is a concrete agentic extension of the three-tier model. Its default <code>recommended</code> token filter excludes primitive palette ramps that agents should not use directly, while the <code>primitive</code> and <code>all</code> modes remain available for exceptional cases.<sup><a href="#s-4">4</a></sup> The merged PR says it dropped <code>cssValue</code> from discovery responses to discourage agents from copying primitive references instead of using semantic <code>var()</code> tokens, and it moved theme guidance out of token lookup into Markdown guide content.<sup><a href="#s-4">4</a></sup></p>
     <p>This is token governance expressed as API design: the default response encodes what most consumers should do, not merely what values exist. For agents, “show fewer, better tokens first” can be more reliable than maximal transparency.</p>
 
     <h2>Perspectives: how many tokens is too many?</h2>
@@ -63,7 +63,7 @@
     <ol>
       <li id="s-1"><a href="../raw/Design%20Token%20Architecture%20with%20Brad%20Frost.txt">Design Token Architecture — Brad Frost (video, 04/2025)</a></li>
       <li id="s-2"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
-      <li id="s-3"><a href="https://www.designtokens.org/tr/2025.10/">Design Tokens Community Group 2025.10 specification</a></li>
+      <li id="s-3"><a href="../raw/Components%20as%20Data%20for%20Humans%20and%20Machines.rtf">Components as Data for Humans and Machines — Nathan Curtis (04/2026)</a></li>
       <li id="s-4"><a href="../raw/mcp/agentic-ai-nysds-mcp-token-tools-2026-07-03.md">New York State Design System MCP token tools: Semantic-token filtering for agents</a></li>
     </ol>
     <h4>Related pages</h4>
@@ -74,6 +74,8 @@
       <li><a href="./mcp-interface.html">MCP & the Machine-Readable Interface</a></li>
       <li><a href="./mcp-case-studies.html">MCP Case Studies & Agent-Ready Infrastructure</a></li>
       <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+      <li><a href="./sovereignty-and-token-capital.html">Model Sovereignty & Token Capital</a></li>
+      <li><a href="./broken-promises-of-design-systems.html">The Broken Promises of Design Systems</a></li>
     </ul>
   </footer>
 

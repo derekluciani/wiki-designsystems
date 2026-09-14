@@ -20,28 +20,37 @@
 
   <article class="markdown-body">
     <h1 class="wiki-title">Model Sovereignty & Token Capital</h1>
-    <p><em>The ultimate strategic asset of the modern firm is not the baseline AI model, but a model-agnostic learning loop that compounds human ingenuity and tokenized capabilities.</em></p>
+    <p><em>The strategic asset is not the baseline AI model, but a model-portable learning loop that compounds human judgment and firm-owned AI capability.</em></p>
 
     <h2>The two capitals: human and token</h2>
     <p>In the transition to an AI-driven economy, every firm must manage and scale two distinct forms of capital:<sup><a href="#s-1">1</a></sup></p>
     <ul>
       <li><strong>Human Capital:</strong> The knowledge, judgment, relationships, ingenuity, and pattern recognition of a firm's people. This capital remains the primary driver of token capital growth, as human agency sets ambitious goals, connects dots across domains, and recognizes patterns that matter most.<sup><a href="#s-1">1</a></sup></li>
-      <li><strong>Token Capital:</strong> The firm's proprietary AI capability it builds and owns (AI models, custom systems, and data loops).<sup><a href="#s-1">1</a></sup> In design systems, token capital comprises design tokens, component libraries, design-system-aware MCP (Model Context Protocol) servers, and structured guidelines.</li>
+      <li><strong>Token Capital:</strong> The firm's proprietary AI capability that it builds and owns: models, custom systems, and the data and learning loops that improve them.<sup><a href="#s-1">1</a></sup></li>
     </ul>
     <p>Crucially, human capital does not become less valuable as token capital grows; it becomes <em>more</em> valuable. Without human direction, compute simply runs in circles.<sup><a href="#s-1">1</a></sup></p>
+    <p><strong>Design-system application (wiki synthesis):</strong> design tokens, component libraries, MCP interfaces, and structured guidelines are not token capital by definition. They are infrastructure that can contribute to firm-owned AI capability when they supply machine-readable context, constraints, evaluation targets, and correction signals to an organizational learning loop. Static assets that never participate in learning remain system artifacts, not learned AI capability.</p>
 
     <h2>The compounding learning loop</h2>
     <p>The core competitive advantage is not selecting the best baseline model, but building a learning loop on top of models where human capital and token capital compound.<sup><a href="#s-1">1</a></sup> Organizations must turn their workflows, domain knowledge, and judgment into AI systems that improve with use. This forms a compounding "hill climbing machine" that accelerates through:<sup><a href="#s-1">1</a></sup></p>
     <ul>
-      <li><strong>Private Evals:</strong> Custom benchmarks capturing model performance against real outcomes that matter to the business (e.g., component accuracy, design-system compliance) rather than generic public benchmarks.<sup><a href="#s-1">1</a></sup> (See <a href="./evals-observability.html">Evals & Observability</a>).</li>
-      <li><strong>Private Reinforcement Learning (RL):</strong> Training environments where models grow stronger on real trace logs (such as developer usage, corrections, and manual design reviews) from inside the organization.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>Private Evals:</strong> Custom benchmarks capture model performance against business outcomes rather than generic public benchmarks.<sup><a href="#s-1">1</a></sup> In a design-system setting, component-use and output-quality evaluations are one possible implementation.<sup><a href="#s-2">2</a></sup><sup><a href="#s-3">3</a></sup> (See <a href="./evals-observability.html">Evals & Observability</a>).</li>
+      <li><strong>Private Reinforcement Learning (RL):</strong> Training environments let models improve from an organization's internal trace logs.<sup><a href="#s-1">1</a></sup> Developer corrections and human design reviews could supply such signals; that design-system application is a synthesis, not Nadella's definition.</li>
       <li><strong>Knowledge Bases:</strong> Structuring institutional memory to make it queryable and increase token efficiency.<sup><a href="#s-1">1</a></sup></li>
     </ul>
-    <p>Unlike standard depreciating assets, this learning loop compounds over time: every improved workflow generates better training signals, accelerating the accumulation of unique tacit knowledge.<sup><a href="#s-1">1</a></sup></p>
+    <p>Unlike standard depreciating assets, this learning loop can compound over time: improved workflows produce better training signals, helping the firm accumulate capability grounded in its own tacit knowledge.<sup><a href="#s-1">1</a></sup></p>
 
     <h2>Model sovereignty: the "company veteran" test</h2>
     <p>A major risk of the agentic shift is ceding control and value to model providers. A firm's ultimate test of sovereignty is its ability to switch out a "generalist" base model without losing the "company veteran" expertise built into its learning system.<sup><a href="#s-1">1</a></sup></p>
-    <p>In design engineering, this sovereignty is preserved when the design system is the source of truth. Design tokens, structured component APIs (<a href="./token-architecture.html">tokens-as-API</a>), and Storybook eval suites remain model-agnostic interfaces. The underlying LLM may generate UI code, but the design system ensures compliance, protecting the organization's unique visual identity and technical standards regardless of which model is currently running. This separation of concerns prevents vendor lock-in.<sup><a href="#s-1">1</a></sup></p>
+    <p>In design engineering, machine-readable tokens, structured component APIs, MCP interfaces, and executable tests can provide relatively model-independent seams around the generator.<sup><a href="#s-2">2</a></sup><sup><a href="#s-3">3</a></sup> They constrain output and make a base-model swap less disruptive; they do not ensure compliance or make the whole stack vendor-independent. A design system can reduce one form of lock-in while dependencies remain in models, agent clients, protocols, embeddings, hosting, and evaluation infrastructure.</p>
+
+    <h2>Perspectives: when does system infrastructure become token capital?</h2>
+    <ul>
+      <li><strong>The affirmative case:</strong> a design system can become part of a model-portable learning loop when its contracts, evaluations, and correction history let organizational judgment survive a model change. This is the design-system analogue of Nadella's “company veteran” test, not a definition found in his source.<sup><a href="#s-1">1</a></sup></li>
+      <li><strong>The objection:</strong> static tokens, components, and guidelines encode decisions but do not themselves learn. Calling every reusable artifact token capital collapses the distinction between ordinary infrastructure and proprietary AI capability.</li>
+      <li><strong>The dependency problem:</strong> model-independent system contracts can reduce dependence on one model provider while leaving material dependence elsewhere in the agent stack. Sovereignty is therefore a matter of degree, tested by substitution and retained performance rather than asserted from architecture alone.</li>
+    </ul>
+    <p><strong>Wiki position:</strong> count design-system infrastructure as a contributor to token capital only when it participates in a measured learning loop whose capability persists across a base-model swap. The durable asset is the loop and its accumulated evidence, not the superficial wordplay between design <em>tokens</em> and token capital.</p>
 
     <h2>Macroeconomic equilibrium: frontier ecosystems</h2>
     <p>Nadella warns of a political economy issue: if AI value only accrues to a few monolithic frontier models, the resulting displacement of knowledge work will mimic the hollowing out of industrial economies in early globalization/outsourcing waves.<sup><a href="#s-1">1</a></sup> The stable equilibrium requires building a <strong>frontier ecosystem</strong> rather than just a frontier model. In this ecosystem, value is distributed broadly because every company maintains its own learning loop to compound its institutional knowledge.<sup><a href="#s-1">1</a></sup></p>
@@ -51,13 +60,16 @@
     <h4>Sources</h4>
     <ol>
       <li id="s-1"><a href="../raw/A%20frontier%20without%20an%20ecosystem%20is%20not%20stable%20%28State%20of%20the%20industry%29.txt">A frontier without an ecosystem is not stable (State of the industry) — Satya Nadella (06/2026)</a></li>
+      <li id="s-2"><a href="../raw/How%20Product%20Design%20Systems%20Teams%20Use%20Agentic%20AI%20%282022%E2%80%932026%2C%20North%20America%29.md">How Product Design Systems Teams Use Agentic AI (report, 2022–2026)</a></li>
+      <li id="s-3"><a href="../raw/Agentic%20Design%20Systems%20in%202026%20with%20Brad%20Frost.txt">Agentic Design Systems in 2026 with Brad Frost (video, 12/2025)</a></li>
     </ol>
     <h4>Related pages</h4>
     <ul>
       <li><a href="./agentic-readiness.html">Agentic Readiness & Architecture</a></li>
       <li><a href="./evals-observability.html">Evals & Observability</a></li>
-      <li><a href="./success-metrics.html">Success Metrics & the Value of a System</a></li>
+      <li><a href="./knowledge-graphs.html">Design Systems as Knowledge Graphs</a></li>
       <li><a href="./token-architecture.html">Three-Tier Token Architecture</a></li>
+      <li><a href="./agentic-content-templates.html">Agentic Content & Prototyping Templates</a></li>
     </ul>
   </footer>
 

@@ -46,7 +46,7 @@
     <p>The workflow moves beyond designer-to-developer handoff. Curtis describes tools that fetch Figma data, scan a library, generate YAML specs, and compare raw design data against structured output; those specs then feed code generation, documentation, QA, accessibility audits, visual review, and agent workflows.<sup><a href="#s-1">1</a></sup> The important constraint is that commands are scripted and deterministic, not merely natural-language prompts, so agents work faster and with fewer ambiguous interpretations.<sup><a href="#s-1">1</a></sup></p>
 
     <h2>Contracts, manifests, and MCP payloads</h2>
-    <p>The 2026 MCP cases show components-as-data becoming an implementation pattern, not only a design argument. Indeed parsed MDX into per-component JSON files for MCP/RAG retrieval; Storybook uses manifests and MCP documentation endpoints so agents can inspect component docs, stories, and tests; Primer exposes components, examples, patterns, tokens, and usage guidance through an installable MCP package.<sup><a href="#s-2">2</a></sup><sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup> Primitiv pushes the pattern further by scanning Figma, code, Storybook, and token files, reconciling conflicts, and serving a design-system contract with component provenance, inferred rules, conflicts, and violations.<sup><a href="#s-5">5</a></sup></p>
+    <p>The selected 2026 notes provide several implementations of components-as-data at different evidence levels. Indeed is reported to have parsed MDX into per-component JSON for MCP/RAG retrieval.<sup><a href="#s-2">2</a></sup> As publicly documented in July 2026, Storybook's preview React MCP exposes component documentation and stories, while Primer React distributes an MCP package exposing components, examples, patterns, tokens, and usage guidance.<sup><a href="#s-3">3</a></sup><sup><a href="#s-4">4</a></sup> Primitiv's public documentation describes scanning Figma, code, Storybook, and token files, reconciling conflicts into a contract, and serving that contract through MCP; the corpus contains no independent behavior or adoption evidence.<sup><a href="#s-5">5</a></sup></p>
     <p>The distinction matters: a component spec describes intent; a manifest exposes runtime/documentation facts; a reconciled contract asserts which facts win when sources disagree. Mature agent-facing systems may need all three.</p>
 
     <h2>ADRs as schema governance</h2>
@@ -79,6 +79,7 @@
       <li><a href="./token-pipelines.html">Token Pipelines: JSON, Style Dictionary & Figma Variables</a></li>
       <li><a href="./governance.html">Governance: Conversations, Not Flowcharts</a></li>
       <li><a href="./team-maturity.html">Design System Team Maturity</a></li>
+      <li><a href="./broken-promises-of-design-systems.html">The Broken Promises of Design Systems</a></li>
     </ul>
   </footer>
 
